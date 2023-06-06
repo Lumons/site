@@ -3,19 +3,22 @@ project:
 
 website:
   title: "Lumos Insight"
-  image: "images/logo.png"
+  favicon: "images/logo.png"
+  sidebar:
+    logo: "images/logo.png"
+    style: "docked"
+    search: false
+    contents:
+      - posts.qmd
+
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
-    sidebar:
-      logo: "images/logo.png"
-      nav:
-        - text: "Home"
-          href: "index.html"
-        - text: "About"
-          href: "about.html"
+
+
+
 
 

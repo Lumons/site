@@ -3,6 +3,6 @@ format: html
 editor: visual
 ---
 
-# Coming soon
+# About
 
-# ![](images/logo.PNG)
+Learning, consulting, sharing, exploring. Work in progress.
