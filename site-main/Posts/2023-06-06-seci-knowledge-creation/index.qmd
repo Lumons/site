@@ -13,9 +13,9 @@ Knowledge, in all its forms, is fundamental to our understanding of the world ar
 
 # The SECI model
 
-Developed by Ikujiro Nonaka and refined by Hirotaka Takeuchi, the SECI model provides an account of knowledge creation and its transmission between and within individuals. Within this model, knowledge creation results from the transformation of tacit and explicit knowledge, through the processes of Socialisation, Externalisation, Combination, and Internalisation (SECI).
+Developed by Ikujiro Nonaka and Hirotaka Takeuchi, the SECI model provides an account of knowledge creation and its transmission between and within individuals. Within this model, knowledge creation results from the transformation of tacit and explicit knowledge, through the processes of Socialisation, Externalisation, Combination, and Internalisation (SECI).
 
-Originally a framework for understanding how knowledge is transferred and transformed within an organisation, the SECI model is also useful for considering how learning relates to the absorption, modification, and sharing, of information. It is a framework that requires that we account for different types of knowledge and ways of knowing, and is of particular significance as we navigate the complex world of today, wherein, as Nonaka asserts, *"the only certainty is uncertainty, the one sure source of lasting competitive advantage is knowledge"*.
+Originally a framework for understanding how knowledge is transferred and transformed within organisations, the SECI model is also useful for considering how learning occurs as a result of the absorption, modification, and sharing of information. It is a framework that requires that we account for different types of knowledge and ways of knowing, and is of particular significance as we navigate the complex world of today, wherein, as Nonaka asserts, *"the only certainty is uncertainty, the one sure source of lasting competitive advantage is knowledge"*.
 
 ## *Socialisation*
 
@@ -35,6 +35,6 @@ Lastly, internalisation is the process by which explicit knowledge is absorbed a
 
 --- 
 
-Knowledge propels us forward, obsoleting itself as it transforms our understanding of the world around us. The SECI model provides a stable framework for orienting ourselves, encouraging continuous learning and innovation while accounting for change and disruption. Navigating the uncertainties of our world, the continuous conversion and circulation of knowledge - from tacit to explicit, individual to collective, and back again - empowers us to adapt, grow, and innovate. It also forces us to come to acknowledge the multifaceted process that is learning. The purpose of this post and those that follow is to serve as an example of this knowledge creation process, opening the floor for further contemplation, critique, and collaboration, aiming to cultivate learning, share understanding, and maybe even create something new
+Knowledge propels us forward, obsoleting itself as it transforms our understanding of the world around us. The SECI model provides a stable framework for orienting ourselves, encouraging continuous learning and innovation while accounting for change and disruption. Navigating the uncertainties of our world, the continuous conversion and circulation of knowledge - from tacit to explicit, individual to collective, and back again - empowers us to adapt, grow, and innovate. It also forces us to come to acknowledge the multifaceted process that is learning. The purpose of this post and those that follow is to serve as an example of this knowledge creation process, opening the floor for further contemplation, critique, and collaboration, aiming to cultivate learning, share understanding, and maybe even create something new.
 
 \
