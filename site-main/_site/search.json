@@ -1,0 +1,205 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About",
+    "section": "",
+    "text": "About\nLearning, consulting, sharing, exploring. Work in progress."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "On knowledge creation.html",
+    "href": "On knowledge creation.html",
+    "title": "The SECI model & knowledge creation",
+    "section": "",
+    "text": "Knowledge, in all its forms, is fundamental to our understanding of the world around us, and is key to navigating the uncertainties of life. This post explores the process of knowledge creation, put forward by organisational theorist Ikujiro Nonaka in his essay “The Knowledge-Creating Company”. It sheds light on the transformation of tacit and explicit knowledge through the Socialisation, Externalisation, Combination, and Internalisation (SECI) model.\n\nKnowledge, like the world it is supposed to reflect, is not a static entity. As Peter Drucker puts it, “Knowledge is different from all other resources. It makes itself constantly obsolete, so that today’s advanced knowledge is tomorrow’s ignorance. And the knowledge that matters is subject to rapid and abrupt shifts.” This statement underscores the necessity of continuous learning and innovation, both for individuals and organisations."
+  },
+  {
+    "objectID": "On knowledge creation.html#quarto",
+    "href": "On knowledge creation.html#quarto",
+    "title": "On knowledge creation",
+    "section": "",
+    "text": "Knowledge, in all its forms, is fundamental to our understanding of the world around us, and is key to navigating the uncertainties of life. This post explores the process of knowledge creation, put forward by organisational theorist Ikujiro Nonaka in his essay \"The Knowledge-Creating Company\". It sheds light on the transformation of tacit and explicit knowledge through the Socialisation, Externalisation, Combination, and Internalisation (SECI) model.\n\nKnowledge, like the world it is supposed to reflect, is not a static entity. As Peter Drucker puts it, \"Knowledge is different from all other resources. It makes itself constantly obsolete, so that today's advanced knowledge is tomorrow's ignorance. And the knowledge that matters is subject to rapid and abrupt shifts.\" This statement underscores the necessity of continuous learning and innovation, both for individuals and organisations.\n\nNonaka’s SECI model serves as a framework to understand how knowledge is transferred and transformed within an organisation. This framework is of particular significance as we navigate the complex world of today, wherein, as Nonaka asserts, \"the only certainty is uncertainty, the one sure source of lasting competitive advantage is knowledge\".\n\n\nSocialisation\n\n\nThis phase involves the transmission of tacit knowledge between individuals through shared experiences, such as an apprenticeship or immersion in a foreign culture. Essentially, it is the process of learning by observation, imitation, and practice, thus creating the raw material for the production of new knowledge.\n\n\nExternalisation\n\n\nExternalisation is the subsequent step, which involves converting tacit knowledge into explicit forms. Knowledge is articulated, crystallised, and thereby made shareable through various means like metaphors, analogies, concepts, or documents. This step paves the way for the creation of new, explicit knowledge that can be utilised by others.\n\n\nCombination\n\n\nCombination concerns itself with the systematisation and integration of explicit knowledge. Various types of explicit knowledge - data, report insights, document details - are collated, often assisted by computerised networks or databases. This process can involve categorising or reclassifying explicit knowledge into new clusters, which are then shared within the organisation, enhancing collective understanding and knowledge.\n\n\nInternalisation\n\n\nLastly, internalisation is the process by which explicit knowledge is absorbed and embodied by individuals, reverting back into tacit knowledge. This often occurs through ‘learning-by-doing’, or when individuals reflect on and practice newly acquired knowledge. For instance, techniques in a manual (explicit knowledge) may be studied and practised until they can be performed without referring to the manual (tacit knowledge).\n\n\nInternalisation cultivates an individual’s proficiency and capacity for innovation. The internalised tacit knowledge, once shared, contributes to the organisational knowledge pool. As individuals connect, recognise patterns, and synthesise fields, ideas, and concepts, a new cycle of the SECI model begins, fostering continuous knowledge creation and learning.\n\n\nIn this context, Drucker’s quote becomes even more relevant, emphasising that the knowledge that propels us today may soon be obsolete. This relentless evolution underscores the importance of the SECI model’s cyclical nature and its role in encouraging continuous learning and innovation.\n\n\nNavigating the uncertainties of our world, the continuous conversion and circulation of knowledge - from tacit to explicit, individual to collective, and back again - empowers us to adapt, grow, and innovate. It also forces us to come to acknowledge the multifaceted process that is learning. The purpose of this post and those that follow is to serve as this knowledge creation process, opening the floor for further contemplation, critique, and collaboration, aiming to cultivate learning, share understanding, and potentially create something new."
+  },
+  {
+    "objectID": "On knowledge creation.html#socialisation",
+    "href": "On knowledge creation.html#socialisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Socialisation",
+    "text": "Socialisation\nSocialisation involves the transmission of tacit knowledge between individuals through shared experiences, such as an apprenticeship or immersion in a foreign culture. Essentially, it is the process of learning by observation, imitation, and practice, thus creating the raw material for the production of new knowledge."
+  },
+  {
+    "objectID": "On knowledge creation.html#externalisation",
+    "href": "On knowledge creation.html#externalisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Externalisation",
+    "text": "Externalisation\nExternalisation is the subsequent step, which involves converting tacit knowledge into explicit forms. Knowledge is articulated, crystallised, and thereby made shareable through various means like metaphors, analogies, concepts, or documents. This step paves the way for the creation of new, explicit knowledge that can be utilised by others."
+  },
+  {
+    "objectID": "On knowledge creation.html#combination",
+    "href": "On knowledge creation.html#combination",
+    "title": "The SECI model & knowledge creation",
+    "section": "Combination",
+    "text": "Combination\nCombination concerns itself with the systematisation and integration of explicit knowledge. Various types of explicit knowledge - data, report insights, document details - are collated, often assisted by computerised networks or databases. This process can involve categorising or reclassifying explicit knowledge into new clusters, which are then shared within the organisation, enhancing collective understanding and knowledge."
+  },
+  {
+    "objectID": "On knowledge creation.html#internalisation",
+    "href": "On knowledge creation.html#internalisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Internalisation",
+    "text": "Internalisation\nLastly, internalisation is the process by which explicit knowledge is absorbed and embodied by individuals, reverting back into tacit knowledge. This often occurs through ‘learning-by-doing’, or when individuals reflect on and practice newly acquired knowledge. For instance, techniques in a manual (explicit knowledge) may be studied and practised until they can be performed without referring to the manual (tacit knowledge).\nInternalisation cultivates an individual’s proficiency and capacity for innovation. The internalised tacit knowledge, once shared, contributes to the organisational knowledge pool. As individuals connect, recognise patterns, and synthesise fields, ideas, and concepts, a new cycle of the SECI model begins, fostering continuous knowledge creation and learning."
+  },
+  {
+    "objectID": "posts/New folder/index.html",
+    "href": "posts/New folder/index.html",
+    "title": "The SECI model & knowledge creation",
+    "section": "",
+    "text": "Knowledge, in all its forms, is fundamental to our understanding of the world around us, and is key to navigating the uncertainties of life. This post explores the process of knowledge creation, put forward by organisational theorist Ikujiro Nonaka in his essay “The Knowledge-Creating Company”. It sheds light on the transformation of tacit and explicit knowledge through the Socialisation, Externalisation, Combination, and Internalisation (SECI) model.\n\nKnowledge, like the world it is supposed to reflect, is not a static entity. As Peter Drucker puts it, “Knowledge is different from all other resources. It makes itself constantly obsolete, so that today’s advanced knowledge is tomorrow’s ignorance. And the knowledge that matters is subject to rapid and abrupt shifts.” This statement underscores the necessity of continuous learning and innovation, both for individuals and organisations."
+  },
+  {
+    "objectID": "posts/New folder/index.html#socialisation",
+    "href": "posts/New folder/index.html#socialisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Socialisation",
+    "text": "Socialisation\nSocialisation involves the transmission of tacit knowledge between individuals through shared experiences, such as an apprenticeship or immersion in a foreign culture. Essentially, it is the process of learning by observation, imitation, and practice, thus creating the raw material for the production of new knowledge."
+  },
+  {
+    "objectID": "posts/New folder/index.html#externalisation",
+    "href": "posts/New folder/index.html#externalisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Externalisation",
+    "text": "Externalisation\nExternalisation is the subsequent step, which involves converting tacit knowledge into explicit forms. Knowledge is articulated, crystallised, and thereby made shareable through various means like metaphors, analogies, concepts, or documents. This step paves the way for the creation of new, explicit knowledge that can be utilised by others."
+  },
+  {
+    "objectID": "posts/New folder/index.html#combination",
+    "href": "posts/New folder/index.html#combination",
+    "title": "The SECI model & knowledge creation",
+    "section": "Combination",
+    "text": "Combination\nCombination concerns itself with the systematisation and integration of explicit knowledge. Various types of explicit knowledge - data, report insights, document details - are collated, often assisted by computerised networks or databases. This process can involve categorising or reclassifying explicit knowledge into new clusters, which are then shared within the organisation, enhancing collective understanding and knowledge."
+  },
+  {
+    "objectID": "posts/New folder/index.html#internalisation",
+    "href": "posts/New folder/index.html#internalisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Internalisation",
+    "text": "Internalisation\nLastly, internalisation is the process by which explicit knowledge is absorbed and embodied by individuals, reverting back into tacit knowledge. This often occurs through ‘learning-by-doing’, or when individuals reflect on and practice newly acquired knowledge. For instance, techniques in a manual (explicit knowledge) may be studied and practised until they can be performed without referring to the manual (tacit knowledge).\nInternalisation cultivates an individual’s proficiency and capacity for innovation. The internalised tacit knowledge, once shared, contributes to the organisational knowledge pool. As individuals connect, recognise patterns, and synthesise fields, ideas, and concepts, a new cycle of the SECI model begins, fostering continuous knowledge creation and learning."
+  },
+  {
+    "objectID": "posts/On knowledge creation.html",
+    "href": "posts/On knowledge creation.html",
+    "title": "The SECI model & knowledge creation",
+    "section": "",
+    "text": "Knowledge, in all its forms, is fundamental to our understanding of the world around us, and is key to navigating the uncertainties of life. This post explores the process of knowledge creation, put forward by organisational theorist Ikujiro Nonaka in his essay “The Knowledge-Creating Company”. It sheds light on the transformation of tacit and explicit knowledge through the Socialisation, Externalisation, Combination, and Internalisation (SECI) model.\n\nKnowledge, like the world it is supposed to reflect, is not a static entity. As Peter Drucker puts it, “Knowledge is different from all other resources. It makes itself constantly obsolete, so that today’s advanced knowledge is tomorrow’s ignorance. And the knowledge that matters is subject to rapid and abrupt shifts.” This statement underscores the necessity of continuous learning and innovation, both for individuals and organisations."
+  },
+  {
+    "objectID": "posts/On knowledge creation.html#socialisation",
+    "href": "posts/On knowledge creation.html#socialisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Socialisation",
+    "text": "Socialisation\nSocialisation involves the transmission of tacit knowledge between individuals through shared experiences, such as an apprenticeship or immersion in a foreign culture. Essentially, it is the process of learning by observation, imitation, and practice, thus creating the raw material for the production of new knowledge."
+  },
+  {
+    "objectID": "posts/On knowledge creation.html#externalisation",
+    "href": "posts/On knowledge creation.html#externalisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Externalisation",
+    "text": "Externalisation\nExternalisation is the subsequent step, which involves converting tacit knowledge into explicit forms. Knowledge is articulated, crystallised, and thereby made shareable through various means like metaphors, analogies, concepts, or documents. This step paves the way for the creation of new, explicit knowledge that can be utilised by others."
+  },
+  {
+    "objectID": "posts/On knowledge creation.html#combination",
+    "href": "posts/On knowledge creation.html#combination",
+    "title": "The SECI model & knowledge creation",
+    "section": "Combination",
+    "text": "Combination\nCombination concerns itself with the systematisation and integration of explicit knowledge. Various types of explicit knowledge - data, report insights, document details - are collated, often assisted by computerised networks or databases. This process can involve categorising or reclassifying explicit knowledge into new clusters, which are then shared within the organisation, enhancing collective understanding and knowledge."
+  },
+  {
+    "objectID": "posts/On knowledge creation.html#internalisation",
+    "href": "posts/On knowledge creation.html#internalisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Internalisation",
+    "text": "Internalisation\nLastly, internalisation is the process by which explicit knowledge is absorbed and embodied by individuals, reverting back into tacit knowledge. This often occurs through ‘learning-by-doing’, or when individuals reflect on and practice newly acquired knowledge. For instance, techniques in a manual (explicit knowledge) may be studied and practised until they can be performed without referring to the manual (tacit knowledge).\nInternalisation cultivates an individual’s proficiency and capacity for innovation. The internalised tacit knowledge, once shared, contributes to the organisational knowledge pool. As individuals connect, recognise patterns, and synthesise fields, ideas, and concepts, a new cycle of the SECI model begins, fostering continuous knowledge creation and learning."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Posts",
+    "section": "",
+    "text": "The SECI model & knowledge creation\n\n\n\n\n\n\n\nKnowledge\n\n\nLearning\n\n\n\n\nAs knowledge changes, so must we.\n\n\n\n\n\n\nJun 6, 2022\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2023-06-06-seci-knowledge-creation/index.html",
+    "href": "posts/2023-06-06-seci-knowledge-creation/index.html",
+    "title": "The SECI model & knowledge creation",
+    "section": "",
+    "text": "Knowledge, in all its forms, is fundamental to our understanding of the world around us, and is key to navigating the uncertainties of life. But knowledge, like the world it is supposed to reflect, is not a static entity. As Peter Drucker puts it, “Knowledge is different from all other resources. It makes itself constantly obsolete, so that today’s advanced knowledge is tomorrow’s ignorance. And the knowledge that matters is subject to rapid and abrupt shifts.” As knowledge changes so must we, a fact which underscores the necessity of continuous learning and innovation."
+  },
+  {
+    "objectID": "posts/2023-06-06-seci-knowledge-creation/index.html#socialisation",
+    "href": "posts/2023-06-06-seci-knowledge-creation/index.html#socialisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Socialisation",
+    "text": "Socialisation\nSocialisation involves the transmission of tacit knowledge between individuals through shared experiences, such as an apprenticeship or immersion in a foreign culture. Essentially, it is the process of learning by observation, imitation, and practice, thus creating the raw material for the production of new knowledge."
+  },
+  {
+    "objectID": "posts/2023-06-06-seci-knowledge-creation/index.html#externalisation",
+    "href": "posts/2023-06-06-seci-knowledge-creation/index.html#externalisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Externalisation",
+    "text": "Externalisation\nExternalisation is the subsequent step, which involves converting tacit knowledge into explicit forms. Knowledge is articulated, crystallised, and thereby made shareable through various means like metaphors, analogies, concepts, or documents. This step paves the way for the creation of new, explicit knowledge that can be utilised by others."
+  },
+  {
+    "objectID": "posts/2023-06-06-seci-knowledge-creation/index.html#combination",
+    "href": "posts/2023-06-06-seci-knowledge-creation/index.html#combination",
+    "title": "The SECI model & knowledge creation",
+    "section": "Combination",
+    "text": "Combination\nCombination concerns itself with the systematisation and integration of explicit knowledge. Various types of explicit knowledge - data, report insights, document details - are collated, often assisted by computerised networks or databases. This process can involve categorising or reclassifying explicit knowledge into new clusters, which are then shared within the organisation, enhancing collective understanding and knowledge."
+  },
+  {
+    "objectID": "posts/2023-06-06-seci-knowledge-creation/index.html#internalisation",
+    "href": "posts/2023-06-06-seci-knowledge-creation/index.html#internalisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Internalisation",
+    "text": "Internalisation\nLastly, internalisation is the process by which explicit knowledge is absorbed and embodied by individuals, reverting back into tacit knowledge. This often occurs through ‘learning-by-doing’, or when individuals reflect on and practice newly acquired knowledge. Internalisation cultivates an individual’s proficiency and capacity for innovation. The internalised tacit knowledge, once shared, contributes to the organisational knowledge pool. As individuals connect, recognise patterns, and synthesise fields, ideas, and concepts, a new cycle of the SECI model begins, fostering continuous knowledge creation and learning.\n\nKnowledge propels us forward, obsoleting itself as it transforms our understanding of the world around us. The SECI model provides a stable framework for orienting ourselves, encouraging continuous learning and innovation while accounting for change and disruption. Navigating the uncertainties of our world, the continuous conversion and circulation of knowledge - from tacit to explicit, individual to collective, and back again - empowers us to adapt, grow, and innovate. It also forces us to come to acknowledge the multifaceted process that is learning. The purpose of this post and those that follow is to serve as an example of this knowledge creation process, opening the floor for further contemplation, critique, and collaboration, aiming to cultivate learning, share understanding, and maybe even create something new"
+  },
+  {
+    "objectID": "Posts/2023-06-06-seci-knowledge-creation/index.html",
+    "href": "Posts/2023-06-06-seci-knowledge-creation/index.html",
+    "title": "The SECI model & knowledge creation",
+    "section": "",
+    "text": "Knowledge, in all its forms, is fundamental to our understanding of the world around us, and is key to navigating the uncertainties of life. But knowledge, like the world it is supposed to reflect, is not a static entity. As Peter Drucker puts it, “Knowledge is different from all other resources. It makes itself constantly obsolete, so that today’s advanced knowledge is tomorrow’s ignorance. And the knowledge that matters is subject to rapid and abrupt shifts.” As knowledge changes so must we, a fact which underscores the necessity of continuous learning and innovation."
+  },
+  {
+    "objectID": "Posts/2023-06-06-seci-knowledge-creation/index.html#socialisation",
+    "href": "Posts/2023-06-06-seci-knowledge-creation/index.html#socialisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Socialisation",
+    "text": "Socialisation\nSocialisation involves the transmission of tacit knowledge between individuals through shared experiences, such as an apprenticeship or immersion in a foreign culture. Essentially, it is the process of learning by observation, imitation, and practice, thus creating the raw material for the production of new knowledge."
+  },
+  {
+    "objectID": "Posts/2023-06-06-seci-knowledge-creation/index.html#externalisation",
+    "href": "Posts/2023-06-06-seci-knowledge-creation/index.html#externalisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Externalisation",
+    "text": "Externalisation\nExternalisation is the subsequent step, which involves converting tacit knowledge into explicit forms. Knowledge is articulated, crystallised, and thereby made shareable through various means like metaphors, analogies, concepts, or documents. This step paves the way for the creation of new, explicit knowledge that can be utilised by others."
+  },
+  {
+    "objectID": "Posts/2023-06-06-seci-knowledge-creation/index.html#combination",
+    "href": "Posts/2023-06-06-seci-knowledge-creation/index.html#combination",
+    "title": "The SECI model & knowledge creation",
+    "section": "Combination",
+    "text": "Combination\nCombination concerns itself with the systematisation and integration of explicit knowledge. Various types of explicit knowledge - data, report insights, document details - are collated, often assisted by computerised networks or databases. This process can involve categorising or reclassifying explicit knowledge into new clusters, which are then shared within the organisation, enhancing collective understanding and knowledge."
+  },
+  {
+    "objectID": "Posts/2023-06-06-seci-knowledge-creation/index.html#internalisation",
+    "href": "Posts/2023-06-06-seci-knowledge-creation/index.html#internalisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Internalisation",
+    "text": "Internalisation\nLastly, internalisation is the process by which explicit knowledge is absorbed and embodied by individuals, reverting back into tacit knowledge. This often occurs through ‘learning-by-doing’, or when individuals reflect on and practice newly acquired knowledge. Internalisation cultivates an individual’s proficiency and capacity for innovation. The internalised tacit knowledge, once shared, contributes to the organisational knowledge pool. As individuals connect, recognise patterns, and synthesise fields, ideas, and concepts, a new cycle of the SECI model begins, fostering continuous knowledge creation and learning.\n\nKnowledge propels us forward, obsoleting itself as it transforms our understanding of the world around us. The SECI model provides a stable framework for orienting ourselves, encouraging continuous learning and innovation while accounting for change and disruption. Navigating the uncertainties of our world, the continuous conversion and circulation of knowledge - from tacit to explicit, individual to collective, and back again - empowers us to adapt, grow, and innovate. It also forces us to come to acknowledge the multifaceted process that is learning. The purpose of this post and those that follow is to serve as an example of this knowledge creation process, opening the floor for further contemplation, critique, and collaboration, aiming to cultivate learning, share understanding, and maybe even create something new"
+  }
+]

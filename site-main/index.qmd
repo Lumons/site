@@ -1,0 +1,8 @@
+---
+format: html
+editor: visual
+---
+
+# About
+
+Learning, consulting, sharing, exploring. Work in progress.
