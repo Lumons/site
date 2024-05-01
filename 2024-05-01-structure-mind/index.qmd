@@ -1,0 +1,41 @@
+---
+title: "On structuring a mind"
+description: |
+  "Getting my thoughts in order."
+date: 2024-05-01
+format: html
+categories: [Product development, Artficial Intelligence]
+image: considering_the_question_how_do_we_structure_a_mind_do_b8136847-57de-4742-83f2-14f36e9a9bf5.png
+editor: visual
+---
+
+I've recently started a new project: creating an AI-enabled journaling tool. It's an opportunity to develop my coding skills but also serves as a playground to experiment with large language models (LLMs). It's the kind of project that motivates me to stay updated on new developments in the field and improve my expertise in Natural Language Processing (NLP).
+
+**Why Start This Project?**
+
+The tool began as a way to manage my learning and project management skills. I constantly find myself balancing the desire to add new features with the need to prioritize and implement them effectively. Moreover, the project is inherently self-reflective. The continuous cycle of trying new things, identifying mistakes, and refining approaches provides a valuable insight into both self-guided learning and product development.
+
+**Evolving from Logging to Analyzing**
+
+Initially, the tool was designed to facilitate simple logging of daily entries. However, I quickly realized the value in focusing on processing and analysis. Despite numerous previous attempts at journaling—evidenced by piles of partially filled notebooks—the task always felt tedious. To overcome this, my first version allowed for quick "brain dumps," which were then summarized by an active LLM, providing instant reflections. This change highlighted two immediate issues:
+
+1. The LLM's summaries weren't always accurate.
+2. Having structured debriefs significantly improved my consistency in journaling.
+
+In response to these observations, I shifted my focus to enhancing user interaction and accessibility to insights. Implementing voice recording and transcription, despite its susceptibility to errors, made the tool more intuitive and engaging.
+
+**Technical Advancements**
+
+As my understanding of what I wanted developed, so did the technology. My initial foray into 'assisted memory retrieval' started with a simple keyword search that pulled up filenames of previous entries. A simple feature, but an introduction to indexing more generally. This addition meant that I could search for topics and then input the files which turned up into an LLM. This was a precursor to more sophisticated features like summarization by an LLM, using a method known as Retrieval Augmented Generation (RAG). This process involves using additional information to refine the outputs from an LLM based on past entries. 
+
+My first RAG setup was straightforward but failed due to an overly short context window. Although it was a setback, it paved the way for more advanced techniques, such as document parsing, embedding, and ranking.
+
+**Reflections and Next Steps**
+
+This project has been a rewarding learning experience thus far, forcing me to continue pushing the boundaries of what I can achieve with AI and coding. Each step, from initial logging to complex data retrieval, has not only been about building a tool but also about prioritisation and adaptation. While it can be challenging, and finding the time it requires not always straight forward, the experience is quite fulfilling. 
+
+**Resources:**
+- [A place to start for document processing and parsing](https://medium.com/@bavalpreetsinghh/llamaindex-chunking-strategies-for-large-language-models-part-1-ded1218cfd30)
+- [Github repo](https://github.com/Lumons/cognitive_interface)
+- [LMstudio](https://lmstudio.ai/)(my preferred local inference provider) 
+
