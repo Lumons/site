@@ -7,5 +7,26 @@
   },
   "placeholder.qmd": {
     "placeholder.html": "7a7ad517"
+  },
+  "Posts/2024-05-22-cultivating-habits-ai/index.qmd": {
+    "index.html": "b5a9c895"
+  },
+  "Posts/2023-06-06-seci-knowledge-creation/index.qmd": {
+    "index.html": "188a3ce3"
+  },
+  "site-main/Posts/2023-06-06-seci-knowledge-creation/index.qmd": {
+    "index.html": "c22ed6a3"
+  },
+  "site-main/index.qmd": {
+    "index.html": "b39853b9"
+  },
+  "site-main/posts.qmd": {
+    "posts.html": "0ec4f8b3"
+  },
+  "site-main/about.qmd": {
+    "about.html": "d2d6bd01"
+  },
+  "posts.qmd": {
+    "posts.html": "7e00705a"
   }
 }

@@ -1,8 +1,16 @@
 [
   {
+    "listing": "/site-main/posts.html",
+    "items": [
+      "/site-main/Posts/2023-06-06-seci-knowledge-creation/index.html"
+    ]
+  },
+  {
     "listing": "/posts.html",
     "items": [
-      "/Posts/2023-06-06-seci-knowledge-creation/index.html"
+      "/Posts/2024-05-22-cultivating-habits-ai/index.html",
+      "/Posts/2023-06-06-seci-knowledge-creation/index.html",
+      "/site-main/Posts/2023-06-06-seci-knowledge-creation/index.html"
     ]
   }
 ]
