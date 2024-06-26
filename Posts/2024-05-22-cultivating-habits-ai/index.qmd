@@ -1,0 +1,19 @@
+---
+title: "Cultivating Journalling Habits with AI"
+description: Learning by doing it the hard way
+date: 2024-05-22
+format: html
+categories: [Large Language Models, Knowledge management]
+image: Sometimes_understanding_what_we_truly_need_comes_from__70737b8d-1eb7-4d74-9ebc-939026b92b12.png
+editor: visual
+---
+
+Journalling has never been a consistent habit for me. Despite starting numerous times with a new notebook and the best of intentions, my efforts tended to quickly devolve into scribbled reminders and half-hearted notes. Over time, I'd inevitably abandon the effort, only to pick it up again months later. This cycle of inconsistent documentation often felt artificial—writing felt meaningful when there was something significant to note, less so when it merely served as a reminder of daily routines. 
+
+Like so many others, I've recently fallen down the rabbit hole of Large Language Models (LLMs)—statistical models that combine contemporary machine learning with vast amounts of data to mimic and understand human language. The advent of LLMs however, presented an opportunity to create a slightly stickier solution. Rather than focusing on the specific outputs of these models, I found the concept of a conversational debrief with an AI to be a more interactive and engaging way to journal daily events. 
+
+To leverage this, I built a graphical user interface (GUI) that interfaced with a local LLM, enabling me to have daily debriefs in text or audio through a back-and-forth conversation. This project provided an excuse to work on my Python skills, while also introducing me to more complex concepts like retrieval-augmented generation (RAG). However, the challenge of maintaining and updating a local AI assistant soon became apparent—especially as many features I sought were readily available through existing platforms. 
+
+This realization prompted a shift in my approach. Instead of engineering a specific way of interacting with the LLM, I needed to embrace flexibility in how I recorded and kept notes—be it a voice note or a quick text entry. I learned that the consistency of documentation wasn't bound by the interface I used but by how regularly I could capture, record, and organize my thoughts using the tools at my disposal; a process which itself made the value of consistency harder to ignore. 
+
+This new strategy has proven quite fruitful. It allows me to write notes across various modalities and devices while focusing more on utilizing LLMs to search over and analyze this content. Previously it wasn't clear who I was writing for or why. Now I find myself motivated by the mere fact that the data exists, and provides an opportunity for me to learn and analyse later. The journey taught me that sometimes, understanding what we truly need comes from trying the hard way first.
