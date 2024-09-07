@@ -8,10 +8,9 @@ image: "On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474
 editor: visual
 ---
 
-
 ![Midjourney's perspective](On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png)
 
-Link to blogpost - 
+Link to blogpost -
 
 The world of psychometric assessment—and measurement in general—is focused on demonstrating the validity of its measures. We ask, "Does this tool measure what it claims to measure?", "What do measurements on one construct imply about another?", and "How can this information be used to infer future behaviours?" If we take a more behavioural science approach, an additional layer might be, "What does this tell us about the most effective way to influence future behaviours?" The key concern here is evidence—observations that can support these claims. Think of them as theoretical tent pegs: "People who did this were also more likely to do that," and so on.
 
@@ -27,4 +26,4 @@ Next, we move to **substantive evidence**, which is about practical outcomes. Wh
 
 So, where do embeddings come into all of this? So far, everything described involves analyzing response patterns, but has little to do with the actual meanings of the words in the items themselves. Traditional methods don’t guarantee that respondents interpret items the same way—or even pay attention consistently.
 
-Psychometric assessments often infer constructs from co-occurring patterns in responses, identifying shared tendencies and defining constructs based on these patterns. However, this can sometimes miss the nuances of meaning behind the words. This is where *word embeddings* come into play. Word embeddings provide an additional source of information that we can use to make theoretical claims, a process I'll leave for a later entry. 
+Psychometric assessments often infer constructs from co-occurring patterns in responses, identifying shared tendencies and defining constructs based on these patterns. However, this can sometimes miss the nuances of meaning behind the words. This is where *word embeddings* come into play. Word embeddings provide an additional source of information that we can use to make theoretical claims, a process I'll leave for a later entry.

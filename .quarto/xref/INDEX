@@ -28,5 +28,44 @@
   },
   "posts.qmd": {
     "posts.html": "7e00705a"
+  },
+  "Posts/06-09-24-embedded-vectors-linguistic-objects/index.qmd": {
+    "index.html": "de4e37da"
+  },
+  "Posts/06-09-24-measuring-meaning/index.qmd": {
+    "index.html": "6b76d4c5"
+  },
+  "Posts/06-09-24-beyond-responding/index.qmd": {
+    "index.html": "25cc5da2"
+  },
+  "Posts/07-09-24-embedded-vectors-linguistic-objects/index.qmd": {
+    "index.html": "7bd3da2c"
+  },
+  "site/Posts/2023-06-06-seci-knowledge-creation/index.qmd": {
+    "index.html": "55d75cb1"
+  },
+  "site/Posts/2024-05-22-cultivating-habits-ai/index.qmd": {
+    "index.html": "a06c94a8"
+  },
+  "site/index.qmd": {
+    "index.html": "13ce71ef"
+  },
+  "site/site-main/Posts/2023-06-06-seci-knowledge-creation/index.qmd": {
+    "index.html": "80801783"
+  },
+  "site/site-main/index.qmd": {
+    "index.html": "271ccd37"
+  },
+  "site/site-main/posts.qmd": {
+    "posts.html": "04ac8cc7"
+  },
+  "site/site-main/about.qmd": {
+    "about.html": "7a9f6831"
+  },
+  "site/posts.qmd": {
+    "posts.html": "c3fe4c78"
+  },
+  "site/about.qmd": {
+    "about.html": "ebb96459"
   }
 }

@@ -8,9 +8,26 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/Posts/07-09-24-embedded-vectors-linguistic-objects/index.html",
+      "/Posts/06-09-24-measuring-meaning/index.html",
+      "/Posts/06-09-24-beyond-responding/index.html",
       "/Posts/2024-05-22-cultivating-habits-ai/index.html",
       "/Posts/2023-06-06-seci-knowledge-creation/index.html",
-      "/site-main/Posts/2023-06-06-seci-knowledge-creation/index.html"
+      "/site/site-main/Posts/2023-06-06-seci-knowledge-creation/index.html"
+    ]
+  },
+  {
+    "listing": "/site/posts.html",
+    "items": [
+      "/site/Posts/2024-05-22-cultivating-habits-ai/index.html",
+      "/site/Posts/2023-06-06-seci-knowledge-creation/index.html",
+      "/site/site-main/Posts/2023-06-06-seci-knowledge-creation/index.html"
+    ]
+  },
+  {
+    "listing": "/site/site-main/posts.html",
+    "items": [
+      "/site/site-main/Posts/2023-06-06-seci-knowledge-creation/index.html"
     ]
   }
 ]
