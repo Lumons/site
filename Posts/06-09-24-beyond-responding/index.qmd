@@ -1,0 +1,30 @@
+---
+title: "Beyond responding (2/3)"
+description: "Using behaviours as meaning" 
+date: 2024-09-06
+format: html
+categories: [Psychometric validation]
+image: "On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png"
+editor: visual
+---
+
+
+![Midjourney's perspective](On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png)
+
+Link to blogpost - 
+
+The world of psychometric assessment—and measurement in general—is focused on demonstrating the validity of its measures. We ask, "Does this tool measure what it claims to measure?", "What do measurements on one construct imply about another?", and "How can this information be used to infer future behaviours?" If we take a more behavioural science approach, an additional layer might be, "What does this tell us about the most effective way to influence future behaviours?" The key concern here is evidence—observations that can support these claims. Think of them as theoretical tent pegs: "People who did this were also more likely to do that," and so on.
+
+# Evidenced claims
+
+When we seek evidence for the claim that certain items in a test measure the same construct, we turn to various statistical tools. One of the first is *reliability*. Cronbach's Alpha assesses internal consistency, or how well the items in a test relate to each other. However, Cronbach’s Alpha assumes all items contribute equally to the construct, which is often not the case. McDonald’s Omega improves on this by accounting for items that contribute more strongly than others, giving a more refined view of how variation in responses reflects the underlying factors.
+
+Once we’ve established item relatedness and consistency, we can bolster the argument with techniques like dimension reduction and latent variable modeling. These techniques allow us to represent the construct scores directly and explore how they relate to one another.
+
+Next, we move to **substantive evidence**, which is about practical outcomes. What do scores on these constructs predict, and how do they relate to other constructs or outcomes? This is where things can get tricky, especially if longitudinal data is sparse. However, concurrent data (scales administered at the same time) can help us observe relationships between constructs and strengthen validation efforts.
+
+# What about the Word Embeddings?
+
+So, where do embeddings come into all of this? So far, everything described involves analyzing response patterns, but has little to do with the actual meanings of the words in the items themselves. Traditional methods don’t guarantee that respondents interpret items the same way—or even pay attention consistently.
+
+Psychometric assessments often infer constructs from co-occurring patterns in responses, identifying shared tendencies and defining constructs based on these patterns. However, this can sometimes miss the nuances of meaning behind the words. This is where *word embeddings* come into play. Word embeddings provide an additional source of information that we can use to make theoretical claims, a process I'll leave for a later entry. 

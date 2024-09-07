@@ -1,0 +1,40 @@
+---
+title: "Embedded vectors as linguistic objects (3/3)"
+description: Finding new structures of meaning
+date: 2024-09-07
+format: html
+categories: [Semantic quantification, Semantic and Conceptual clustering]
+image: embedded_vectors_as_linguistic_objects_6a7f2c1e-e961-4c5a-9b2d-85a0ca74bbc5.png
+editor: visual
+---
+
+![Midjourney's perspective](embedded_vectors_as_linguistic_objects_6a7f2c1e-e961-4c5a-9b2d-85a0ca74bbc5.png)
+
+Recently, researchers have begun to explore the possibility that values derived from word embeddings may carry meaning we can apply to the words themselves. 
+
+# Word embeddings and psychometrics 
+
+For example, word embeddings can be calculated alongside other metrics during the psychometric validation process (link to previous blogpost), providing information about the semantic similarity of items corresponds to traditional psychometric statistics. Items whose embeddings have a higher cosine similarity also appear to be semantically similar and appear to elicit similar response patterns [^1][^2][^3]. All this is to provide a justification for the relatedness of similarity metrics to repsonse data, but it may well be worth considering whether the information in the statistical object that is an embeddings model may well take some kind of primacy over candidate response data[^4]. At the very least, it tells us something different to participant response data. At best, well, new dimensions to explore. The second cognitive revolution if you're bold. 
+
+## Cosine similarity
+
+Anyway, the metric we're talking about, cosine similarity, is a metric used to quantify how similar two vectors are by calculating the cosine of the angle between them. In the context of word embeddings if two items have a high cosine similarity, it means they are closer to each other in semantic space. This is a useful place for us to begin thinking about things like cluster analysis and dimension reduction (is there a geometry of latent space?), but we will leave actual exploration for another time. 
+
+# Embeddings as a New Frontier for the Science of Meaning
+
+This new approach represents an exciting frontier in assessment development and measurement. While traditional methods focus on analyzing responses, embeddings allow us to look deeper into the language of the items themselves. By combining statistical evidence with linguistic analysis, we’re better equipped to refine scales, ensure validity, and understand the constructs. 
+
+We can also think about the idea of embeddings as a new way of representing textual information. We compress information by looking at patterns of words, creating a space big enough for them, and put them in piles. Embeddings give us coordinates to compare linguistic meaning and behavioural responses side by side.
+
+Ultimately that brings us back to the first post in the present series. This new form of representation of textual information as embeddings captures some of the nuances and subtleties of language, and does so in a way that is quantitative and measured. By representing words as numbers, we're able to perform statistical operations on the things that exist within the structure of our language. And, in doing this, we have the opportunity to model the relationships between thoughts, concepts, categories, and cognitions. Not only as a form of supplementary evidence, but as a primary form of semantic relatedness.   
+
+Of course, this opens the door to new applications, like using embeddings to **generate new psychometric items** or even expanding the range of our measurement processes, embracing higher dimensional datasets and the complexity involved in such analysese. It also allows us to identify items with **linguistic bias**, and to ask new questions: If two items are statistically related but linguistically distant, what does that say about the clarity of their meaning? 
+
+Beyond this, by looking at the the relationship between words and meaning from a different perspective, we're able to develop a novel appreciation for the way in which thoughts and ideas fit together, and perhaps a more detailed view of our culture, philosophy, and language. 
+
+
+[^1]: Hernandez and Nie (2022) investigated the relationship between item embeddings and item-level intercorrelations. In their study, they trained a model to take pairs of items as input and predict the empirical correlation between them. This suggested that items with high semantic similarity also showed similar response patterns, opening new avenues for understanding how language influences response behavior.
+[^2]: Relatedly Wulff and Mata (2023) follow up studies revealed that the the average cosine similarity between item embeddings could predict internal consistency reliability—a key psychometric metric, and items on different scales had lower similarities than items on the same scales
+[^3]: But we must of course remember that cosine similarity is not semantive similarity (add reference)
+[^4]: And the gold rush begins, enterprising knowledge workers can now explore this new frontier of ontological boundaries. 
+
