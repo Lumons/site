@@ -22,11 +22,11 @@ It’s not enough to simply count words or look at combinations of words. The qu
 
 In this process, words are converted into **numerical representations** called **embeddings**, which capture their relationships to other words across multiple dimensions. These embeddings are adjusted based on the attention mechanism, which weighs how much focus each word should receive relative to others. Importantly, I say "words," but in practice, the model operates on **tokens**—units of analysis that may loosely correspond to words but can also include spaces, parts of words, punctuation, or combinations of these. Over time, as the model grows in size, it learns to assign precise **coordinates** (or embeddings) to each token, mapping them in a way that reflects their contextual importance and meaning.
 
-In practice, the use of word embeddings offers a semantically rich quantification of language[^2]. The extent to which this is the case is demonstrated in the ability of LLMs to capture nuances like synonyms, antonyms, or contextual similarities.
+In practice, the use of word embeddings offers a semantically rich quantification of language. The extent to which this is the case is demonstrated in the ability of LLMs to capture nuances like synonyms, antonyms, or contextual similarities.
 
 In essence, by converting language into embeddings, we're compressing its meaning into a lower-dimensional space. While this might feel like 'flattening' language, there's an optimistic view: embeddings translate one form of language into another. This compression doesn’t strip away meaning but instead encodes it in ways that align with our linguistic and cognitive frameworks, allowing models to capture rich semantic relationships and potentially offer us new ones. 
 
 
-[^1]:You may also have heard of N-grams due to their association with one [Robert L. Mercer](https://scholar.google.com/citations?user=9VCF3hQAAAAJ&hl=en), famous for associations with Cambridge Analytica, Brexit campaign, Breitbart News, and for his stint at elite Hedge Fund Renaissance Technologies. Who says NLP doesn't pay?
-
 [^1]: "Attention Is All You Need" - [Link](https://arxiv.org/abs/1706.03762)
+
+[^2]: You may also have heard of N-grams due to their association with one [Robert L. Mercer](https://scholar.google.com/citations?user=9VCF3hQAAAAJ&hl=en), famous for associations with Cambridge Analytica, Brexit campaign, Breitbart News, and for his stint at elite Hedge Fund Renaissance Technologies. Who says NLP doesn't pay?
