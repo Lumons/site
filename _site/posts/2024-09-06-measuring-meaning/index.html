@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-09-09">
+<meta name="description" content="Turning words into numbers">
 
-<title>Lumos Insight</title>
+<title>Lumos Insight - Measuring Meaning (pt.&nbsp;1/3)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/logo.PNG" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo.PNG" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar docked">
@@ -81,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Measuring Meaning (pt.&nbsp;1/3)</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -92,21 +94,21 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.PNG" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/logo.PNG" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Posts</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link">
+  <a href="../../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
@@ -120,24 +122,74 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
+  <li><a href="#n-grams" id="toc-n-grams" class="nav-link active" data-scroll-target="#n-grams">N-grams</a></li>
+  <li><a href="#transformers" id="toc-transformers" class="nav-link" data-scroll-target="#transformers">Transformers</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Measuring Meaning (pt.&nbsp;1/3)</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Semantic quantification</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Turning words into numbers
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
 
-<section id="about" class="level1">
-<h1>About</h1>
-<p>Learning, consulting, sharing, exploring. Work in progress.</p>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 9, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>One of the key innovations that has contributed to the development of LLMs is the ability to convert words into embedded vectors, or vectors of word embeddings. This is because analysing text (formatted as strings) is challenging. After simply counting the relative frequencies of words, what else is there to quantify?</p>
+<section id="n-grams" class="level1">
+<h1>N-grams</h1>
+<p>N-grams offered a way to capture some local context by focusing on combinations of words, but they struggle with longer-range dependencies. Simply increasing the size of your n-grams to capture more context leads to overly complex, dense representations that are inefficient and still fail to fully capture meaning over longer distances<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+</section>
+<section id="transformers" class="level1">
+<h1>Transformers</h1>
+<p>It’s not enough to simply count words or look at combinations of words. The question remains: where do you draw the boundaries between letters, words, sentences, and contexts? The answer comes in the form of the <strong>Transformer architecture</strong>[^2], which preserves context and relevance by modeling the <strong>relative importance</strong> of different words through <strong>self-attention</strong>.</p>
+<p>In this process, words are converted into <strong>numerical representations</strong> called <strong>embeddings</strong>, which capture their relationships to other words across multiple dimensions. These embeddings are adjusted based on the attention mechanism, which weighs how much focus each word should receive relative to others. Importantly, I say “words,” but in practice, the model operates on <strong>tokens</strong>—units of analysis that may loosely correspond to words but can also include spaces, parts of words, punctuation, or combinations of these. Over time, as the model grows in size, it learns to assign precise <strong>coordinates</strong> (or embeddings) to each token, mapping them in a way that reflects their contextual importance and meaning.</p>
+<p>In practice, the use of word embeddings offers a semantically rich quantification of language[^2]. The extent to which this is the case is demonstrated in the ability of LLMs to capture nuances like synonyms, antonyms, or contextual similarities.</p>
+<p>In essence, by converting language into embeddings, we’re compressing its meaning into a lower-dimensional space. While this might feel like ‘flattening’ language, there’s an optimistic view: embeddings translate one form of language into another. This compression doesn’t strip away meaning but instead encodes it in ways that align with our linguistic and cognitive frameworks, allowing models to capture rich semantic relationships and potentially offer us new ones.</p>
 
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>“Attention Is All You Need” - <a href="https://arxiv.org/abs/1706.03762">Link</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

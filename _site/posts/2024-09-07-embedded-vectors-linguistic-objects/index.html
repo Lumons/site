@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-09-09">
+<meta name="description" content="Finding new structures of meaning">
 
-<title>Lumos Insight</title>
+<title>Lumos Insight - Embedded vectors as linguistic objects (pt.&nbsp;3/3)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/logo.PNG" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo.PNG" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar docked">
@@ -81,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Embedded vectors as linguistic objects (pt.&nbsp;3/3)</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -92,21 +94,21 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.PNG" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/logo.PNG" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Posts</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link">
+  <a href="../../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
@@ -120,24 +122,88 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
+  <li><a href="#word-embeddings-and-psychometrics" id="toc-word-embeddings-and-psychometrics" class="nav-link active" data-scroll-target="#word-embeddings-and-psychometrics">Word embeddings and psychometrics</a>
+  <ul class="collapse">
+  <li><a href="#cosine-similarity" id="toc-cosine-similarity" class="nav-link" data-scroll-target="#cosine-similarity">Cosine similarity</a></li>
+  </ul></li>
+  <li><a href="#embeddings-as-a-new-frontier-for-the-science-of-meaning" id="toc-embeddings-as-a-new-frontier-for-the-science-of-meaning" class="nav-link" data-scroll-target="#embeddings-as-a-new-frontier-for-the-science-of-meaning">Embeddings as a New Frontier for the Science of Meaning</a></li>
+  <li><a href="#combining-responses-and-semantic-structures" id="toc-combining-responses-and-semantic-structures" class="nav-link" data-scroll-target="#combining-responses-and-semantic-structures">Combining responses and semantic structures</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Embedded vectors as linguistic objects (pt.&nbsp;3/3)</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Semantic quantification</div>
+    <div class="quarto-category">Semantic and Conceptual clustering</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Finding new structures of meaning
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
 
-<section id="about" class="level1">
-<h1>About</h1>
-<p>Learning, consulting, sharing, exploring. Work in progress.</p>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 9, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><img src="embedded_vectors_as_linguistic_objects_6a7f2c1e-e961-4c5a-9b2d-85a0ca74bbc5.png" class="img-fluid"></p>
+<p>Recently, researchers have begun to explore the possibility that values derived from word embeddings may carry meaning we can apply to the words themselves.</p>
+<section id="word-embeddings-and-psychometrics" class="level1">
+<h1>Word embeddings and psychometrics</h1>
+<p>We can calculate word embeddings along with other metrics during the psychometric validation process. This provides us with information about the semantic similarity of items, and how this similarity is itself related to traditional psychometric statitistics. For example items whose embeddings have a higher <em>cosine similarity</em>, appear to be semantically similar and also elicit similar responses <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. That is to say, the metric derived from statistical relationships between words themselves carries some information about the meaning of the words.</p>
+<p>We could simply think of this as a new form of evidence to be used in support of validity arguments, but it may well be worth considering whether the information in the statistical object that is an embeddings model may well take some kind of primacy over candidate response data. Rather than using human behaviour to shape our ontology, can we instead use semantic information? How about characterising it as both: - our responses to words, and - the relationships between words</p>
+<p>At the very least, it tells us something new, in addition to participant response data. At best, well, new dimensions to explore. The second cognitive revolution if you’re bold.</p>
+<section id="cosine-similarity" class="level2">
+<h2 class="anchored" data-anchor-id="cosine-similarity">Cosine similarity</h2>
+<p>Anyway, the metric we’re talking about, cosine similarity, is a metric used to quantify how similar two vectors are by calculating the cosine of the angle between them. In the context of word embeddings if two items have a high cosine similarity, it means they are closer to each other in semantic space. We can also use this data to perform clustering analyses and dimension reduction, in an attempt to tease out the relationship between category and cluster.</p>
+</section>
+</section>
+<section id="embeddings-as-a-new-frontier-for-the-science-of-meaning" class="level1">
+<h1>Embeddings as a New Frontier for the Science of Meaning</h1>
+<p>This new approach, which combines novel ways of representing linguistic data, may represent the new frontier in assessment development and measurement. While traditional methods focus on analyzing responses, embeddings allow us to look deeper into the language of the items themselves. By combining statistical evidence with linguistic analysis, we’re better equipped to refine scales, ensure validity, and understand the constructs.</p>
+<p>From an assessment perspective, one of the only ways to address the impact of uncertainties around AI and test-taking is to make the assessment process more open, multidimensional. Where we once constrained the set of candidate options for the sake of brevity and construct specificity, perhaps we must now embrace a ‘broader’ assessment space. One conducted with the help of AI perhaps?</p>
+<p>Of course, this opens the door to new applications, like using embeddings to <strong>generate new psychometric items</strong> or even expanding the range of our measurement processes, embracing higher dimensional datasets and the complexity involved in such analysese. It also allows us to identify items with <strong>linguistic bias</strong>, and to ask new questions: If two items are statistically related but linguistically distant, what does that say about the clarity of their meaning?</p>
+</section>
+<section id="combining-responses-and-semantic-structures" class="level1">
+<h1>Combining responses and semantic structures</h1>
+<p>On the one hand we have structural, statistical data about how people respond to questions, on the other we have multidimensional statistical objects that retain semantic quantities of the questions. How those interact is to be determined.</p>
+<p>Ultimately that brings us back to the beginning. Embeddings capture some degree of the nuances and subtelties of language, they take semantic information and quantify it, measure it. By representing words as numbers, we’re then able to perform statistical operations on the things that exist within the structure of our language. And, in doing this, we have the opportunity to model hitherto unknown relationships between thoughts, concepts, categories, and cognitions. Not only as a form of supplementary evidence, but as a primary form of semantic relatedness.</p>
+<p>Beyond this, by looking at the the relationship between words and meaning from a different perspective, we might be able to develop a novel appreciation for the way in which thoughts and ideas fit together, and perhaps a more detailed view of our culture, philosophy, and language.</p>
 
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/peps.12543">Hernandez and Nie (2022)</a> investigated the relationship between item embeddings and item-level intercorrelations. In their study, they trained a model to take pairs of items as input and predict the empirical correlation between them. This suggested that items with high semantic similarity also showed similar response patterns, opening new avenues for understanding how language influences response behavior.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Relatedly <a href="https://osf.io/preprints/psyarxiv/9h7aw">Wulff and Mata (2023)</a> follow up studies revealed that the the average cosine similarity between item embeddings could predict internal consistency reliability—a key psychometric metric, and items on different scales had lower similarities than items on the same scales<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Also cosine similarity might not be similarity.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

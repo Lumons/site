@@ -1,7 +1,0 @@
----
-format: html
-editor: visual
-title: "About"
----
-
-About this site

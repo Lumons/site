@@ -1,0 +1,113 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "posts/2024-09-07-embedded-vectors-linguistic-objects/index.html",
+    "href": "posts/2024-09-07-embedded-vectors-linguistic-objects/index.html",
+    "title": "Embedded vectors as linguistic objects (pt. 3/3)",
+    "section": "",
+    "text": "Recently, researchers have begun to explore the possibility that values derived from word embeddings may carry meaning we can apply to the words themselves."
+  },
+  {
+    "objectID": "posts/2024-09-07-embedded-vectors-linguistic-objects/index.html#cosine-similarity",
+    "href": "posts/2024-09-07-embedded-vectors-linguistic-objects/index.html#cosine-similarity",
+    "title": "Embedded vectors as linguistic objects (pt. 3/3)",
+    "section": "Cosine similarity",
+    "text": "Cosine similarity\nAnyway, the metric we’re talking about, cosine similarity, is a metric used to quantify how similar two vectors are by calculating the cosine of the angle between them. In the context of word embeddings if two items have a high cosine similarity, it means they are closer to each other in semantic space. We can also use this data to perform clustering analyses and dimension reduction, in an attempt to tease out the relationship between category and cluster."
+  },
+  {
+    "objectID": "posts/2024-09-07-embedded-vectors-linguistic-objects/index.html#footnotes",
+    "href": "posts/2024-09-07-embedded-vectors-linguistic-objects/index.html#footnotes",
+    "title": "Embedded vectors as linguistic objects (pt. 3/3)",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nHernandez and Nie (2022) investigated the relationship between item embeddings and item-level intercorrelations. In their study, they trained a model to take pairs of items as input and predict the empirical correlation between them. This suggested that items with high semantic similarity also showed similar response patterns, opening new avenues for understanding how language influences response behavior.↩︎\nRelatedly Wulff and Mata (2023) follow up studies revealed that the the average cosine similarity between item embeddings could predict internal consistency reliability—a key psychometric metric, and items on different scales had lower similarities than items on the same scales↩︎\nAlso cosine similarity might not be similarity.↩︎"
+  },
+  {
+    "objectID": "posts/2024-09-06-measuring-meaning/index.html",
+    "href": "posts/2024-09-06-measuring-meaning/index.html",
+    "title": "Measuring Meaning (pt. 1/3)",
+    "section": "",
+    "text": "One of the key innovations that has contributed to the development of LLMs is the ability to convert words into embedded vectors, or vectors of word embeddings. This is because analysing text (formatted as strings) is challenging. After simply counting the relative frequencies of words, what else is there to quantify?"
+  },
+  {
+    "objectID": "posts/2024-09-06-measuring-meaning/index.html#footnotes",
+    "href": "posts/2024-09-06-measuring-meaning/index.html#footnotes",
+    "title": "Measuring Meaning (pt. 1/3)",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n“Attention Is All You Need” - Link↩︎"
+  },
+  {
+    "objectID": "posts/2023-06-06-seci-knowledge-creation/index.html",
+    "href": "posts/2023-06-06-seci-knowledge-creation/index.html",
+    "title": "The SECI model & knowledge creation",
+    "section": "",
+    "text": "Knowledge, in all its forms, is fundamental to our understanding of the world around us, and is key to navigating the uncertainties of life. But knowledge, like the world it is supposed to reflect, is not a static entity. As Peter Drucker puts it, “Knowledge is different from all other resources. It makes itself constantly obsolete, so that today’s advanced knowledge is tomorrow’s ignorance. And the knowledge that matters is subject to rapid and abrupt shifts.” As knowledge changes so must we, a fact which underscores the necessity of continuous learning and innovation."
+  },
+  {
+    "objectID": "posts/2023-06-06-seci-knowledge-creation/index.html#socialisation",
+    "href": "posts/2023-06-06-seci-knowledge-creation/index.html#socialisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Socialisation",
+    "text": "Socialisation\nSocialisation involves the transmission of tacit knowledge between individuals through shared experiences, such as an apprenticeship or immersion in a foreign culture. Essentially, it is the process of learning by observation, imitation, and practice, thus creating the raw material for the production of new knowledge."
+  },
+  {
+    "objectID": "posts/2023-06-06-seci-knowledge-creation/index.html#externalisation",
+    "href": "posts/2023-06-06-seci-knowledge-creation/index.html#externalisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Externalisation",
+    "text": "Externalisation\nExternalisation is the subsequent step, which involves converting tacit knowledge into explicit forms. Knowledge is articulated, crystallised, and thereby made shareable through various means like metaphors, analogies, concepts, or documents. This step paves the way for the creation of new, explicit knowledge that can be utilised by others."
+  },
+  {
+    "objectID": "posts/2023-06-06-seci-knowledge-creation/index.html#combination",
+    "href": "posts/2023-06-06-seci-knowledge-creation/index.html#combination",
+    "title": "The SECI model & knowledge creation",
+    "section": "Combination",
+    "text": "Combination\nCombination concerns itself with the systematisation and integration of explicit knowledge. Various types of explicit knowledge - data, report insights, document details - are collated, often assisted by computerised networks or databases. This process can involve categorising or reclassifying explicit knowledge into new clusters, which are then shared within the organisation, enhancing collective understanding and knowledge."
+  },
+  {
+    "objectID": "posts/2023-06-06-seci-knowledge-creation/index.html#internalisation",
+    "href": "posts/2023-06-06-seci-knowledge-creation/index.html#internalisation",
+    "title": "The SECI model & knowledge creation",
+    "section": "Internalisation",
+    "text": "Internalisation\nLastly, internalisation is the process by which explicit knowledge is absorbed and embodied by individuals, reverting back into tacit knowledge. This often occurs through ‘learning-by-doing’, or when individuals reflect on and practice newly acquired knowledge. Internalisation cultivates an individual’s proficiency and capacity for innovation. The internalised tacit knowledge, once shared, contributes to the organisational knowledge pool. As individuals connect, recognise patterns, and synthesise fields, ideas, and concepts, a new cycle of the SECI model begins, fostering continuous knowledge creation and learning.\n\nKnowledge propels us forward, obsoleting itself as it transforms our understanding of the world around us. The SECI model provides a stable framework for orienting ourselves, encouraging continuous learning and innovation while accounting for change and disruption. Navigating the uncertainties of our world, the continuous conversion and circulation of knowledge - from tacit to explicit, individual to collective, and back again - empowers us to adapt, grow, and innovate. It also forces us to come to acknowledge the multifaceted process that is learning. The purpose of this post and those that follow is to serve as an example of this knowledge creation process, opening the floor for further contemplation, critique, and collaboration, aiming to cultivate learning, share understanding, and maybe even create something new."
+  },
+  {
+    "objectID": "posts/2024-05-22-cultivating-habits-ai/index.html",
+    "href": "posts/2024-05-22-cultivating-habits-ai/index.html",
+    "title": "Cultivating Journalling Habits with AI",
+    "section": "",
+    "text": "Journalling has never been a consistent habit for me. Despite starting numerous times with a new notebook and the best of intentions, my efforts tended to quickly devolve into scribbled reminders and half-hearted notes. Over time, I’d inevitably abandon the effort, only to pick it up again months later. This cycle of inconsistent documentation often felt artificial—writing felt meaningful when there was something significant to note, less so when it merely served as a reminder of daily routines.\nLike so many others, I’ve recently fallen down the rabbit hole of Large Language Models (LLMs)—statistical models that combine contemporary machine learning with vast amounts of data to mimic and understand human language. The advent of LLMs however, presented an opportunity to create a slightly stickier solution. Rather than focusing on the specific outputs of these models, I found the concept of a conversational debrief with an AI to be a more interactive and engaging way to journal daily events.\nTo leverage this, I built a graphical user interface (GUI) that interfaced with a local LLM, enabling me to have daily debriefs in text or audio through a back-and-forth conversation. This project provided an excuse to work on my Python skills, while also introducing me to more complex concepts like retrieval-augmented generation (RAG). However, the challenge of maintaining and updating a local AI assistant soon became apparent—especially as many features I sought were readily available through existing platforms.\nThis realization prompted a shift in my approach. Instead of engineering a specific way of interacting with the LLM, I needed to embrace flexibility in how I recorded and kept notes—be it a voice note or a quick text entry. I learned that the consistency of documentation wasn’t bound by the interface I used but by how regularly I could capture, record, and organize my thoughts using the tools at my disposal; a process which itself made the value of consistency harder to ignore.\nThis new strategy has proven quite fruitful. It allows me to write notes across various modalities and devices while focusing more on utilizing LLMs to search over and analyze this content. Previously it wasn’t clear who I was writing for or why. Now I find myself motivated by the mere fact that the data exists, and provides an opportunity for me to learn and analyse later. The journey taught me that sometimes, understanding what we truly need comes from trying the hard way first."
+  },
+  {
+    "objectID": "posts/2024-09-06-beyond-responding/index.html",
+    "href": "posts/2024-09-06-beyond-responding/index.html",
+    "title": "Beyond responding (pt. 2/3)",
+    "section": "",
+    "text": "The field of psychometric assessment - if not measurement world in general - is focused on demonstrating the validity of measures. What is the evidence this value means what it represents? Do these numbers actually represent reality?\nIn psychometrics in particuar we ask, - “Does this tool measure what it claims to measure?”, - “What do measurements on one construct imply about another?”, and - “How can this information be used to infer future behaviours?”\nNote some people object[^1].\nThe key concern here is evidence—observations that can support these claims. Think of them as theoretical tent pegs: “People who did this were also more likely to do that” and so on.\n\nEvidenced claims\nWhen we seek evidence for the claim that certain items in a test measure the same construct, we turn to various statistical tools. One of the first is reliability. Cronbach’s Alpha assesses internal consistency, or how well the items in a test relate to each other. However, Cronbach’s Alpha assumes all items contribute equally to the construct, which is often not the case. McDonald’s Omega improves on this by accounting for items that contribute more strongly than others, giving a more refined view of how variation in responses reflects the underlying factors.\nOnce we’ve established item relatedness and consistency, we can bolster the argument with techniques like dimension reduction and latent variable modeling. These techniques allow us to represent the construct scores directly and explore how they relate to one another.\nNext, we move to substantive evidence, which is about practical outcomes. What do scores on these constructs predict, and how do they relate to other constructs or outcomes? This is where things can get tricky, especially if longitudinal data is sparse. However, concurrent data (scales administered at the same time) can help us observe relationships between constructs and strengthen validation efforts.\n\n\nWhat about the Word Embeddings?\nSo, where do embeddings come into all of this? So far everything I’ve described involves analyzing response patterns. People are responding to questions about themselves, and we look at the relationships between their responses. There are a bunch of assumptions there, such as: - how much do peoples’ interpretations of these constructs differ culturally? - how motivated are people to provide authentic and reflective responses? - how well do people really know themselves?\nSo psychometric assessments make inferences about psychological constructs from co-occurring patterns in responses, but what inferences can we make on the basis of word embeddings? At the very least, word embeddings give us a new avenue for investigating the relatedness of words. They may in fact offer more than that, with embedding derived measures potentially allowing us to infer quantities and qualities of similarity, and meaning.\n[1^] Sydney University professor  has a fair bit to say on the extent to which psychological constructs can be quantified in a mathematically relevant way"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About",
+    "section": "",
+    "text": "About\nLearning, consulting, sharing, exploring. Work in progress."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Posts",
+    "section": "",
+    "text": "Measuring Meaning (pt. 1/3)\n\n\n\n\n\n\nSemantic quantification\n\n\n\nTurning words into numbers\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nBeyond responding (pt. 2/3)\n\n\n\n\n\n\nPsychometric validation\n\n\n\nUsing behaviours as meaning\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nEmbedded vectors as linguistic objects (pt. 3/3)\n\n\n\n\n\n\nSemantic quantification\n\n\nSemantic and Conceptual clustering\n\n\n\nFinding new structures of meaning\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCultivating Journalling Habits with AI\n\n\n\n\n\n\nLarge Language Models\n\n\nKnowledge management\n\n\n\nLearning by doing it the hard way\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nThe SECI model & knowledge creation\n\n\n\n\n\n\nKnowledge\n\n\nLearning\n\n\n\nAs knowledge changes, so must we. \n\n\n\n\n\nJun 6, 2022\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Posts"
+    ]
+  }
+]
