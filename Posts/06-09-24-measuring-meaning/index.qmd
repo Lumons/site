@@ -1,14 +1,14 @@
 ---
-title: "Measuring Meaning (1/3)"
+title: "Measuring Meaning"
 description: Turning words into numbers
 date: 2024-09-06
 format: html
 categories: [Semantic quantification]
-image: In_essence_by_converting_language_into_embeddings_were_2dd21abf-b169-402c-b1bc-0472cbce47c9.png
+image: The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png
 editor: visual
 ---
 
-![](In_essence_by_converting_language_into_embeddings_were_2dd21abf-b169-402c-b1bc-0472cbce47c9.png){fig-align="center"}
+![](The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png){fig-align="center"}
 
 One of the key innovations that has contributed to the development of LLMs is the ability to convert words into embedded vectors, or vectors of word embeddings. This is because analysing text (formatted as strings) is challenging. After simply counting the relative frequencies of words, what else is there to quantify?
 

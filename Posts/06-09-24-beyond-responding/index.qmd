@@ -1,5 +1,5 @@
 ---
-title: "Beyond responding (2/3)"
+title: "Beyond responding"
 description: "Using behaviours as meaning" 
 date: 2024-09-06
 format: html
@@ -8,9 +8,7 @@ image: "On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474
 editor: visual
 ---
 
-![Midjourney's perspective](On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png)
-
-Link to blogpost -
+![](On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png)
 
 The world of psychometric assessment—and measurement in general—is focused on demonstrating the validity of its measures. We ask, "Does this tool measure what it claims to measure?", "What do measurements on one construct imply about another?", and "How can this information be used to infer future behaviours?" If we take a more behavioural science approach, an additional layer might be, "What does this tell us about the most effective way to influence future behaviours?" The key concern here is evidence—observations that can support these claims. Think of them as theoretical tent pegs: "People who did this were also more likely to do that," and so on.
 
