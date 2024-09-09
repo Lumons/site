@@ -67,5 +67,11 @@
   },
   "site/about.qmd": {
     "about.html": "ebb96459"
+  },
+  "posts/2023-06-06-seci-knowledge-creation/index.qmd": {
+    "index.html": "cb850068"
+  },
+  "posts/2024-09-06-measuring-meaning/index.qmd": {
+    "index.html": "0d08bc61"
   }
 }

@@ -175,9 +175,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="transformers" class="level1">
 <h1>Transformers</h1>
-<p>It’s not enough to simply count words or look at combinations of words. The question remains: where do you draw the boundaries between letters, words, sentences, and contexts? The answer comes in the form of the <strong>Transformer architecture</strong>[^2], which preserves context and relevance by modeling the <strong>relative importance</strong> of different words through <strong>self-attention</strong>.</p>
+<p>It’s not enough to simply count words or look at combinations of words. The question remains: where do you draw the boundaries between letters, words, sentences, and contexts? The answer comes in the form of the <strong>Transformer architecture</strong><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, which preserves context and relevance by modeling the <strong>relative importance</strong> of different words through <strong>self-attention</strong>.</p>
 <p>In this process, words are converted into <strong>numerical representations</strong> called <strong>embeddings</strong>, which capture their relationships to other words across multiple dimensions. These embeddings are adjusted based on the attention mechanism, which weighs how much focus each word should receive relative to others. Importantly, I say “words,” but in practice, the model operates on <strong>tokens</strong>—units of analysis that may loosely correspond to words but can also include spaces, parts of words, punctuation, or combinations of these. Over time, as the model grows in size, it learns to assign precise <strong>coordinates</strong> (or embeddings) to each token, mapping them in a way that reflects their contextual importance and meaning.</p>
-<p>In practice, the use of word embeddings offers a semantically rich quantification of language[^2]. The extent to which this is the case is demonstrated in the ability of LLMs to capture nuances like synonyms, antonyms, or contextual similarities.</p>
+<p>In practice, the use of word embeddings offers a semantically rich quantification of language. The extent to which this is the case is demonstrated in the ability of LLMs to capture nuances like synonyms, antonyms, or contextual similarities.</p>
 <p>In essence, by converting language into embeddings, we’re compressing its meaning into a lower-dimensional space. While this might feel like ‘flattening’ language, there’s an optimistic view: embeddings translate one form of language into another. This compression doesn’t strip away meaning but instead encodes it in ways that align with our linguistic and cognitive frameworks, allowing models to capture rich semantic relationships and potentially offer us new ones.</p>
 
 
@@ -188,6 +188,7 @@ ul.task-list li input[type="checkbox"] {
 
 <ol>
 <li id="fn1"><p>“Attention Is All You Need” - <a href="https://arxiv.org/abs/1706.03762">Link</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>You may also have heard of N-grams due to their association with one <a href="https://scholar.google.com/citations?user=9VCF3hQAAAAJ&amp;hl=en">Robert L. Mercer</a>, famous for associations with Cambridge Analytica, Brexit campaign, Breitbart News, and for his stint at elite Hedge Fund Renaissance Technologies. Who says NLP doesn’t pay?<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

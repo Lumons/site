@@ -2,7 +2,7 @@
 title: "The SECI model & knowledge creation"
 description: |
   As knowledge changes, so must we.
-date: 2022-06-06
+date: 2023-06-06
 format: html
 categories: [Knowledge, Learning]
 image: Navigating_the_uncertainties_of_our_world_the_continuous_c_5382e1c4-45b3-452a-ab2c-aa3739e5aa51.png
