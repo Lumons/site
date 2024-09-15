@@ -122,7 +122,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#n-grams" id="toc-n-grams" class="nav-link active" data-scroll-target="#n-grams">N-grams</a></li>
+  <li><a href="#word-frequency" id="toc-word-frequency" class="nav-link active" data-scroll-target="#word-frequency">Word frequency</a></li>
+  <li><a href="#n-grams" id="toc-n-grams" class="nav-link" data-scroll-target="#n-grams">N-grams</a></li>
   <li><a href="#transformers" id="toc-transformers" class="nav-link" data-scroll-target="#transformers">Transformers</a></li>
   </ul>
 </nav>
@@ -168,10 +169,14 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>One of the key innovations that has contributed to the development of LLMs is the ability to convert words into embedded vectors, or vectors of word embeddings. This is because analysing text (formatted as strings) is challenging. After simply counting the relative frequencies of words, what else is there to quantify?</p>
+<p>One of the key innovations that has contributed to the development of LLMs is the ability to convert words into embedded vectors, or vectors of word embeddings. Word embeddings represent a way of quantifying words while retaining contain some of their meaning. Prior to this development, computational text analysis was particularly challenging. This is because analysing textual information requires that we first quantify it in some way; convert some dimensions of the texts characteristics, features, and hopefully meaning, into numerical information that we can then interpret. Earlier approaches were as simple as counting word frequencies. From there, the unit of analysis changed, moving from individual words to combinations of 2 or more (n-grams). Generating word embeddings, the next step beyond this, involves specifying word tokens, and describing them in terms of their relationship with others.</p>
+<section id="word-frequency" class="level1">
+<h1>Word frequency</h1>
+<p>Relying on word frequency is a simple, efficient, but limited way to analyse a text. Afterall, it really is just counting words - how many times does each word appear in the body of text? There are certainly situations where this type of information is useful: examining word distribution across texts, comparing different texts, or even simple forms of ranking. Despite its ease and efficiency though, word frequency analysis is rather limited. It is unable to code for word context or order, and it cannot disambiguate nuance or distinguish between synonymous words. What’s more, this approach does not capture long or even short range relationships or dependencies between words. For example, the terms <code>["artificial intelligence", "not happy"]</code> have meaning by virtue of the combinations of those words, but this is not captured in word frequency analysis.</p>
+</section>
 <section id="n-grams" class="level1">
 <h1>N-grams</h1>
-<p>N-grams offered a way to capture some local context by focusing on combinations of words, but they struggle with longer-range dependencies. Simply increasing the size of your n-grams to capture more context leads to overly complex, dense representations that are inefficient and still fail to fully capture meaning over longer distances<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>N-grams are word combinations, sequences of size <em>n</em> that contain <em>n</em> words. For example bi-grams (<em>n</em> = 2) would look like <code>["The dog", "dog barks", "barks often"]</code>, tri-grams (<em>n</em> = 2) <code>["The dog barks", "dog barks often"]</code>. By representing text data as combinations, or sequences of words of varying length, we get to represent a bit more meaning - to the extent that it’s related to word order and adjacency. For example, we get more context sensitivity than we would with simple word frequencies (e.g.&nbsp;the distinction between <code>happy</code> and <code>not happy</code>). However, while n-grams have the added benefit of additional short range context, they struggle with longer range dependencies. Simply increasing the size of your n-grams to capture more context leads to overly complex, dense representations that are inefficient and still fail to fully capture meaning over longer distances<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 </section>
 <section id="transformers" class="level1">
 <h1>Transformers</h1>
