@@ -35,14 +35,14 @@
     "href": "posts/2024-09-06-measuring-meaning/index.html",
     "title": "Measuring Meaning (pt. 1/3)",
     "section": "",
-    "text": "One of the key innovations that has contributed to the development of LLMs is the ability to convert words into embedded vectors, or vectors of word embeddings. Word embeddings represent a way of quantifying words while retaining contain some of their meaning. Prior to this development, computational text analysis was particularly challenging. This is because analysing textual information requires that we first quantify it in some way; convert some dimensions of the texts characteristics, features, and hopefully meaning, into numerical information that we can then interpret. Earlier approaches were as simple as counting word frequencies. From there, the unit of analysis changed, moving from individual words to combinations of 2 or more (n-grams). Generating word embeddings, the next step beyond this, involves specifying word tokens, and describing them in terms of their relationship with others."
+    "text": "One of the key innovations that has contributed to the development of LLMs is the ability to convert words into embedded vectors, or vectors of word embeddings. Word embeddings offer a way of quantifying words while retaining some of their meaning. Prior to this development, computational text analysis was particularly challenging. This is because analysing textual information requires that we first quantify it in some way; convert some dimensions of the text’s characteristics, features, and hopefully meaning, into numerical information. Earlier approaches were as simple as counting word frequencies. From there, the unit of analysis changed, moving from individual words to combinations of 2 or more (n-grams). Generating word embeddings, the next step beyond this, involves specifying word tokens, and describing them in terms of their relationship with others."
   },
   {
     "objectID": "posts/2024-09-06-measuring-meaning/index.html#footnotes",
     "href": "posts/2024-09-06-measuring-meaning/index.html#footnotes",
     "title": "Measuring Meaning (pt. 1/3)",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\n“Attention Is All You Need” - Link↩︎\nYou may also have heard of N-grams due to their association with one Robert L. Mercer, famous for associations with Cambridge Analytica, Brexit campaign, Breitbart News, and for his stint at elite Hedge Fund Renaissance Technologies. Who says NLP doesn’t pay?↩︎"
+    "text": "Footnotes\n\n\nYou may also have heard of N-grams due to their association with one Robert L. Mercer, famous for associations with Cambridge Analytica, Brexit campaign, Breitbart News, and for his stint at elite Hedge Fund Renaissance Technologies. Who says NLP doesn’t pay?↩︎\n“Attention Is All You Need” - Link↩︎"
   },
   {
     "objectID": "posts/2023-06-06-seci-knowledge-creation/index.html",
