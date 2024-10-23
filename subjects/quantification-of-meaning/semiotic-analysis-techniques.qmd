@@ -4,10 +4,9 @@ format:
     revealjs:
         theme: moon
 slide-number: true
-self-contained: true
 ---
 
-# Week 3: Semiotic Analysis Techniques
+# Semiotic Analysis Techniques
 
 ## Learning Objectives
 
