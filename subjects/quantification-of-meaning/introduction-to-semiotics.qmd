@@ -1,0 +1,181 @@
+---
+title: "Introduction to Semiotics"
+format:
+    revealjs:
+        theme: moon
+slide-number: true
+self-contained: true
+---
+
+# Introduction to Semiotics
+
+## Learning Objectives
+
+- Understand the basic concepts and terminology in semiotics.
+- Explore the contributions of key figures like Ferdinand de Saussure, Charles Peirce, and Roland Barthes.
+- Analyze how signs and symbols operate in language, media, and culture.
+
+---
+
+## What is Semiotics?
+
+- **Definition**: Semiotics is the study of signs and symbols as elements of communicative behavior.
+- **Purpose**: Helps us understand how language and other forms of communication convey meaning beyond mere words.
+- **Relevance**: Provides the theoretical foundation for understanding meaning, crucial for later quantification.
+
+---
+
+### Key Terms in Semiotics
+- **Sign**: The basic unit of meaning; anything that can stand for something else.
+- **Signifier**: The form a sign takes (e.g., a word, image, sound).
+- **Signified**: The concept or idea that the signifier represents.
+
+---
+
+## Key Figures in Semiotics
+
+### Ferdinand de Saussure (1857–1913)
+
+- **Contribution**: Signs consist of a *signifier* (form) and a *signified* (concept).
+- **Principles**:
+    - *Arbitrariness of the Sign*: No inherent link between signifier and signified.
+    - *Structuralism*: Signs are understood within the structure of language.
+- **Example**: The word "tree" has no natural connection to the object it refers to.
+
+---
+
+### Charles Sanders Peirce (1839–1914)
+
+- **Contribution**: Introduced a triadic model: *representamen* (sign), *object*, and *interpretant* (meaning).
+- **Types of Signs**:
+    - *Icon*: Resembles the object (e.g., photograph).
+    - *Index*: Directly connected (e.g., smoke as index of fire).
+    - *Symbol*: Based on convention (e.g., words).
+- **Example**: A flag is a symbol, smoke is an index of fire, and a cartoon is an icon.
+
+---
+
+### Roland Barthes (1915–1980)
+
+- **Contribution**: Extended semiotics to cultural objects.
+- **Concepts**:
+    - *Denotation* (literal meaning) vs. *Connotation* (cultural meaning).
+    - *Mythologies*: Everyday objects convey societal myths and ideologies.
+- **Example**: A red rose denotes a flower but connotes love and romance.
+
+---
+
+## Key Concepts in Semiotics
+
+### The Sign
+
+- **Signifier** and **Signified** relationship.
+- Example: Stop sign (Signifier = red octagon; Signified = "Stop").
+
+---
+
+### Binary Oppositions
+
+- Definition: Contrasting pairs of concepts (e.g., light vs. dark, male vs. female).
+- Application: Shaping societal norms and perception.
+
+---
+
+### Systems of Signs
+
+- **Structuralism**: Meaning arises from relationships within a system.
+- **Semiotic Analysis**: How signs construct reality, culture, and identity.
+
+---
+
+## Applying Semiotics to Everyday Contexts
+
+### Language and Communication
+
+- Analyze words, phrases, and symbols used in advertising, social media, etc.
+- **Example**: Emojis function as signs, conveying emotions without words.
+
+---
+
+### Media and Advertising
+
+- Dissect signs in ads to understand their persuasive meaning.
+- **Example**: Green in marketing signifies eco-friendliness.
+
+---
+
+### Culture and Identity
+
+- Signs as indicators of cultural symbols and identity.
+- **Example**: National flags symbolize national identity; clothing brands signal social status.
+
+---
+
+## Applying Semiotics to Everyday Contexts: Memes
+
+### Memes as Modern Signs
+
+- **Definition**: A meme is a unit of cultural information—often humorous—spread rapidly online. Memes are signs, combining images, text, and cultural references.
+  
+- **Signifier**: The image or text in the meme.
+  
+- **Signified**: The idea or cultural reference behind the meme.
+
+---
+
+### Example of Semiotics in Memes
+
+- **Pepe the Frog**:
+  - **Signifier**: The image of the frog.
+  - **Signified**: Initially humorous content, later evolving into various cultural and political meanings.
+  - **Connotation**: Depending on context, it could symbolize internet humor or political movements.
+
+---
+
+### Memes as Intertextual Signs
+
+- Memes build on layers of meaning: Many memes reference other memes or cultural moments, creating complex systems of signs.
+  
+- **Example**: The "Distracted Boyfriend" meme:
+  - **Denotation**: A man looks away from his girlfriend to admire another woman.
+  - **Connotation**: It has become a symbol of shifting priorities or interests, used in varied contexts.
+
+---
+
+### Memes and Barthes’ Mythology
+
+- Memes can convey broader ideologies or cultural myths, like political views or societal commentary.
+  
+- **Example**: Political memes can signify not just humor but also cultural commentary or propaganda.
+
+---
+
+## Semiotics in Action – Practical Activity
+
+### Group Activity: Semiotic Analysis of Advertisements
+
+1. **Objective**: Apply semiotic concepts to analyze advertisements.
+2. **Instructions**:
+    - Choose an advertisement.
+    - Identify key signs and classify them (icon, index, or symbol).
+    - Discuss the *signifier* and *signified* of each element and its connotations.
+3. **Discussion Questions**:
+    - How do the signs work together to convey a message?
+    - What cultural or ideological myths are present?
+
+---
+
+## Reflection and Discussion
+
+### Discussion Prompts
+
+- How do signs shape our understanding of reality?
+- Can you think of other examples where the meaning of a sign is culturally specific?
+- How might semiotics apply to digital media and online communication?
+
+---
+
+### Reflection Assignment
+
+- Write a short paragraph on a sign you encounter in daily life.
+- Analyze it using semiotic principles (signifier, signified, and possible connotations).

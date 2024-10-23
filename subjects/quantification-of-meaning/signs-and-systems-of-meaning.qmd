@@ -1,0 +1,147 @@
+---
+title: "Quantification of Meaning: Signs and Systems of Meaning"
+format:
+    revealjs:
+        theme: moon
+slide-number: true
+self-contained: true
+---
+
+# Signs and Systems of Meaning
+
+## Learning Objectives
+
+<center>
+- **Understand** structuralism and post-structuralism in relation to semiotics.
+- **Explore** binary oppositions, myths, and ideologies as systems of meaning.
+- **Apply** semiotic analysis to everyday objects and communication.
+</center>
+
+---
+
+## Theoretical Frameworks: Structuralism vs. Post-structuralism
+
+### What is Structuralism?
+
+- **Definition**: A theoretical framework that sees signs and meaning as part of a larger structure (or system) in language and culture.
+  
+- **Key Concept**: Meaning arises not from individual signs but from their relationship within a structured system.
+  
+- **Founder**: Ferdinand de Saussure introduced structuralism, focusing on *langue* (language as a system) vs. *parole* (individual speech).
+
+- **Example**: A word gains meaning because of its position in relation to other words (e.g., "hot" vs. "cold").
+
+---
+
+### Post-structuralism: Challenging Structuralism
+
+- **Definition**: A theoretical approach that critiques and moves beyond structuralism, emphasizing the instability of meaning.
+
+- **Key Concept**: Meaning is fluid and constantly shifting due to the complexities of interpretation and context.
+  
+- **Founder**: Jacques Derrida, with his theory of *deconstruction*, argued that meaning is never fixed and always open to reinterpretation.
+
+- **Example**: A text can have multiple interpretations, and meaning is shaped by context and cultural assumptions.
+
+---
+
+## Binary Oppositions: Creating Meaning through Contrast
+
+### Definition
+
+- **Binary Oppositions**: Pairs of opposite concepts that define meaning by their relationship to each other (e.g., light vs. dark, male vs. female).
+  
+- **Origin**: Structuralists argue that meaning is constructed through these oppositions, as part of larger systems of signs.
+
+---
+
+### Examples of Binary Oppositions
+
+- **Good vs. Evil**: Common in storytelling, where characters are divided into these moral binaries.
+  
+- **Nature vs. Culture**: Used to explore the tension between the natural world and human society.
+  
+- **Self vs. Other**: A key concept in identity formation, where one’s identity is shaped by what it is *not*.
+
+---
+
+## Case Study: Binary Oppositions in Advertising
+
+- **Example**: "Luxury vs. Necessity" in product advertising.
+  - Advertisements often use this binary to create a sense of exclusivity or status around luxury products.
+  
+- **Analysis**: Look at how words and images are paired to emphasize this contrast, shaping consumer perception.
+
+---
+
+## Myth and Ideology in Semiotics
+
+### Roland Barthes’ Concept of Myth
+
+- **Myth**: A type of speech or cultural narrative that gives signs ideological meaning, often tied to societal norms.
+  
+- **Example**: The image of a French soldier saluting the flag is not just a literal action, but a myth that conveys patriotism, duty, and loyalty.
+
+- **Application**: Barthes applied this concept to everything from fashion to politics, revealing the hidden ideologies behind everyday signs.
+
+---
+
+### Ideology and Cultural Codes
+
+- **Definition**: Ideologies are the frameworks of belief that shape how people understand the world, often communicated through systems of signs.
+  
+- **Cultural Codes**: These are shared systems of meaning that people in a culture understand implicitly (e.g., a white wedding dress as a sign of purity).
+
+- **Example**: In media, the way certain groups are represented (or not represented) can reveal underlying ideologies about race, gender, or class.
+
+---
+
+## Case Study: Myth in Everyday Objects
+
+- **Example**: The Apple logo.
+  - **Denotation**: A stylized apple with a bite taken out.
+  - **Connotation**: Innovation, simplicity, sophistication.
+  - **Myth**: Apple as the symbol of technological progress and rebellion against traditional tech.
+
+- **Analysis**: Break down how the design, colors, and brand messaging reinforce this myth.
+
+---
+
+## Practical Activity: Analyzing Signs and Systems of Meaning
+
+### Group Activity
+
+- **Objective**: Apply semiotic analysis to an everyday object or advertisement.
+  
+- **Instructions**:
+  1. Choose an object or ad.
+  2. Identify the binary oppositions at play.
+  3. Analyze the *myth* and *ideology* it conveys.
+  
+- **Example**: A car advertisement—look for contrasts like "freedom vs. constraint" or "adventure vs. routine."
+
+---
+
+## Discussion: The Power of Signs and Systems
+
+### Key Questions
+
+- How do binary oppositions simplify complex concepts and shape perception?
+  
+- In what ways do myths and ideologies influence how we understand culture and society?
+  
+- Can post-structuralism help us understand the instability of meaning in today’s digital world, such as in memes or social media?
+
+---
+
+## Reflection Assignment
+
+- Write a short analysis of an everyday object, advertisement, or piece of media.
+  
+- Focus on the following:
+  1. Identify key binary oppositions.
+  2. Analyze the myth or ideology being communicated.
+  
+- **Example**: Analyze the meaning behind a fast-food logo (e.g., McDonald’s golden arches as a sign of comfort, quick service, and American culture).
+
+

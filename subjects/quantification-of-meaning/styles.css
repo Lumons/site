@@ -1,0 +1,16 @@
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left-content {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .right-image {
+    flex: 1;
+    text-align: right;
+  }
+  

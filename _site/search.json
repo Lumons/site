@@ -116,5 +116,396 @@
     "title": "Beyond responding (pt. 2/3)",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nSydney University professor Joel Michell has a fair bit to say on the extent to which psychological constructs can be quantified in a way that is mathematically relevant and justifiable.↩︎"
+  },
+  {
+    "objectID": "posts/2024-10-05-/index.html",
+    "href": "posts/2024-10-05-/index.html",
+    "title": "Work in progress",
+    "section": "",
+    "text": "Previously talked about word embeddings.\nSome reports on the relationship between word embeddings and psychometric characteristics. Let’s demonstrate step by step, understand how this works.\nIn my current set up, I use lm-studio. Handles the model interaction. Host model on a local server and interact, sending json with different parameters. Code chunk that has the interaction of sending strings and receiving embeddings back.\n\nConvert strings into word embeddings\nCalculate cosine similarity between each pair of words\nAverage cosine similarity of? Maybe correlation?\n\nFirst, let’s generate some embeddings. To demonstrate what I mean, below we have a string and a set of parameters that represent this string in latent space. The vector of numbers you see here is truncated, with the length being 738 in total.\n\n\n\n\nEmbedded String and Truncated Embedding Vector\n\n\nString\nEmbeddings\n\n\n\n\nThe vector of numbers in the column 'Embeddings' is the embedded representation of this statement.\n0.0294, 0.0683, -0.1596, -0.0648, 0.0532, -0.0354, 0.0582, -0.0249, -0.0375, -0.0313, -0.0613, -0.0321, 0.0754, -0.0107, -0.0135, 0.0394, -0.0031, ...\n\n\n\n\n\n\n\n\nWe can do the same now with each of the items in the big 5 aspects scale.\nTable with\n\n\n\n\n\n\n\n\n\nParallel analysis suggests that the number of factors =  NA  and the number of components =  11 \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTop Items with Highest Component Scores for Each Principal Component\n\n\nPC1\nPC2\nPC3\nPC4\nPC5\nPC6\nPC7\nPC8\nPC9\nPC10\nPC11\n\n\n\n\nGet upset easily.\nAm indifferent to the feelings of others.\nGet angry easily.\nKnow how to captivate people.\nSee myself as a good leader.\nDo not have an assertive personality.d\nThink quickly.\nAm afraid of many things.\nAm not embarrassed easily.\nSeldom feel blue.\nAvoid philosophical discussions.\n\n\nGet easily agitated.\nFeel others’ emotions.\nAm filled with doubts about things.\nHave a rich vocabulary.\nAm not interested in other people’s problems.\nDo not like poetry.\nAm easily discouraged.\nRarely get caught up in the excitement.\nPostpone decisions.\nSee that rules are observed.\nLack the talent for influencing people.\n\n\nLike to do things for others.\nSympathize with others’ feelings.\nLove to reflect on things.\nAm not bothered by disorder.\nCan’t be bothered with other’s needs.\nBecome overwhelmed by events.\nLove a good fight.\nWaste my time.\nAm hard to get to know.\nRespect authority.\nLaugh a lot.\n\n\nRarely get irritated.\nGet things done quickly.\nGet easily agitated.\nWant everything to be “just right.”\nAvoid philosophical discussions.\nHave a strong personality.\nWant every detail taken care of.\nDislike routine.\nFormulate ideas clearly.\nSeldom notice the emotional aspects of paintings and pictures.\nSeek conflict.\n\n\nGet angry easily.\nThink quickly.\nCan talk others into doing things.\nMake friends easily.\nShow my feelings when I’m happy.\nLack the talent for influencing people.\nHave a lot of fun.\nHave a lot of fun.\nReveal little about myself.\nNeed a creative outlet.\nMake friends easily.\n\n\n\n\n\n\n\n\n\n\nCalculating scores\nOne thing that would be interesting to do next, would be to generate scores based on the components that are identified here. Internal consistency, correlations between scores. Observe factor structure even. We can’t do that today, don’t have responses.\nPoint out along the way, the number of principal components here is somewhat arbitrary. Could be up to 25 even.\n\n\nCosine similarity\n\nTableHeatmap\n\n\n\n\n\n\n\nAverage Cosine Similarities Between Aspects\n\n\n\nVolatility\nWithdrawal\nCompassion\nPoliteness\nIndustriousness\nOrderliness\nEnthusiasm\nAssertiveness\nIntellect\nOpenness\n\n\n\n\nVolatility\n0.64\n0.51\n0.47\n0.46\n0.45\n0.44\n0.49\n0.47\n0.45\n0.45\n\n\nWithdrawal\n0.51\n0.52\n0.48\n0.43\n0.42\n0.41\n0.47\n0.45\n0.44\n0.46\n\n\nCompassion\n0.47\n0.48\n0.63\n0.50\n0.44\n0.45\n0.49\n0.51\n0.43\n0.48\n\n\nPoliteness\n0.46\n0.43\n0.50\n0.49\n0.43\n0.41\n0.45\n0.50\n0.42\n0.41\n\n\nIndustriousness\n0.45\n0.42\n0.44\n0.43\n0.50\n0.44\n0.42\n0.45\n0.46\n0.42\n\n\nOrderliness\n0.44\n0.41\n0.45\n0.41\n0.44\n0.48\n0.40\n0.42\n0.41\n0.41\n\n\nEnthusiasm\n0.49\n0.47\n0.49\n0.45\n0.42\n0.40\n0.48\n0.47\n0.43\n0.45\n\n\nAssertiveness\n0.47\n0.45\n0.51\n0.50\n0.45\n0.42\n0.47\n0.53\n0.44\n0.44\n\n\nIntellect\n0.45\n0.44\n0.43\n0.42\n0.46\n0.41\n0.43\n0.44\n0.52\n0.46\n\n\nOpenness\n0.45\n0.46\n0.48\n0.41\n0.42\n0.41\n0.45\n0.44\n0.46\n0.51\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI’d like to add some description to these aspects, perhaps by taking the embeddings of the entire aspect, and then looking up the single words or n grams that have the highest cosine similarity, as a means of ‘describing’ that cluster.\n\n\nPCA\nWe’ve already done PCA on the embeddings. This told us about the clusters of words (fill out), which we laid out above.\nWe now have a similarity matrix - a matrix of pairwise cosine similarities between each item’s embeddings. What would dimensionality reduction look like here? Basically, groups of items that tend to be similar to one another.\nNeed to apply some interpretation here. What does it mean to have three clusters based on the pairwise cosine similarities? What do clusters mean, what dissociates them?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  [1] 1 1 1 1 1 1 1 1 1 1 2 1 2 1 2 2 1 1 1 1 3 3 3 3 3 3 3 3 3 1 2 1 3 1 1 1 3\n [38] 2 2 1 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 3 3 1 1 3 1 1 1 1 3 1 2 1 2 1 1 1\n [75] 3 2 1 1 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2\n\n\n\n\n\n\n\n\n\n  [1] 3 3 3 3 3 3 3 3 3 3 2 3 2 3 2 2 3 3 3 3 1 1 1 1 1 1 1 1 1 3 2 3 1 3 1 1 1\n [38] 2 3 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 2 3 1 3 3 3 2 1 2 3 3 2 3 1 3\n [75] 1 2 3 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe can also use each item as a node, and treat their cosine similarities as edge strength, to visualise the relationships between items.\n\n\n\n\n\n\n\n\n\nPoint to the new articles by guenole, and the working paper. They address difference metrics maybe\nNow that we’ve done that the results either show that strings are similar when they’re categorised together, or not. Either way, we’re going to take the items, concatenate them together in a single chunk, and convert to embeddings. Is this the best way to do this? Not sure. Single words that are most similar to this item?"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/quantification-of-meaning.html",
+    "href": "subjects/quantification-of-meaning/quantification-of-meaning.html",
+    "title": "Quantification of Meaning: From Semiotics to NLP",
+    "section": "",
+    "text": "Welcome to the Quantification of Meaning! Here you’ll find all the relevant materials."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/quantification-of-meaning.html#slide-decks",
+    "href": "subjects/quantification-of-meaning/quantification-of-meaning.html#slide-decks",
+    "title": "Quantification of Meaning",
+    "section": "",
+    "text": "Introduction to Semiotics"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/quantification-of-meaning.html#slides",
+    "href": "subjects/quantification-of-meaning/quantification-of-meaning.html#slides",
+    "title": "Quantification of Meaning: From Semiotics to NLP",
+    "section": "Slides",
+    "text": "Slides\n\nIntroduction to Semiotics\nSigns and Systems of Meaning\nSemiotic Analysis Techniques"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/introduction-to-semiotics.html",
+    "href": "subjects/quantification-of-meaning/introduction-to-semiotics.html",
+    "title": "Introduction to Semiotics",
+    "section": "",
+    "text": "Understand the basic concepts and terminology in semiotics.\nExplore the contributions of key figures like Ferdinand de Saussure, Charles Peirce, and Roland Barthes.\nAnalyze how signs and symbols operate in language, media, and culture.\n\n\n\n\n\n\nDefinition: Semiotics is the study of signs and symbols as elements of communicative behavior.\nPurpose: Helps us understand how language and other forms of communication convey meaning beyond mere words.\nRelevance: Provides the theoretical foundation for understanding meaning, crucial for later quantification.\n\n\n\n\n\nSign: The basic unit of meaning; anything that can stand for something else.\nSignifier: The form a sign takes (e.g., a word, image, sound).\nSignified: The concept or idea that the signifier represents.\n\n\n\n\n\n\n\n\n\nContribution: Signs consist of a signifier (form) and a signified (concept).\nPrinciples:\n\nArbitrariness of the Sign: No inherent link between signifier and signified.\nStructuralism: Signs are understood within the structure of language.\n\nExample: The word “tree” has no natural connection to the object it refers to.\n\n\n\n\n\n\nContribution: Introduced a triadic model: representamen (sign), object, and interpretant (meaning).\nTypes of Signs:\n\nIcon: Resembles the object (e.g., photograph).\nIndex: Directly connected (e.g., smoke as index of fire).\nSymbol: Based on convention (e.g., words).\n\nExample: A flag is a symbol, smoke is an index of fire, and a cartoon is an icon.\n\n\n\n\n\n\nContribution: Extended semiotics to cultural objects.\nConcepts:\n\nDenotation (literal meaning) vs. Connotation (cultural meaning).\nMythologies: Everyday objects convey societal myths and ideologies.\n\nExample: A red rose denotes a flower but connotes love and romance.\n\n\n\n\n\n\n\n\n\nSignifier and Signified relationship.\nExample: Stop sign (Signifier = red octagon; Signified = “Stop”).\n\n\n\n\n\n\nDefinition: Contrasting pairs of concepts (e.g., light vs. dark, male vs. female).\nApplication: Shaping societal norms and perception.\n\n\n\n\n\n\nStructuralism: Meaning arises from relationships within a system.\nSemiotic Analysis: How signs construct reality, culture, and identity.\n\n\n\n\n\n\n\n\n\nAnalyze words, phrases, and symbols used in advertising, social media, etc.\nExample: Emojis function as signs, conveying emotions without words.\n\n\n\n\n\n\nDissect signs in ads to understand their persuasive meaning.\nExample: Green in marketing signifies eco-friendliness.\n\n\n\n\n\n\nSigns as indicators of cultural symbols and identity.\nExample: National flags symbolize national identity; clothing brands signal social status.\n\n\n\n\n\n\n\n\n\nDefinition: A meme is a unit of cultural information—often humorous—spread rapidly online. Memes are signs, combining images, text, and cultural references.\nSignifier: The image or text in the meme.\nSignified: The idea or cultural reference behind the meme.\n\n\n\n\n\n\nPepe the Frog:\n\nSignifier: The image of the frog.\nSignified: Initially humorous content, later evolving into various cultural and political meanings.\nConnotation: Depending on context, it could symbolize internet humor or political movements.\n\n\n\n\n\n\n\nMemes build on layers of meaning: Many memes reference other memes or cultural moments, creating complex systems of signs.\nExample: The “Distracted Boyfriend” meme:\n\nDenotation: A man looks away from his girlfriend to admire another woman.\nConnotation: It has become a symbol of shifting priorities or interests, used in varied contexts.\n\n\n\n\n\n\n\nMemes can convey broader ideologies or cultural myths, like political views or societal commentary.\nExample: Political memes can signify not just humor but also cultural commentary or propaganda.\n\n\n\n\n\n\n\n\n\nObjective: Apply semiotic concepts to analyze advertisements.\nInstructions:\n\nChoose an advertisement.\nIdentify key signs and classify them (icon, index, or symbol).\nDiscuss the signifier and signified of each element and its connotations.\n\nDiscussion Questions:\n\nHow do the signs work together to convey a message?\nWhat cultural or ideological myths are present?\n\n\n\n\n\n\n\n\n\n\nHow do signs shape our understanding of reality?\nCan you think of other examples where the meaning of a sign is culturally specific?\nHow might semiotics apply to digital media and online communication?\n\n\n\n\n\n\nWrite a short paragraph on a sign you encounter in daily life.\nAnalyze it using semiotic principles (signifier, signified, and possible connotations)."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/introduction-to-semiotics.html#learning-objectives",
+    "href": "subjects/quantification-of-meaning/introduction-to-semiotics.html#learning-objectives",
+    "title": "Introduction to Semiotics",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nUnderstand the basic concepts and terminology in semiotics.\nExplore the contributions of key figures like Ferdinand de Saussure, Charles Peirce, and Roland Barthes.\nAnalyze how signs and symbols operate in language, media, and culture."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/introduction-to-semiotics.html#what-is-semiotics",
+    "href": "subjects/quantification-of-meaning/introduction-to-semiotics.html#what-is-semiotics",
+    "title": "Introduction to Semiotics",
+    "section": "What is Semiotics?",
+    "text": "What is Semiotics?\n\nDefinition: Semiotics is the study of signs and symbols as elements of communicative behavior.\nPurpose: Helps us understand how language and other forms of communication convey meaning beyond mere words.\nRelevance: Provides the theoretical foundation for understanding meaning, crucial for later quantification."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/introduction-to-semiotics.html#key-figures-in-semiotics",
+    "href": "subjects/quantification-of-meaning/introduction-to-semiotics.html#key-figures-in-semiotics",
+    "title": "Introduction to Semiotics",
+    "section": "Key Figures in Semiotics",
+    "text": "Key Figures in Semiotics\nFerdinand de Saussure (1857–1913)\n\nContribution: Signs consist of a signifier (form) and a signified (concept).\nPrinciples:\n\nArbitrariness of the Sign: No inherent link between signifier and signified.\nStructuralism: Signs are understood within the structure of language.\n\nExample: The word “tree” has no natural connection to the object it refers to."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/introduction-to-semiotics.html#key-concepts-in-semiotics",
+    "href": "subjects/quantification-of-meaning/introduction-to-semiotics.html#key-concepts-in-semiotics",
+    "title": "Introduction to Semiotics",
+    "section": "Key Concepts in Semiotics",
+    "text": "Key Concepts in Semiotics\nThe Sign\n\nSignifier and Signified relationship.\nExample: Stop sign (Signifier = red octagon; Signified = “Stop”)."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/introduction-to-semiotics.html#applying-semiotics-to-everyday-contexts",
+    "href": "subjects/quantification-of-meaning/introduction-to-semiotics.html#applying-semiotics-to-everyday-contexts",
+    "title": "Introduction to Semiotics",
+    "section": "Applying Semiotics to Everyday Contexts",
+    "text": "Applying Semiotics to Everyday Contexts\nLanguage and Communication\n\nAnalyze words, phrases, and symbols used in advertising, social media, etc.\nExample: Emojis function as signs, conveying emotions without words."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/introduction-to-semiotics.html#applying-semiotics-to-everyday-contexts-memes",
+    "href": "subjects/quantification-of-meaning/introduction-to-semiotics.html#applying-semiotics-to-everyday-contexts-memes",
+    "title": "Introduction to Semiotics",
+    "section": "Applying Semiotics to Everyday Contexts: Memes",
+    "text": "Applying Semiotics to Everyday Contexts: Memes\nMemes as Modern Signs\n\nDefinition: A meme is a unit of cultural information—often humorous—spread rapidly online. Memes are signs, combining images, text, and cultural references.\nSignifier: The image or text in the meme.\nSignified: The idea or cultural reference behind the meme."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/introduction-to-semiotics.html#semiotics-in-action-practical-activity",
+    "href": "subjects/quantification-of-meaning/introduction-to-semiotics.html#semiotics-in-action-practical-activity",
+    "title": "Introduction to Semiotics",
+    "section": "Semiotics in Action – Practical Activity",
+    "text": "Semiotics in Action – Practical Activity\nGroup Activity: Semiotic Analysis of Advertisements\n\nObjective: Apply semiotic concepts to analyze advertisements.\nInstructions:\n\nChoose an advertisement.\nIdentify key signs and classify them (icon, index, or symbol).\nDiscuss the signifier and signified of each element and its connotations.\n\nDiscussion Questions:\n\nHow do the signs work together to convey a message?\nWhat cultural or ideological myths are present?"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/introduction-to-semiotics.html#reflection-and-discussion",
+    "href": "subjects/quantification-of-meaning/introduction-to-semiotics.html#reflection-and-discussion",
+    "title": "Introduction to Semiotics",
+    "section": "Reflection and Discussion",
+    "text": "Reflection and Discussion\nDiscussion Prompts\n\nHow do signs shape our understanding of reality?\nCan you think of other examples where the meaning of a sign is culturally specific?\nHow might semiotics apply to digital media and online communication?"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-3.html",
+    "href": "subjects/quantification-of-meaning/Untitled-3.html",
+    "title": "Quantification of Meaning: Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Learn practical techniques for semiotic analysis in text, visual media, and advertising.\n\nUnderstand qualitative coding and thematic analysis as methods for studying signs and symbols.\nApply semiotic analysis techniques to real-world examples.\n\n\n\n\n\n\n\n\n\n\nDefinition: Semiotic analysis is a method used to interpret signs and symbols in texts, images, and media. It focuses on uncovering the underlying meaning of signs and their cultural or social significance.\nApplication: This method is widely used in media studies, cultural studies, and advertising analysis to reveal hidden ideologies or myths behind visual and textual content.\n\n\n\n\n\n\n\n\n\nObjective: Uncover the underlying meaning in written language.\nSteps:\n\nIdentify Signs: Look for words, phrases, metaphors, or symbols that function as signs.\nSignifier and Signified: Analyze the relationship between the literal (signifier) and the conceptual (signified).\nContext: Consider the cultural or social context in which the text appears.\n\nExample: A news headline might use certain words or metaphors to influence the reader’s perception of an event.\n\n\n\n\n\n\nObjective: Interpret signs in images, films, and other visual content.\nSteps:\n\nIdentify Visual Elements: Look at colors, shapes, symbols, and layout.\nDenotation and Connotation: Analyze the literal representation (denotation) and its associative or cultural meanings (connotation).\nCultural Codes: Explore how certain visual cues align with cultural expectations or myths.\n\nExample: A political cartoon may use exaggerated imagery to symbolize power dynamics or societal critique.\n\n\n\n\n\n\nObjective: Deconstruct the meaning in advertisements and how they communicate with audiences.\nSteps:\n\nIdentify Key Signs: Consider brand symbols, colors, slogans, and imagery.\nTarget Audience: Analyze how the advertisement addresses its audience through signs and symbols.\nMyths and Ideologies: Explore how ads reflect broader cultural or ideological messages.\n\nExample: A luxury car advertisement may use symbols of wealth and freedom to target high-income consumers.\n\n\n\n\n\n\n\n\n\nDefinition: Qualitative coding is the process of categorizing and labeling text, images, or media based on recurring signs or themes.\nSteps:\n\nOpen Coding: Start by identifying all potential signs and symbols.\nAxial Coding: Group related signs into categories or themes.\nSelective Coding: Focus on the most significant or frequent categories to build a coherent narrative.\n\nExample: In analyzing a set of advertisements, you might label signs of luxury, freedom, or eco-friendliness.\n\n\n\n\n\n\nDefinition: Thematic analysis involves identifying, analyzing, and reporting patterns or themes within data. It’s used to interpret meaning from signs across a set of texts or images.\nSteps:\n\nFamiliarization: Immerse yourself in the material by reading or viewing it multiple times.\nGenerate Codes: Label signs or features with codes that reflect their meaning.\nSearch for Themes: Group codes into overarching themes that tell a story about the material.\nReview Themes: Ensure that themes are coherent and well-supported by evidence.\n\nExample: Analyzing a series of TV commercials to identify recurring themes of family, success, or environmentalism.\n\n\n\n\n\n\n\n\n\nObjective: Use semiotic analysis to analyze a text, visual media, or advertisement.\nInstructions:\n\nChoose an advertisement or a short text (e.g., magazine ad, social media post).\nUse qualitative coding to identify key signs.\nApply thematic analysis to uncover underlying myths or ideologies.\n\nDiscussion Questions:\n\nWhat signs or symbols did you identify?\nHow do these signs contribute to the overall meaning?\nWhat themes or cultural ideologies did you discover?\n\n\n\n\n\n\n\n\n\n\nDenotation: A woman standing on a beach with a sunset in the background.\nConnotation: The imagery connotes freedom, beauty, and serenity.\nMyth: The ad promotes the idea that buying this perfume will grant the consumer a sense of elegance and emotional freedom.\n\n\n\n\n\n\n\n\n\nHow does qualitative coding help us uncover hidden meanings in media?\nWhat are the strengths and limitations of thematic analysis in understanding semiotic systems?\nIn what ways does semiotic analysis reveal the cultural or ideological underpinnings of everyday objects?\n\n\n\n\n\n\n\nTask: Conduct a semiotic analysis of an advertisement or media text.\nFocus:\n\nIdentify key signs and symbols (use qualitative coding).\nPerform a thematic analysis to uncover underlying ideologies or myths.\n\nExample: Analyze a fast-food ad for its use of cultural symbols (e.g., convenience, family, or happiness) and discuss the broader themes and ideologies it promotes."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-3.html#learning-objectives",
+    "href": "subjects/quantification-of-meaning/Untitled-3.html#learning-objectives",
+    "title": "Quantification of Meaning: Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Learn practical techniques for semiotic analysis in text, visual media, and advertising.\n\nUnderstand qualitative coding and thematic analysis as methods for studying signs and symbols.\nApply semiotic analysis techniques to real-world examples."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-3.html#semiotic-analysis-introduction",
+    "href": "subjects/quantification-of-meaning/Untitled-3.html#semiotic-analysis-introduction",
+    "title": "Quantification of Meaning: Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Definition: Semiotic analysis is a method used to interpret signs and symbols in texts, images, and media. It focuses on uncovering the underlying meaning of signs and their cultural or social significance.\nApplication: This method is widely used in media studies, cultural studies, and advertising analysis to reveal hidden ideologies or myths behind visual and textual content."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-3.html#practical-techniques-analyzing-text-visual-media-and-advertising",
+    "href": "subjects/quantification-of-meaning/Untitled-3.html#practical-techniques-analyzing-text-visual-media-and-advertising",
+    "title": "Quantification of Meaning: Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Objective: Uncover the underlying meaning in written language.\nSteps:\n\nIdentify Signs: Look for words, phrases, metaphors, or symbols that function as signs.\nSignifier and Signified: Analyze the relationship between the literal (signifier) and the conceptual (signified).\nContext: Consider the cultural or social context in which the text appears.\n\nExample: A news headline might use certain words or metaphors to influence the reader’s perception of an event.\n\n\n\n\n\n\nObjective: Interpret signs in images, films, and other visual content.\nSteps:\n\nIdentify Visual Elements: Look at colors, shapes, symbols, and layout.\nDenotation and Connotation: Analyze the literal representation (denotation) and its associative or cultural meanings (connotation).\nCultural Codes: Explore how certain visual cues align with cultural expectations or myths.\n\nExample: A political cartoon may use exaggerated imagery to symbolize power dynamics or societal critique.\n\n\n\n\n\n\nObjective: Deconstruct the meaning in advertisements and how they communicate with audiences.\nSteps:\n\nIdentify Key Signs: Consider brand symbols, colors, slogans, and imagery.\nTarget Audience: Analyze how the advertisement addresses its audience through signs and symbols.\nMyths and Ideologies: Explore how ads reflect broader cultural or ideological messages.\n\nExample: A luxury car advertisement may use symbols of wealth and freedom to target high-income consumers."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-3.html#methods-qualitative-coding-and-thematic-analysis",
+    "href": "subjects/quantification-of-meaning/Untitled-3.html#methods-qualitative-coding-and-thematic-analysis",
+    "title": "Quantification of Meaning: Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Definition: Qualitative coding is the process of categorizing and labeling text, images, or media based on recurring signs or themes.\nSteps:\n\nOpen Coding: Start by identifying all potential signs and symbols.\nAxial Coding: Group related signs into categories or themes.\nSelective Coding: Focus on the most significant or frequent categories to build a coherent narrative.\n\nExample: In analyzing a set of advertisements, you might label signs of luxury, freedom, or eco-friendliness.\n\n\n\n\n\n\nDefinition: Thematic analysis involves identifying, analyzing, and reporting patterns or themes within data. It’s used to interpret meaning from signs across a set of texts or images.\nSteps:\n\nFamiliarization: Immerse yourself in the material by reading or viewing it multiple times.\nGenerate Codes: Label signs or features with codes that reflect their meaning.\nSearch for Themes: Group codes into overarching themes that tell a story about the material.\nReview Themes: Ensure that themes are coherent and well-supported by evidence.\n\nExample: Analyzing a series of TV commercials to identify recurring themes of family, success, or environmentalism."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-3.html#practical-activity-applying-semiotic-analysis-techniques",
+    "href": "subjects/quantification-of-meaning/Untitled-3.html#practical-activity-applying-semiotic-analysis-techniques",
+    "title": "Quantification of Meaning: Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Objective: Use semiotic analysis to analyze a text, visual media, or advertisement.\nInstructions:\n\nChoose an advertisement or a short text (e.g., magazine ad, social media post).\nUse qualitative coding to identify key signs.\nApply thematic analysis to uncover underlying myths or ideologies.\n\nDiscussion Questions:\n\nWhat signs or symbols did you identify?\nHow do these signs contribute to the overall meaning?\nWhat themes or cultural ideologies did you discover?"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-3.html#case-study-semiotic-analysis-of-an-advertisement",
+    "href": "subjects/quantification-of-meaning/Untitled-3.html#case-study-semiotic-analysis-of-an-advertisement",
+    "title": "Quantification of Meaning: Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Denotation: A woman standing on a beach with a sunset in the background.\nConnotation: The imagery connotes freedom, beauty, and serenity.\nMyth: The ad promotes the idea that buying this perfume will grant the consumer a sense of elegance and emotional freedom."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-3.html#discussion-exploring-semiotic-techniques",
+    "href": "subjects/quantification-of-meaning/Untitled-3.html#discussion-exploring-semiotic-techniques",
+    "title": "Quantification of Meaning: Semiotic Analysis Techniques",
+    "section": "",
+    "text": "How does qualitative coding help us uncover hidden meanings in media?\nWhat are the strengths and limitations of thematic analysis in understanding semiotic systems?\nIn what ways does semiotic analysis reveal the cultural or ideological underpinnings of everyday objects?"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-3.html#reflection-assignment",
+    "href": "subjects/quantification-of-meaning/Untitled-3.html#reflection-assignment",
+    "title": "Quantification of Meaning: Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Task: Conduct a semiotic analysis of an advertisement or media text.\nFocus:\n\nIdentify key signs and symbols (use qualitative coding).\nPerform a thematic analysis to uncover underlying ideologies or myths.\n\nExample: Analyze a fast-food ad for its use of cultural symbols (e.g., convenience, family, or happiness) and discuss the broader themes and ideologies it promotes."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-2.html",
+    "href": "subjects/quantification-of-meaning/Untitled-2.html",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "",
+    "text": "Understand structuralism and post-structuralism in relation to semiotics.\nExplore binary oppositions, myths, and ideologies as systems of meaning.\nApply semiotic analysis to everyday objects and communication.\n\n\n\n\n\n\n\n\n\nDefinition: A theoretical framework that sees signs and meaning as part of a larger structure (or system) in language and culture.\nKey Concept: Meaning arises not from individual signs but from their relationship within a structured system.\nFounder: Ferdinand de Saussure introduced structuralism, focusing on langue (language as a system) vs. parole (individual speech).\nExample: A word gains meaning because of its position in relation to other words (e.g., “hot” vs. “cold”).\n\n\n\n\n\n\nDefinition: A theoretical approach that critiques and moves beyond structuralism, emphasizing the instability of meaning.\nKey Concept: Meaning is fluid and constantly shifting due to the complexities of interpretation and context.\nFounder: Jacques Derrida, with his theory of deconstruction, argued that meaning is never fixed and always open to reinterpretation.\nExample: A text can have multiple interpretations, and meaning is shaped by context and cultural assumptions.\n\n\n\n\n\n\n\n\n\nBinary Oppositions: Pairs of opposite concepts that define meaning by their relationship to each other (e.g., light vs. dark, male vs. female).\nOrigin: Structuralists argue that meaning is constructed through these oppositions, as part of larger systems of signs.\n\n\n\n\n\n\nGood vs. Evil: Common in storytelling, where characters are divided into these moral binaries.\nNature vs. Culture: Used to explore the tension between the natural world and human society.\nSelf vs. Other: A key concept in identity formation, where one’s identity is shaped by what it is not.\n\n\n\n\n\n\n\nExample: “Luxury vs. Necessity” in product advertising.\n\nAdvertisements often use this binary to create a sense of exclusivity or status around luxury products.\n\nAnalysis: Look at how words and images are paired to emphasize this contrast, shaping consumer perception.\n\n\n\n\n\n\n\n\nMyth: A type of speech or cultural narrative that gives signs ideological meaning, often tied to societal norms.\nExample: The image of a French soldier saluting the flag is not just a literal action, but a myth that conveys patriotism, duty, and loyalty.\nApplication: Barthes applied this concept to everything from fashion to politics, revealing the hidden ideologies behind everyday signs.\n\n\n\n\n\n\nDefinition: Ideologies are the frameworks of belief that shape how people understand the world, often communicated through systems of signs.\nCultural Codes: These are shared systems of meaning that people in a culture understand implicitly (e.g., a white wedding dress as a sign of purity).\nExample: In media, the way certain groups are represented (or not represented) can reveal underlying ideologies about race, gender, or class.\n\n\n\n\n\n\n\nExample: The Apple logo.\n\nDenotation: A stylized apple with a bite taken out.\nConnotation: Innovation, simplicity, sophistication.\nMyth: Apple as the symbol of technological progress and rebellion against traditional tech.\n\nAnalysis: Break down how the design, colors, and brand messaging reinforce this myth.\n\n\n\n\n\n\n\n\nObjective: Apply semiotic analysis to an everyday object or advertisement.\nInstructions:\n\nChoose an object or ad.\nIdentify the binary oppositions at play.\nAnalyze the myth and ideology it conveys.\n\nExample: A car advertisement—look for contrasts like “freedom vs. constraint” or “adventure vs. routine.”\n\n\n\n\n\n\n\n\n\nHow do binary oppositions simplify complex concepts and shape perception?\nIn what ways do myths and ideologies influence how we understand culture and society?\nCan post-structuralism help us understand the instability of meaning in today’s digital world, such as in memes or social media?\n\n\n\n\n\n\n\nWrite a short analysis of an everyday object, advertisement, or piece of media.\nFocus on the following:\n\nIdentify key binary oppositions.\nAnalyze the myth or ideology being communicated.\n\nExample: Analyze the meaning behind a fast-food logo (e.g., McDonald’s golden arches as a sign of comfort, quick service, and American culture)."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-2.html#learning-objectives",
+    "href": "subjects/quantification-of-meaning/Untitled-2.html#learning-objectives",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "",
+    "text": "Understand structuralism and post-structuralism in relation to semiotics.\nExplore binary oppositions, myths, and ideologies as systems of meaning.\nApply semiotic analysis to everyday objects and communication."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-2.html#theoretical-frameworks-structuralism-vs.-post-structuralism",
+    "href": "subjects/quantification-of-meaning/Untitled-2.html#theoretical-frameworks-structuralism-vs.-post-structuralism",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "",
+    "text": "Definition: A theoretical framework that sees signs and meaning as part of a larger structure (or system) in language and culture.\nKey Concept: Meaning arises not from individual signs but from their relationship within a structured system.\nFounder: Ferdinand de Saussure introduced structuralism, focusing on langue (language as a system) vs. parole (individual speech).\nExample: A word gains meaning because of its position in relation to other words (e.g., “hot” vs. “cold”).\n\n\n\n\n\n\nDefinition: A theoretical approach that critiques and moves beyond structuralism, emphasizing the instability of meaning.\nKey Concept: Meaning is fluid and constantly shifting due to the complexities of interpretation and context.\nFounder: Jacques Derrida, with his theory of deconstruction, argued that meaning is never fixed and always open to reinterpretation.\nExample: A text can have multiple interpretations, and meaning is shaped by context and cultural assumptions."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-2.html#binary-oppositions-creating-meaning-through-contrast",
+    "href": "subjects/quantification-of-meaning/Untitled-2.html#binary-oppositions-creating-meaning-through-contrast",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "",
+    "text": "Binary Oppositions: Pairs of opposite concepts that define meaning by their relationship to each other (e.g., light vs. dark, male vs. female).\nOrigin: Structuralists argue that meaning is constructed through these oppositions, as part of larger systems of signs.\n\n\n\n\n\n\nGood vs. Evil: Common in storytelling, where characters are divided into these moral binaries.\nNature vs. Culture: Used to explore the tension between the natural world and human society.\nSelf vs. Other: A key concept in identity formation, where one’s identity is shaped by what it is not."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-2.html#case-study-binary-oppositions-in-advertising",
+    "href": "subjects/quantification-of-meaning/Untitled-2.html#case-study-binary-oppositions-in-advertising",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "",
+    "text": "Example: “Luxury vs. Necessity” in product advertising.\n\nAdvertisements often use this binary to create a sense of exclusivity or status around luxury products.\n\nAnalysis: Look at how words and images are paired to emphasize this contrast, shaping consumer perception."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-2.html#myth-and-ideology-in-semiotics",
+    "href": "subjects/quantification-of-meaning/Untitled-2.html#myth-and-ideology-in-semiotics",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "",
+    "text": "Myth: A type of speech or cultural narrative that gives signs ideological meaning, often tied to societal norms.\nExample: The image of a French soldier saluting the flag is not just a literal action, but a myth that conveys patriotism, duty, and loyalty.\nApplication: Barthes applied this concept to everything from fashion to politics, revealing the hidden ideologies behind everyday signs.\n\n\n\n\n\n\nDefinition: Ideologies are the frameworks of belief that shape how people understand the world, often communicated through systems of signs.\nCultural Codes: These are shared systems of meaning that people in a culture understand implicitly (e.g., a white wedding dress as a sign of purity).\nExample: In media, the way certain groups are represented (or not represented) can reveal underlying ideologies about race, gender, or class."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-2.html#case-study-myth-in-everyday-objects",
+    "href": "subjects/quantification-of-meaning/Untitled-2.html#case-study-myth-in-everyday-objects",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "",
+    "text": "Example: The Apple logo.\n\nDenotation: A stylized apple with a bite taken out.\nConnotation: Innovation, simplicity, sophistication.\nMyth: Apple as the symbol of technological progress and rebellion against traditional tech.\n\nAnalysis: Break down how the design, colors, and brand messaging reinforce this myth."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-2.html#practical-activity-analyzing-signs-and-systems-of-meaning",
+    "href": "subjects/quantification-of-meaning/Untitled-2.html#practical-activity-analyzing-signs-and-systems-of-meaning",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "",
+    "text": "Objective: Apply semiotic analysis to an everyday object or advertisement.\nInstructions:\n\nChoose an object or ad.\nIdentify the binary oppositions at play.\nAnalyze the myth and ideology it conveys.\n\nExample: A car advertisement—look for contrasts like “freedom vs. constraint” or “adventure vs. routine.”"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-2.html#discussion-the-power-of-signs-and-systems",
+    "href": "subjects/quantification-of-meaning/Untitled-2.html#discussion-the-power-of-signs-and-systems",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "",
+    "text": "How do binary oppositions simplify complex concepts and shape perception?\nIn what ways do myths and ideologies influence how we understand culture and society?\nCan post-structuralism help us understand the instability of meaning in today’s digital world, such as in memes or social media?"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/Untitled-2.html#reflection-assignment",
+    "href": "subjects/quantification-of-meaning/Untitled-2.html#reflection-assignment",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "",
+    "text": "Write a short analysis of an everyday object, advertisement, or piece of media.\nFocus on the following:\n\nIdentify key binary oppositions.\nAnalyze the myth or ideology being communicated.\n\nExample: Analyze the meaning behind a fast-food logo (e.g., McDonald’s golden arches as a sign of comfort, quick service, and American culture)."
+  },
+  {
+    "objectID": "subjects/subjects.html",
+    "href": "subjects/subjects.html",
+    "title": "Subjects",
+    "section": "",
+    "text": "Courses\nHere are the available courses:\n\nQuantification of meaning",
+    "crumbs": [
+      "Subjects"
+    ]
+  },
+  {
+    "objectID": "subjects.html",
+    "href": "subjects.html",
+    "title": "Subjects",
+    "section": "",
+    "text": "Here are the available courses:\n\nQuantification of Meaning",
+    "crumbs": [
+      "Subjects"
+    ]
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning.html",
+    "href": "subjects/quantification-of-meaning.html",
+    "title": "Quantification of Meaning: From Semiotics to NLP",
+    "section": "",
+    "text": "Welcome to the Quantification of Meaning! Here you’ll find all the relevant materials.\n\n\n\n\nIntroduction to Semiotics"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning.html#slides",
+    "href": "subjects/quantification-of-meaning.html#slides",
+    "title": "Quantification of Meaning: From Semiotics to NLP",
+    "section": "",
+    "text": "Introduction to Semiotics"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#learning-objectives",
+    "href": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#learning-objectives",
+    "title": "Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Learn practical techniques for semiotic analysis in text, visual media, and advertising.\n\nUnderstand qualitative coding and thematic analysis as methods for studying signs and symbols.\nApply semiotic analysis techniques to real-world examples."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#semiotic-analysis-introduction",
+    "href": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#semiotic-analysis-introduction",
+    "title": "Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Definition: Semiotic analysis is a method used to interpret signs and symbols in texts, images, and media. It focuses on uncovering the underlying meaning of signs and their cultural or social significance.\nApplication: This method is widely used in media studies, cultural studies, and advertising analysis to reveal hidden ideologies or myths behind visual and textual content."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#practical-techniques-analyzing-text-visual-media-and-advertising",
+    "href": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#practical-techniques-analyzing-text-visual-media-and-advertising",
+    "title": "Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Objective: Uncover the underlying meaning in written language.\nSteps:\n\nIdentify Signs: Look for words, phrases, metaphors, or symbols that function as signs.\nSignifier and Signified: Analyze the relationship between the literal (signifier) and the conceptual (signified).\nContext: Consider the cultural or social context in which the text appears.\n\nExample: A news headline might use certain words or metaphors to influence the reader’s perception of an event.\n\n\n\n\n\n\nObjective: Interpret signs in images, films, and other visual content.\nSteps:\n\nIdentify Visual Elements: Look at colors, shapes, symbols, and layout.\nDenotation and Connotation: Analyze the literal representation (denotation) and its associative or cultural meanings (connotation).\nCultural Codes: Explore how certain visual cues align with cultural expectations or myths.\n\nExample: A political cartoon may use exaggerated imagery to symbolize power dynamics or societal critique.\n\n\n\n\n\n\nObjective: Deconstruct the meaning in advertisements and how they communicate with audiences.\nSteps:\n\nIdentify Key Signs: Consider brand symbols, colors, slogans, and imagery.\nTarget Audience: Analyze how the advertisement addresses its audience through signs and symbols.\nMyths and Ideologies: Explore how ads reflect broader cultural or ideological messages.\n\nExample: A luxury car advertisement may use symbols of wealth and freedom to target high-income consumers."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#methods-qualitative-coding-and-thematic-analysis",
+    "href": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#methods-qualitative-coding-and-thematic-analysis",
+    "title": "Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Definition: Qualitative coding is the process of categorizing and labeling text, images, or media based on recurring signs or themes.\nSteps:\n\nOpen Coding: Start by identifying all potential signs and symbols.\nAxial Coding: Group related signs into categories or themes.\nSelective Coding: Focus on the most significant or frequent categories to build a coherent narrative.\n\nExample: In analyzing a set of advertisements, you might label signs of luxury, freedom, or eco-friendliness.\n\n\n\n\n\n\nDefinition: Thematic analysis involves identifying, analyzing, and reporting patterns or themes within data. It’s used to interpret meaning from signs across a set of texts or images.\nSteps:\n\nFamiliarization: Immerse yourself in the material by reading or viewing it multiple times.\nGenerate Codes: Label signs or features with codes that reflect their meaning.\nSearch for Themes: Group codes into overarching themes that tell a story about the material.\nReview Themes: Ensure that themes are coherent and well-supported by evidence.\n\nExample: Analyzing a series of TV commercials to identify recurring themes of family, success, or environmentalism."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#practical-activity-applying-semiotic-analysis-techniques",
+    "href": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#practical-activity-applying-semiotic-analysis-techniques",
+    "title": "Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Objective: Use semiotic analysis to analyze a text, visual media, or advertisement.\nInstructions:\n\nChoose an advertisement or a short text (e.g., magazine ad, social media post).\nUse qualitative coding to identify key signs.\nApply thematic analysis to uncover underlying myths or ideologies.\n\nDiscussion Questions:\n\nWhat signs or symbols did you identify?\nHow do these signs contribute to the overall meaning?\nWhat themes or cultural ideologies did you discover?"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#case-study-semiotic-analysis-of-an-advertisement",
+    "href": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#case-study-semiotic-analysis-of-an-advertisement",
+    "title": "Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Denotation: A woman standing on a beach with a sunset in the background.\nConnotation: The imagery connotes freedom, beauty, and serenity.\nMyth: The ad promotes the idea that buying this perfume will grant the consumer a sense of elegance and emotional freedom."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#discussion-exploring-semiotic-techniques",
+    "href": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#discussion-exploring-semiotic-techniques",
+    "title": "Semiotic Analysis Techniques",
+    "section": "",
+    "text": "How does qualitative coding help us uncover hidden meanings in media?\nWhat are the strengths and limitations of thematic analysis in understanding semiotic systems?\nIn what ways does semiotic analysis reveal the cultural or ideological underpinnings of everyday objects?"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#reflection-assignment",
+    "href": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html#reflection-assignment",
+    "title": "Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Task: Conduct a semiotic analysis of an advertisement or media text.\nFocus:\n\nIdentify key signs and symbols (use qualitative coding).\nPerform a thematic analysis to uncover underlying ideologies or myths.\n\nExample: Analyze a fast-food ad for its use of cultural symbols (e.g., convenience, family, or happiness) and discuss the broader themes and ideologies it promotes."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html",
+    "href": "subjects/quantification-of-meaning/semiotic-analysis-techniques.html",
+    "title": "Semiotic Analysis Techniques",
+    "section": "",
+    "text": "Learn practical techniques for semiotic analysis in text, visual media, and advertising.\n\nUnderstand qualitative coding and thematic analysis as methods for studying signs and symbols.\nApply semiotic analysis techniques to real-world examples.\n\n\n\n\n\n\n\n\n\n\nDefinition: Semiotic analysis is a method used to interpret signs and symbols in texts, images, and media. It focuses on uncovering the underlying meaning of signs and their cultural or social significance.\nApplication: This method is widely used in media studies, cultural studies, and advertising analysis to reveal hidden ideologies or myths behind visual and textual content.\n\n\n\n\n\n\n\n\n\nObjective: Uncover the underlying meaning in written language.\nSteps:\n\nIdentify Signs: Look for words, phrases, metaphors, or symbols that function as signs.\nSignifier and Signified: Analyze the relationship between the literal (signifier) and the conceptual (signified).\nContext: Consider the cultural or social context in which the text appears.\n\nExample: A news headline might use certain words or metaphors to influence the reader’s perception of an event.\n\n\n\n\n\n\nObjective: Interpret signs in images, films, and other visual content.\nSteps:\n\nIdentify Visual Elements: Look at colors, shapes, symbols, and layout.\nDenotation and Connotation: Analyze the literal representation (denotation) and its associative or cultural meanings (connotation).\nCultural Codes: Explore how certain visual cues align with cultural expectations or myths.\n\nExample: A political cartoon may use exaggerated imagery to symbolize power dynamics or societal critique.\n\n\n\n\n\n\nObjective: Deconstruct the meaning in advertisements and how they communicate with audiences.\nSteps:\n\nIdentify Key Signs: Consider brand symbols, colors, slogans, and imagery.\nTarget Audience: Analyze how the advertisement addresses its audience through signs and symbols.\nMyths and Ideologies: Explore how ads reflect broader cultural or ideological messages.\n\nExample: A luxury car advertisement may use symbols of wealth and freedom to target high-income consumers.\n\n\n\n\n\n\n\n\n\nDefinition: Qualitative coding is the process of categorizing and labeling text, images, or media based on recurring signs or themes.\nSteps:\n\nOpen Coding: Start by identifying all potential signs and symbols.\nAxial Coding: Group related signs into categories or themes.\nSelective Coding: Focus on the most significant or frequent categories to build a coherent narrative.\n\nExample: In analyzing a set of advertisements, you might label signs of luxury, freedom, or eco-friendliness.\n\n\n\n\n\n\nDefinition: Thematic analysis involves identifying, analyzing, and reporting patterns or themes within data. It’s used to interpret meaning from signs across a set of texts or images.\nSteps:\n\nFamiliarization: Immerse yourself in the material by reading or viewing it multiple times.\nGenerate Codes: Label signs or features with codes that reflect their meaning.\nSearch for Themes: Group codes into overarching themes that tell a story about the material.\nReview Themes: Ensure that themes are coherent and well-supported by evidence.\n\nExample: Analyzing a series of TV commercials to identify recurring themes of family, success, or environmentalism.\n\n\n\n\n\n\n\n\n\nObjective: Use semiotic analysis to analyze a text, visual media, or advertisement.\nInstructions:\n\nChoose an advertisement or a short text (e.g., magazine ad, social media post).\nUse qualitative coding to identify key signs.\nApply thematic analysis to uncover underlying myths or ideologies.\n\nDiscussion Questions:\n\nWhat signs or symbols did you identify?\nHow do these signs contribute to the overall meaning?\nWhat themes or cultural ideologies did you discover?\n\n\n\n\n\n\n\n\n\n\nDenotation: A woman standing on a beach with a sunset in the background.\nConnotation: The imagery connotes freedom, beauty, and serenity.\nMyth: The ad promotes the idea that buying this perfume will grant the consumer a sense of elegance and emotional freedom.\n\n\n\n\n\n\n\n\n\nHow does qualitative coding help us uncover hidden meanings in media?\nWhat are the strengths and limitations of thematic analysis in understanding semiotic systems?\nIn what ways does semiotic analysis reveal the cultural or ideological underpinnings of everyday objects?\n\n\n\n\n\n\n\nTask: Conduct a semiotic analysis of an advertisement or media text.\nFocus:\n\nIdentify key signs and symbols (use qualitative coding).\nPerform a thematic analysis to uncover underlying ideologies or myths.\n\nExample: Analyze a fast-food ad for its use of cultural symbols (e.g., convenience, family, or happiness) and discuss the broader themes and ideologies it promotes."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html",
+    "href": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "",
+    "text": "Understand structuralism and post-structuralism in relation to semiotics.\nExplore binary oppositions, myths, and ideologies as systems of meaning.\nApply semiotic analysis to everyday objects and communication.\n\n\n\n\n\n\n\n\n\nDefinition: A theoretical framework that sees signs and meaning as part of a larger structure (or system) in language and culture.\nKey Concept: Meaning arises not from individual signs but from their relationship within a structured system.\nFounder: Ferdinand de Saussure introduced structuralism, focusing on langue (language as a system) vs. parole (individual speech).\nExample: A word gains meaning because of its position in relation to other words (e.g., “hot” vs. “cold”).\n\n\n\n\n\n\nDefinition: A theoretical approach that critiques and moves beyond structuralism, emphasizing the instability of meaning.\nKey Concept: Meaning is fluid and constantly shifting due to the complexities of interpretation and context.\nFounder: Jacques Derrida, with his theory of deconstruction, argued that meaning is never fixed and always open to reinterpretation.\nExample: A text can have multiple interpretations, and meaning is shaped by context and cultural assumptions.\n\n\n\n\n\n\n\n\n\nBinary Oppositions: Pairs of opposite concepts that define meaning by their relationship to each other (e.g., light vs. dark, male vs. female).\nOrigin: Structuralists argue that meaning is constructed through these oppositions, as part of larger systems of signs.\n\n\n\n\n\n\nGood vs. Evil: Common in storytelling, where characters are divided into these moral binaries.\nNature vs. Culture: Used to explore the tension between the natural world and human society.\nSelf vs. Other: A key concept in identity formation, where one’s identity is shaped by what it is not.\n\n\n\n\n\n\n\nExample: “Luxury vs. Necessity” in product advertising.\n\nAdvertisements often use this binary to create a sense of exclusivity or status around luxury products.\n\nAnalysis: Look at how words and images are paired to emphasize this contrast, shaping consumer perception.\n\n\n\n\n\n\n\n\nMyth: A type of speech or cultural narrative that gives signs ideological meaning, often tied to societal norms.\nExample: The image of a French soldier saluting the flag is not just a literal action, but a myth that conveys patriotism, duty, and loyalty.\nApplication: Barthes applied this concept to everything from fashion to politics, revealing the hidden ideologies behind everyday signs.\n\n\n\n\n\n\nDefinition: Ideologies are the frameworks of belief that shape how people understand the world, often communicated through systems of signs.\nCultural Codes: These are shared systems of meaning that people in a culture understand implicitly (e.g., a white wedding dress as a sign of purity).\nExample: In media, the way certain groups are represented (or not represented) can reveal underlying ideologies about race, gender, or class.\n\n\n\n\n\n\n\nExample: The Apple logo.\n\nDenotation: A stylized apple with a bite taken out.\nConnotation: Innovation, simplicity, sophistication.\nMyth: Apple as the symbol of technological progress and rebellion against traditional tech.\n\nAnalysis: Break down how the design, colors, and brand messaging reinforce this myth.\n\n\n\n\n\n\n\n\nObjective: Apply semiotic analysis to an everyday object or advertisement.\nInstructions:\n\nChoose an object or ad.\nIdentify the binary oppositions at play.\nAnalyze the myth and ideology it conveys.\n\nExample: A car advertisement—look for contrasts like “freedom vs. constraint” or “adventure vs. routine.”\n\n\n\n\n\n\n\n\n\nHow do binary oppositions simplify complex concepts and shape perception?\nIn what ways do myths and ideologies influence how we understand culture and society?\nCan post-structuralism help us understand the instability of meaning in today’s digital world, such as in memes or social media?\n\n\n\n\n\n\n\nWrite a short analysis of an everyday object, advertisement, or piece of media.\nFocus on the following:\n\nIdentify key binary oppositions.\nAnalyze the myth or ideology being communicated.\n\nExample: Analyze the meaning behind a fast-food logo (e.g., McDonald’s golden arches as a sign of comfort, quick service, and American culture)."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#learning-objectives",
+    "href": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#learning-objectives",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\n\nUnderstand structuralism and post-structuralism in relation to semiotics.\nExplore binary oppositions, myths, and ideologies as systems of meaning.\nApply semiotic analysis to everyday objects and communication."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#theoretical-frameworks-structuralism-vs.-post-structuralism",
+    "href": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#theoretical-frameworks-structuralism-vs.-post-structuralism",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "Theoretical Frameworks: Structuralism vs. Post-structuralism",
+    "text": "Theoretical Frameworks: Structuralism vs. Post-structuralism\nWhat is Structuralism?\n\nDefinition: A theoretical framework that sees signs and meaning as part of a larger structure (or system) in language and culture.\nKey Concept: Meaning arises not from individual signs but from their relationship within a structured system.\nFounder: Ferdinand de Saussure introduced structuralism, focusing on langue (language as a system) vs. parole (individual speech).\nExample: A word gains meaning because of its position in relation to other words (e.g., “hot” vs. “cold”)."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#binary-oppositions-creating-meaning-through-contrast",
+    "href": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#binary-oppositions-creating-meaning-through-contrast",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "Binary Oppositions: Creating Meaning through Contrast",
+    "text": "Binary Oppositions: Creating Meaning through Contrast\nDefinition\n\nBinary Oppositions: Pairs of opposite concepts that define meaning by their relationship to each other (e.g., light vs. dark, male vs. female).\nOrigin: Structuralists argue that meaning is constructed through these oppositions, as part of larger systems of signs."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#case-study-binary-oppositions-in-advertising",
+    "href": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#case-study-binary-oppositions-in-advertising",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "Case Study: Binary Oppositions in Advertising",
+    "text": "Case Study: Binary Oppositions in Advertising\n\nExample: “Luxury vs. Necessity” in product advertising.\n\nAdvertisements often use this binary to create a sense of exclusivity or status around luxury products.\n\nAnalysis: Look at how words and images are paired to emphasize this contrast, shaping consumer perception."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#myth-and-ideology-in-semiotics",
+    "href": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#myth-and-ideology-in-semiotics",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "Myth and Ideology in Semiotics",
+    "text": "Myth and Ideology in Semiotics\nRoland Barthes’ Concept of Myth\n\nMyth: A type of speech or cultural narrative that gives signs ideological meaning, often tied to societal norms.\nExample: The image of a French soldier saluting the flag is not just a literal action, but a myth that conveys patriotism, duty, and loyalty.\nApplication: Barthes applied this concept to everything from fashion to politics, revealing the hidden ideologies behind everyday signs."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#case-study-myth-in-everyday-objects",
+    "href": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#case-study-myth-in-everyday-objects",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "Case Study: Myth in Everyday Objects",
+    "text": "Case Study: Myth in Everyday Objects\n\nExample: The Apple logo.\n\nDenotation: A stylized apple with a bite taken out.\nConnotation: Innovation, simplicity, sophistication.\nMyth: Apple as the symbol of technological progress and rebellion against traditional tech.\n\nAnalysis: Break down how the design, colors, and brand messaging reinforce this myth."
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#practical-activity-analyzing-signs-and-systems-of-meaning",
+    "href": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#practical-activity-analyzing-signs-and-systems-of-meaning",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "Practical Activity: Analyzing Signs and Systems of Meaning",
+    "text": "Practical Activity: Analyzing Signs and Systems of Meaning\nGroup Activity\n\nObjective: Apply semiotic analysis to an everyday object or advertisement.\nInstructions:\n\nChoose an object or ad.\nIdentify the binary oppositions at play.\nAnalyze the myth and ideology it conveys.\n\nExample: A car advertisement—look for contrasts like “freedom vs. constraint” or “adventure vs. routine.”"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#discussion-the-power-of-signs-and-systems",
+    "href": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#discussion-the-power-of-signs-and-systems",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "Discussion: The Power of Signs and Systems",
+    "text": "Discussion: The Power of Signs and Systems\nKey Questions\n\nHow do binary oppositions simplify complex concepts and shape perception?\nIn what ways do myths and ideologies influence how we understand culture and society?\nCan post-structuralism help us understand the instability of meaning in today’s digital world, such as in memes or social media?"
+  },
+  {
+    "objectID": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#reflection-assignment",
+    "href": "subjects/quantification-of-meaning/signs-and-systems-of-meaning.html#reflection-assignment",
+    "title": "Quantification of Meaning: Signs and Systems of Meaning",
+    "section": "Reflection Assignment",
+    "text": "Reflection Assignment\n\nWrite a short analysis of an everyday object, advertisement, or piece of media.\nFocus on the following:\n\nIdentify key binary oppositions.\nAnalyze the myth or ideology being communicated.\n\nExample: Analyze the meaning behind a fast-food logo (e.g., McDonald’s golden arches as a sign of comfort, quick service, and American culture)."
   }
 ]

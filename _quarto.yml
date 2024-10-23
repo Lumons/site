@@ -13,6 +13,8 @@ website:
         href: posts.qmd
       - text: "About"
         href: about.qmd
+      - text: "Subjects"
+        href: subjects.qmd
 
 format:
   html:

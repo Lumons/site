@@ -1,0 +1,8 @@
+---
+title: "Subjects"
+---
+
+Here are the available courses:
+
+- [Quantification of Meaning](subjects/quantification-of-meaning/quantification-of-meaning.qmd)
+
