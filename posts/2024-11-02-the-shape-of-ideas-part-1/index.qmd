@@ -1,0 +1,185 @@
+---
+title: "The Shape of Ideas"
+description: Part 1 - Frequencies
+date: 2024-11-02
+format: html
+categories: [Thematic analysis, Textual visualisation]
+image: What_is_the_shape_of_an_idea_abstract_geometric_6a6b27a8-eabd-4399-91a2-c88aab7e7399.png
+editor: visual
+execute:
+  echo: false   # No code will be shown in the document
+  warning: false # No warnings will be shown in the document
+  message: false # No messages will be shown in the document
+---
+
+![](What_is_the_shape_of_an_idea_abstract_geometric_6a6b27a8-eabd-4399-91a2-c88aab7e7399.png)
+
+```{r}
+
+library(tidytext)
+library(dplyr)
+library(igraph)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+```
+
+I've been fascinated for a while now by the prospect that knowledge, concepts, and ideas might be represented as geometric forms. Put simply, I've felt drawn to the question, *"What is the shape of an idea?"* This might sound like an ambitious question to answer—and it’s fair to say that I'm not quite there yet. Still, it’s fertile ground for exploration. After all, we're living in an age characterized by the proliferation of analytical techniques suited for just this kind of inquiry.
+
+These methods are, admittedly, quite specialized, rooted in fields like quantitative linguistics and computer science. But thanks to these very tools, we now have accessible resources—like chatbots, text analysis libraries, and visualization software—that help us learn, experiment, and build on our understanding. And what is it that we should be doing with these tools, if not not satisfying our curiosity by answering ambitious questions? 
+
+We may not yet be able to literally "see" an idea's shape, but we can get closer to it by uncovering patterns and connections in language that hint at the structure of thought itself. Starting with a straightforward approach like **Term Frequency (TF)** analysis, we can identify the most frequently occurring words and concepts in a text. This might seem simple, but it lays a foundation, showing us the key ideas that will pave the way for further exploration. From there, we can take it a step further, examining **co-occurrences** and visualising the relationships between words, slowly beginning to sketch the contours of an idea’s "shape" in language.
+
+# The Text
+
+Here, I start with the text *On Liberty* by John Stuart Mill. A seminal work in political philosophy, On Liberty provides a framework for exploring the balance between state authority and individual freedoms. Mill argues for the importance of personal autonomy, emphasizing that individuals should be free to pursue their own paths, provided they do not harm others in the process. His work highlights the need for limits on societal and governmental control, advocating for the protection of individual rights as essential to a vibrant, progressive society. 
+
+To begin with, we need to load in the text.
+
+<div style="text-align: center;">
+  <img src="On_Liberty_(first_edition_title_page_via_facsimile).jpg" alt="On Liberty - John Stuart Mill" width="45%">
+</div>
+
+
+```{r}
+
+# Example full text (replace this with the actual text)
+#text <- "Freedom and justice are essential for a fair society. #Liberty and equality are pillars of rights..."
+
+text <- scan("On Liberty.txt", what = "character", sep = "\n")
+
+text_df <- tibble(doc_id = 1:length(text), text = text)
+
+text_df <- text_df %>%
+  summarize(text = paste(text, collapse = " "))
+
+```
+
+Next, we need to break this text down into individual words, a process known as tokenization. We’ll also remove common words that don’t add much meaning, like "and" or "are." After tokenizing the text words, and removing stopwords, we calculate Term Frequency by counting the occurrence of each word. See below, where the word frequencies have been calculated and then sorted, to show the top 10 words and their frequencies.   
+
+```{r}
+
+# Create a single document identifier and tokenize
+tokens <- text_df %>%
+  mutate(doc_id = 1) %>%  # Adding a single document identifier
+  unnest_tokens(word, text) %>%
+  anti_join(stop_words, by = "word")  # Remove common stopwords
+
+# Calculate term frequency (TF) by counting occurrences of each word
+word_counts <- tokens %>%
+  count(doc_id, word, sort = TRUE)
+
+# Display the top 10 most frequent words
+# Select only the "word" and "n" columns and rename "n" to "Frequency"
+word_counts %>%
+  select(word, n) %>%
+  head(10) %>%
+  rename(Frequency = n, Word = word) %>%  # Rename columns for better display
+  kable("html", caption = "Top 10 Most Frequent Words") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"))
+
+```
+
+Alright, now we have a list of words and their frequencies. While these frequencies give us a sense of the text’s main content, they don’t really illustrate the relationships between concepts or the progression of ideas throughout the work. Some terms may need cleaning up (for instance, "opinion" vs. "opinions" or "persons" vs. "people"), but even that requires judgment about whether these variations carry different meanings or appear in distinct contexts. For now, we’ll work with the terms as they are and focus on visualizing the relationships between them.
+
+# Co-occurrence analysis
+
+To visualize the relationships between our top 10 most frequent words, we’ll examine how they occur together within the text. This approach—called a **co-occurrence analysis**—will help reveal patterns and associations between terms. 
+
+First, we define a window of co-occurrence—in this case, 1—which essentially means we're looking at pairs of consecutive words. Whenever two of these words appear side-by-side in the text, we count that as a co-occurrence (don't forget, we've removed stopwords, so these words will co-occur more than you may think).
+
+Note that this window choice of 1 could be whatever we want it to be. Hoever, by keeping the window small for now we limit our focus to direct, immediate relationships rather than looser connections that might dilute the strength of association.
+
+Below, we can see that of our top 10 most frequently occurring words, the 2 that appear together the most are *opinion* and *truth*, followed by *society* and *individual*. Immediately, this makes intuitive sense, afterall *On Liberty* is an exploration of the relationship between society and individuals, and explores how this is in part due to the nature of/ how they interact with truth and opinion
+
+Below, we can see that among our top 10 most frequently occurring words, the pair that appears together most often is **opinion** and **truth**, followed by **society** and **individual**. This immediately aligns with the themes of **On Liberty**, which we already know to be an exploration of the relationship between society and individuals, and how these interactions are shaped by concepts of truth and opinion. 
+
+
+```{r}
+
+# Filter tokens to include only the top terms
+filtered_tokens <- tokens %>%
+  filter(word %in% word_counts$word[1:10]) %>%
+  mutate(word_id = row_number())  # Re-assign word IDs after filtering
+
+# Set window size for co-occurrences
+window_size <- 1
+
+# Create sliding windows and co-occurrence pairs using only the top terms
+word_pairs <- filtered_tokens %>%
+  crossing(window = 1:window_size) %>%
+  mutate(window_id = word_id + window) %>%
+  inner_join(
+    filtered_tokens %>% select(word_id, word_y = word),
+    by = c("window_id" = "word_id")
+  ) %>%
+  rename(word_x = word) %>%
+  filter(word_x != word_y) %>%
+  count(word_x, word_y, sort = TRUE)
+
+
+# Create a kable table to display the top 10 word pairs by co-occurrence frequency
+word_pairs %>%
+  head(10) %>%  # Show only the top 10 pairs for simplicity
+  kable("html", col.names = c("Word 1", "Word 2", "Frequency"), caption = "Top 10 Word Co-Occurrences") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"))
+
+
+```
+
+So that's quite satisfying, at least we know that a simple count of word frequencies and co-occurrences can get us some pretty representative information. This isn't quite yet the shape of an idea though, we need a few more steps to visualise these relationships. The next step is to create a **co-occurrence matrix**.
+
+# Co-occurrence network graph
+
+A **co-occurrence matrix** is a table that shows how often each word appears alongside every other word within a specified window of text. In this matrix, rows and columns represent words, and each cell contains the co-occurrence count for that word pair. For instance, if *liberty* and *individual* appear near each other 15 times, the matrix will show this count in the corresponding cell. This matrix provides a comprehensive view of all pairwise word relationships in the text, quantifying the connections between each word.
+
+```{r}
+
+# Create co-occurrence matrix
+cooccurrence_matrix <- word_pairs %>%
+  pivot_wider(names_from = word_x, values_from = n, values_fill = 0) %>%
+  column_to_rownames(var = "word_y") %>%
+  as.matrix()
+
+```
+
+
+Once we have this co-occurrence matrix, we can take it a step further by translating it into a **network graph**. In the network graph, each word is represented as a node and the connections between them—based on their co-occurrence counts—are shown as edges. The weight of each edge (i.e., the thickness of the line connecting two words) reflects the frequency of co-occurrence.
+
+
+```{r}
+#| fig.align: "center"
+
+# Build graph from co-occurrence pairs
+graph <- graph_from_data_frame(word_pairs, directed = FALSE)
+
+par(bg = "lightgray")  # Set background color for the plot
+
+plot(graph, 
+     layout = layout_with_fr(graph),
+     vertex.size = degree(graph) * 2,               # Node size based on degree
+     vertex.color = "#D35400",                      # Dark burnt orange for nodes
+     vertex.frame.color = "#8B4513",                # Darker brown for node borders
+     vertex.label.color = "#0B3D91",                # Navy blue for label text for high contrast
+     vertex.label.cex = 0.6,                        # Font size for labels
+     vertex.label.font = 2,                         # Bold font for labels
+     edge.color = "#1F618D",                        # Rich navy blue for edges
+     edge.width = E(graph)$n / max(E(graph)$n) * 8,  # Edge thickness based on co-occurrence
+     edge.arrow.size = 0                           # Remove arrows for undirected edges
+)
+
+
+```
+
+Now we have a visual representation of the relationships between the top 10 words in John Stuart Mill's *On Liberty*. Technically speaking, this is a relatively simple achievement, but it’s been a valuable exercise in setting up foundational concepts we’ll revisit later. Word frequency alone is a fairly basic approach, but it serves as a stepping stone toward more sophisticated methods like TF-IDF. Eventually, we’ll be extracting topics statistically, representing words as embeddings and performing more complex analyses, but for now, this is a useful start.
+
+--- 
+
+![](The_tension_between_society_and_the_individual_appears_c93daa0c-0fea-4169-9354-2ca381a6191a.png)
+
+*On Liberty* has become, partly by chance and partly by choice, my go-to text for exploring text analysis projects. Even with these basic techniques, the key themes of the text are already beginning to emerge. The tension between society and the individual appears, in part, as a struggle over truth and opinion. While this may not be exactly what I meant by identifying the "shape of an idea," it's quite fitting and tells us something valuable about the shape of ideas—that they’re molded by the individuals who hold them and the world they inhabit.
+
+
+
+
