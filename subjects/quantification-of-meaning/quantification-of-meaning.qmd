@@ -2,7 +2,7 @@
 title: "Quantification of Meaning: From Semiotics to NLP"
 format:  
     html:    
-        include-after-body: utterances.html
+        include-after-body: "../../giscus.html"
 ---
 
 Welcome to the Quantification of Meaning! Here you’ll find all the relevant materials. 

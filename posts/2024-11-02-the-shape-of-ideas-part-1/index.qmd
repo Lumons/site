@@ -2,7 +2,9 @@
 title: "The Shape of Ideas"
 description: Part 1 - Frequencies
 date: 2024-11-02
-format: html
+format:
+    html:    
+        include-after-body: "../../giscus.html"
 categories: [Thematic analysis, Textual visualisation]
 image: What_is_the_shape_of_an_idea_abstract_geometric_6a6b27a8-eabd-4399-91a2-c88aab7e7399.png
 editor: visual
@@ -12,7 +14,10 @@ execute:
   message: false # No messages will be shown in the document
 ---
 
-![](What_is_the_shape_of_an_idea_abstract_geometric_6a6b27a8-eabd-4399-91a2-c88aab7e7399.png)
+
+<div style="text-align: center;">
+  <img src="What_is_the_shape_of_an_idea_abstract_geometric_6a6b27a8-eabd-4399-91a2-c88aab7e7399.png" alt="What is the shape of an idea?" width="75%">
+</div>
 
 ```{r}
 
@@ -89,7 +94,7 @@ To visualize the relationships between our top 10 most frequent words, we’ll e
 
 First, we define a window of co-occurrence—in this case, 1—which essentially means we're looking at pairs of consecutive words. Whenever two of these words appear side-by-side in the text, we count that as a co-occurrence (don't forget, we've removed stopwords, so these words will co-occur more than you may think).
 
-Note that this window choice of 1 could be whatever we want it to be. Hoever, by keeping the window small for now we limit our focus to direct, immediate relationships rather than looser connections that might dilute the strength of association.
+Note that this window choice of 1 could be whatever we want it to be. However, by keeping the window small for now we limit our focus to direct, immediate relationships rather than looser connections that might dilute the strength of association.
 
 Below, we can see that of our top 10 most frequently occurring words, the 2 that appear together the most are *opinion* and *truth*, followed by *society* and *individual*. Immediately, this makes intuitive sense, afterall *On Liberty* is an exploration of the relationship between society and individuals, and explores how this is in part due to the nature of/ how they interact with truth and opinion
 
@@ -176,7 +181,10 @@ Now we have a visual representation of the relationships between the top 10 word
 
 --- 
 
-![](The_tension_between_society_and_the_individual_appears_c93daa0c-0fea-4169-9354-2ca381a6191a.png)
+
+<div style="text-align: center;">
+  <img src="The_tension_between_society_and_the_individual_appears_c93daa0c-0fea-4169-9354-2ca381a6191a.png" alt="The tension between society and the individual" width="75%">
+</div>
 
 *On Liberty* has become, partly by chance and partly by choice, my go-to text for exploring text analysis projects. Even with these basic techniques, the key themes of the text are already beginning to emerge. The tension between society and the individual appears, in part, as a struggle over truth and opinion. While this may not be exactly what I meant by identifying the "shape of an idea," it's quite fitting and tells us something valuable about the shape of ideas—that they’re molded by the individuals who hold them and the world they inhabit.
 

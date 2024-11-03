@@ -2,7 +2,9 @@
 title: "Cultivating Journalling Habits with AI"
 description: Learning by doing it the hard way
 date: 2024-05-22
-format: html
+format:
+    html:    
+        include-after-body: "../../giscus.html"
 categories: [Large Language Models, Knowledge management]
 image: Sometimes_understanding_what_we_truly_need_comes_from__70737b8d-1eb7-4d74-9ebc-939026b92b12.png
 editor: visual

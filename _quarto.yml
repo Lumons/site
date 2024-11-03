@@ -9,10 +9,10 @@ website:
     style: "docked"
     search: false
     contents:
-      - text: "Posts"
-        href: posts.qmd
       - text: "About"
         href: about.qmd
+      - text: "Posts"
+        href: posts.qmd
       - text: "Subjects"
         href: subjects.qmd
 

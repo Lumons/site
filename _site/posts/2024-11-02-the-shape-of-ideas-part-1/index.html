@@ -104,14 +104,14 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Posts</span></a>
+  <a href="../../about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../about.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">About</span></a>
+  <a href="../../posts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Posts</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -173,7 +173,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><img src="What_is_the_shape_of_an_idea_abstract_geometric_6a6b27a8-eabd-4399-91a2-c88aab7e7399.png" class="img-fluid"></p>
+<div style="text-align: center;">
+<p><img src="What_is_the_shape_of_an_idea_abstract_geometric_6a6b27a8-eabd-4399-91a2-c88aab7e7399.png" alt="What is the shape of an idea?" width="75%"></p>
+</div>
 <p>I’ve been fascinated for a while now by the prospect that knowledge, concepts, and ideas might be represented as geometric forms. Put simply, I’ve felt drawn to the question, <em>“What is the shape of an idea?”</em> This might sound like an ambitious question to answer—and it’s fair to say that I’m not quite there yet. Still, it’s fertile ground for exploration. After all, we’re living in an age characterized by the proliferation of analytical techniques suited for just this kind of inquiry.</p>
 <p>These methods are, admittedly, quite specialized, rooted in fields like quantitative linguistics and computer science. But thanks to these very tools, we now have accessible resources—like chatbots, text analysis libraries, and visualization software—that help us learn, experiment, and build on our understanding. And what is it that we should be doing with these tools, if not not satisfying our curiosity by answering ambitious questions?</p>
 <p>We may not yet be able to literally “see” an idea’s shape, but we can get closer to it by uncovering patterns and connections in language that hint at the structure of thought itself. Starting with a straightforward approach like <strong>Term Frequency (TF)</strong> analysis, we can identify the most frequently occurring words and concepts in a text. This might seem simple, but it lays a foundation, showing us the key ideas that will pave the way for further exploration. From there, we can take it a step further, examining <strong>co-occurrences</strong> and visualising the relationships between words, slowly beginning to sketch the contours of an idea’s “shape” in language.</p>
@@ -250,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>Co-occurrence analysis</h1>
 <p>To visualize the relationships between our top 10 most frequent words, we’ll examine how they occur together within the text. This approach—called a <strong>co-occurrence analysis</strong>—will help reveal patterns and associations between terms.</p>
 <p>First, we define a window of co-occurrence—in this case, 1—which essentially means we’re looking at pairs of consecutive words. Whenever two of these words appear side-by-side in the text, we count that as a co-occurrence (don’t forget, we’ve removed stopwords, so these words will co-occur more than you may think).</p>
-<p>Note that this window choice of 1 could be whatever we want it to be. Hoever, by keeping the window small for now we limit our focus to direct, immediate relationships rather than looser connections that might dilute the strength of association.</p>
+<p>Note that this window choice of 1 could be whatever we want it to be. However, by keeping the window small for now we limit our focus to direct, immediate relationships rather than looser connections that might dilute the strength of association.</p>
 <p>Below, we can see that of our top 10 most frequently occurring words, the 2 that appear together the most are <em>opinion</em> and <em>truth</em>, followed by <em>society</em> and <em>individual</em>. Immediately, this makes intuitive sense, afterall <em>On Liberty</em> is an exploration of the relationship between society and individuals, and explores how this is in part due to the nature of/ how they interact with truth and opinion</p>
 <p>Below, we can see that among our top 10 most frequently occurring words, the pair that appears together most often is <strong>opinion</strong> and <strong>truth</strong>, followed by <strong>society</strong> and <strong>individual</strong>. This immediately aligns with the themes of <strong>On Liberty</strong>, which we already know to be an exploration of the relationship between society and individuals, and how these interactions are shaped by concepts of truth and opinion.</p>
 <div class="cell">
@@ -340,13 +342,17 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Now we have a visual representation of the relationships between the top 10 words in John Stuart Mill’s <em>On Liberty</em>. Technically speaking, this is a relatively simple achievement, but it’s been a valuable exercise in setting up foundational concepts we’ll revisit later. Word frequency alone is a fairly basic approach, but it serves as a stepping stone toward more sophisticated methods like TF-IDF. Eventually, we’ll be extracting topics statistically, representing words as embeddings and performing more complex analyses, but for now, this is a useful start.</p>
 <hr>
-<p><img src="The_tension_between_society_and_the_individual_appears_c93daa0c-0fea-4169-9354-2ca381a6191a.png" class="img-fluid"></p>
+<div style="text-align: center;">
+<p><img src="The_tension_between_society_and_the_individual_appears_c93daa0c-0fea-4169-9354-2ca381a6191a.png" alt="The tension between society and the individual" width="75%"></p>
+</div>
 <p><em>On Liberty</em> has become, partly by chance and partly by choice, my go-to text for exploring text analysis projects. Even with these basic techniques, the key themes of the text are already beginning to emerge. The tension between society and the individual appears, in part, as a struggle over truth and opinion. While this may not be exactly what I meant by identifying the “shape of an idea,” it’s quite fitting and tells us something valuable about the shape of ideas—that they’re molded by the individuals who hold them and the world they inhabit.</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script src="https://giscus.app/client.js" data-repo="Lumons/site" data-repo-id="R_kgDOITI-Jg" data-category="General" data-category-id="DIC_kwDOITI-Js4Cj8Qx" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="1" data-input-position="top" data-theme="light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async="">
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

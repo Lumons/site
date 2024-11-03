@@ -1,8 +1,10 @@
 ---
-title: "Measuring Meaning (pt. 1/3)"
+title: "Measuring Meaning"
 description: Turning words into numbers
 date: 2024-09-09
-format: html
+format:
+    html:    
+        include-after-body: "../../giscus.html"
 categories: [Semantic quantification]
 image: The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png
 editor: visual

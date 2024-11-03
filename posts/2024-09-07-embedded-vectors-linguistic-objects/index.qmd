@@ -1,8 +1,10 @@
 ---
-title: "Embedded vectors as linguistic objects (pt. 3/3)"
+title: "Embedded vectors as linguistic objects"
 description: Finding new structures of meaning
 date: 2024-09-09
-format: html
+format:
+    html:    
+        include-after-body: "../../giscus.html"
 categories: [Semantic quantification, Semantic and Conceptual clustering]
 image: embedded_vectors_as_linguistic_objects_6a7f2c1e-e961-4c5a-9b2d-85a0ca74bbc5.png
 editor: visual

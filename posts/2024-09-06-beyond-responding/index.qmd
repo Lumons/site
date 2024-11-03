@@ -1,8 +1,10 @@
 ---
-title: "Beyond responding (pt. 2/3)"
+title: "Beyond responding"
 description: "Using behaviours as meaning" 
 date: 2024-09-09
-format: html
+format:
+    html:    
+        include-after-body: "../../giscus.html"
 categories: [Psychometric validation]
 image: "On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png"
 editor: visual
