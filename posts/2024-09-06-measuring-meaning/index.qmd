@@ -8,6 +8,15 @@ format:
 categories: [Semantic quantification]
 image: The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png
 editor: visual
+open-graph:
+  title: "Measuring Meaning"
+  description: "Turning words into numbers"
+  image: "The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png"
+twitter-card:
+  card: "summary"
+  title: "Measuring Meaning"
+  description: "Turning words into numbers"
+  image: "The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png"
 ---
 
 ![](The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png){fig-align="center"}

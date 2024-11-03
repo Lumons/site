@@ -8,6 +8,15 @@ format:
 categories: [Large Language Models, Knowledge management]
 image: Sometimes_understanding_what_we_truly_need_comes_from__70737b8d-1eb7-4d74-9ebc-939026b92b12.png
 editor: visual
+open-graph:
+  title: "Cultivating Journalling Habits with AI"
+  description: "Learning by doing it the hard way"
+  image: "Sometimes_understanding_what_we_truly_need_comes_from__70737b8d-1eb7-4d74-9ebc-939026b92b12.png"
+twitter-card:
+  card: "summary"
+  title: "Cultivating Journalling Habits with AI"
+  description: "Learning by doing it the hard way"
+  image: "Sometimes_understanding_what_we_truly_need_comes_from__70737b8d-1eb7-4d74-9ebc-939026b92b12.png"
 ---
 
 Journalling has never been a consistent habit for me. Despite starting numerous times with a new notebook and the best of intentions, my efforts tended to quickly devolve into scribbled reminders and half-hearted notes. Over time, I'd inevitably abandon the effort, only to pick it up again months later. This cycle of inconsistent documentation often felt artificial—writing felt meaningful when there was something significant to note, less so when it merely served as a reminder of daily routines. 

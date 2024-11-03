@@ -1,5 +1,5 @@
 ---
-title: "Beyond responding"
+title: "Beyond Responding"
 description: "Using behaviours as meaning" 
 date: 2024-09-09
 format:
@@ -8,6 +8,15 @@ format:
 categories: [Psychometric validation]
 image: "On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png"
 editor: visual
+open-graph:
+  title: "Beyond Responding"
+  description: "Using behaviours as meaning"
+  image: "On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png"
+twitter-card:
+  card: "summary"
+  title: "Beyond Responding"
+  description: "Page-specific Twitter description."
+  image: "On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png"
 ---
 
 ![](On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png)

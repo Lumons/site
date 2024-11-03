@@ -8,6 +8,15 @@ format:
 categories: [Semantic quantification, Semantic and Conceptual clustering]
 image: embedded_vectors_as_linguistic_objects_6a7f2c1e-e961-4c5a-9b2d-85a0ca74bbc5.png
 editor: visual
+open-graph:
+  title: "Embedded vectors as linguistic objects"
+  description: "Finding new structures of meaning"
+  image: embedded_vectors_as_linguistic_objects_6a7f2c1e-e961-4c5a-9b2d-85a0ca74bbc5.png
+twitter-card:
+  card: "summary"
+  title: "Embedded vectors as linguistic objects"
+  description: "Finding new structures of meaning"
+  image: embedded_vectors_as_linguistic_objects_6a7f2c1e-e961-4c5a-9b2d-85a0ca74bbc5.png
 ---
 
 ![](embedded_vectors_as_linguistic_objects_6a7f2c1e-e961-4c5a-9b2d-85a0ca74bbc5.png)

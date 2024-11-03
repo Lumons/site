@@ -9,6 +9,15 @@ format:
 categories: [Knowledge, Learning]
 image: Navigating_the_uncertainties_of_our_world_the_continuous_c_5382e1c4-45b3-452a-ab2c-aa3739e5aa51.png
 editor: visual
+open-graph:
+  title: "The SECI model & knowledge creation"
+  description: "As knowledge changes, so must we."
+  image: Navigating_the_uncertainties_of_our_world_the_continuous_c_5382e1c4-45b3-452a-ab2c-aa3739e5aa51.png
+twitter-card:
+  card: "summary"
+  title: "The SECI model & knowledge creation"
+  description: "As knowledge changes, so must we."
+  image: Navigating_the_uncertainties_of_our_world_the_continuous_c_5382e1c4-45b3-452a-ab2c-aa3739e5aa51.png
 ---
 
 Knowledge, in all its forms, is fundamental to our understanding of the world around us, and is key to navigating the uncertainties of life. But knowledge, like the world it is supposed to reflect, is not a static entity. As Peter Drucker puts it, *"Knowledge is different from all other resources. It makes itself constantly obsolete, so that today's advanced knowledge is tomorrow's ignorance. And the knowledge that matters is subject to rapid and abrupt shifts."* As knowledge changes so must we, a fact which underscores the necessity of continuous learning and innovation.
