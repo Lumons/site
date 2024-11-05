@@ -1,4 +1,13 @@
 ---
+open-graph:
+  title: "The Shape of Ideas"
+  description: "Part 1 - Frequencies."
+  image: /home/luke/repos/site/posts/2024-11-02-the-shape-of-ideas-part-1/What_is_the_shape_of_an_idea_abstract_geometric_6a6b27a8-eabd-4399-91a2-c88aab7e7399.png
+twitter-card:
+  card: "summary"
+  title: "The Shape of Ideas"
+  description: "Part 1 - Frequencies"
+  image: /home/luke/repos/site/posts/2024-11-02-the-shape-of-ideas-part-1/What_is_the_shape_of_an_idea_abstract_geometric_6a6b27a8-eabd-4399-91a2-c88aab7e7399.png
 title: "The Shape of Ideas"
 description: Part 1 - Frequencies
 date: 2024-11-02
@@ -8,15 +17,6 @@ format:
 categories: [Thematic analysis, Textual visualisation]
 image: What_is_the_shape_of_an_idea_abstract_geometric_6a6b27a8-eabd-4399-91a2-c88aab7e7399.png
 editor: visual
-open-graph:
-  title: "The Shape of Ideas"
-  description: "Part 1 - Frequencies."
-  image: What_is_the_shape_of_an_idea_abstract_geometric_6a6b27a8-eabd-4399-91a2-c88aab7e7399.png
-twitter-card:
-  card: "summary"
-  title: "The Shape of Ideas"
-  description: "Part 1 - Frequencies"
-  image: What_is_the_shape_of_an_idea_abstract_geometric_6a6b27a8-eabd-4399-91a2-c88aab7e7399.png
 execute:
   echo: false   # No code will be shown in the document
   warning: false # No warnings will be shown in the document
