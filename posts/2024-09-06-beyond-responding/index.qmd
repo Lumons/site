@@ -11,25 +11,27 @@ editor: visual
 open-graph:
   title: "Beyond Responding"
   description: "Using behaviours as meaning"
-  image: "On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png"
+  image: https://www.lumosinsight.co.uk/posts/2024-09-06-beyond-responding/On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png
 twitter-card:
-  card: "summary"
+  card: "summary_large_image"
   title: "Beyond Responding"
   description: "Page-specific Twitter description."
-  image: "On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png"
+  image: https://www.lumosinsight.co.uk/posts/2024-09-06-beyond-responding/On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png
 ---
 
 ![](On_meanings_as_substantive_evidence_the_patent_office__c05cc99c-45a0-474b-b75e-835d108a8892.png)
 
 The field of psychometric assessment - if not measurement world in general - is focused on demonstrating the validity of measures. What is the evidence this value means what it represents? Do these numbers actually represent reality?
 
-In psychometrics in particuar we ask: 
+In psychometrics in particuar we ask:
 
-* "Does this tool measure what it claims to measure?", 
-* "What do measurements on one construct imply about another?", and 
-* "How can this information be used to infer future behaviours?" 
+-   "Does this tool measure what it claims to measure?",
+-   "What do measurements on one construct imply about another?", and
+-   "How can this information be used to infer future behaviours?"
 
 The key concern here is evidence—observations that can support these claims. Think of them as theoretical tent pegs: "People who did this were also more likely to do that" and so on. Note that some people think this is not entirely justified as an endeavour[^1].
+
+[^1]: Sydney University professor [Joel Michell](https://scholar.google.com/citations?user=ei0Gh7cAAAAJ&hl=en) has a fair bit to say on the extent to which psychological constructs can be quantified in a way that is mathematically relevant and justifiable.
 
 # Evidenced claims
 
@@ -43,12 +45,8 @@ Next, we move to **substantive evidence**, which is about practical outcomes. Wh
 
 So, where do embeddings come into all of this? So far everything I've described involves analyzing response patterns. People are responding to questions about themselves, and we look at the relationships between their responses. There are a bunch of assumptions there, such as:
 
-* How much do peoples' interpretations of these constructs differ culturally?
-* How motivated are people to provide authentic and reflective responses? and,
-* How well do people really know themselves? 
+-   How much do peoples' interpretations of these constructs differ culturally?
+-   How motivated are people to provide authentic and reflective responses? and,
+-   How well do people really know themselves?
 
-So psychometric assessments make inferences about psychological constructs from co-occurring patterns in responses, but what inferences can we make on the basis of word embeddings? At the very least, word embeddings give us a new avenue for investigating the relatedness of words. They may in fact offer more than that, with embedding derived measures potentially allowing us to infer quantities and qualities of similarity, and meaning.  
-
-[^1]: Sydney University professor [Joel Michell](https://scholar.google.com/citations?user=ei0Gh7cAAAAJ&hl=en) has a fair bit to say on the extent to which psychological constructs can be quantified in a way that is mathematically relevant and justifiable.
-
-
+So psychometric assessments make inferences about psychological constructs from co-occurring patterns in responses, but what inferences can we make on the basis of word embeddings? At the very least, word embeddings give us a new avenue for investigating the relatedness of words. They may in fact offer more than that, with embedding derived measures potentially allowing us to infer quantities and qualities of similarity, and meaning.

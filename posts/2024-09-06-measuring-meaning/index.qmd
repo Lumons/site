@@ -11,38 +11,36 @@ editor: visual
 open-graph:
   title: "Measuring Meaning"
   description: "Turning words into numbers"
-  image: "The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png"
+  image: https://www.lumosinsight.co.uk/posts/2024-09-06-measuring-meaning/The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png
 twitter-card:
-  card: "summary"
+  card: "summary_large_image"
   title: "Measuring Meaning"
   description: "Turning words into numbers"
-  image: "The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png"
+  image: https://www.lumosinsight.co.uk/posts/2024-09-06-measuring-meaning/The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png
 ---
 
 ![](The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png){fig-align="center"}
 
-One of the key innovations that has contributed to the development of LLMs is the ability to convert words into embedded vectors, or vectors of word embeddings. Word embeddings offer a way of quantifying words while retaining some of their meaning. Prior to this development, computational text analysis was particularly challenging. This is because analysing textual information requires that we first quantify it in some way; convert some dimensions of the text's characteristics, features, and hopefully meaning, into numerical information. Earlier approaches were as simple as counting word frequencies. From there, the unit of analysis changed, moving from individual words to combinations of 2 or more (n-grams). Generating word embeddings, the next step beyond this, involves specifying word tokens, and describing them in terms of their relationship with others. 
+One of the key innovations that has contributed to the development of LLMs is the ability to convert words into embedded vectors, or vectors of word embeddings. Word embeddings offer a way of quantifying words while retaining some of their meaning. Prior to this development, computational text analysis was particularly challenging. This is because analysing textual information requires that we first quantify it in some way; convert some dimensions of the text's characteristics, features, and hopefully meaning, into numerical information. Earlier approaches were as simple as counting word frequencies. From there, the unit of analysis changed, moving from individual words to combinations of 2 or more (n-grams). Generating word embeddings, the next step beyond this, involves specifying word tokens, and describing them in terms of their relationship with others.
 
 # Word frequency
 
-Relying on word frequency is a simple, efficient, but limited way to analyse a text. Afterall, it really is just counting words - how many times does each word appear in the body of text? There are certainly situations where this type of information is useful: examining word distribution across texts, comparing different texts, or even simple forms of ranking. Despite its ease and efficiency though, word frequency analysis is rather limited. It is unable to code for word context or order, and it cannot disambiguate nuance or distinguish between synonymous words. What's more, this approach does not capture long or even short range relationships, or dependencies between words. For example, the terms `["artificial intelligence", "not happy"]` have meaning by virtue of the combinations of those words, but this is not captured in word frequency analysis. 
+Relying on word frequency is a simple, efficient, but limited way to analyse a text. Afterall, it really is just counting words - how many times does each word appear in the body of text? There are certainly situations where this type of information is useful: examining word distribution across texts, comparing different texts, or even simple forms of ranking. Despite its ease and efficiency though, word frequency analysis is rather limited. It is unable to code for word context or order, and it cannot disambiguate nuance or distinguish between synonymous words. What's more, this approach does not capture long or even short range relationships, or dependencies between words. For example, the terms `["artificial intelligence", "not happy"]` have meaning by virtue of the combinations of those words, but this is not captured in word frequency analysis.
 
 # N-grams
 
-N-grams are word combinations, sequences of size _n_ that contain _n_ words. For example bi-grams (_n_ = 2) would look like `["The dog", "dog barks", "barks often"]`, tri-grams (_n_ = 2) `["The dog barks", "dog barks often"]`.  By representing text data as combinations, or sequences of words of varying length, we get to represent a bit more meaning - to the extent that it's related to word order and adjacency. For example, we get more context sensitivity than we would with simple word frequencies (e.g. the distinction between `happy` and `not happy`). However, while n-grams have the added benefit of additional short range context, they struggle with longer range dependencies. Simply increasing the size of your n-grams to capture more context leads to overly complex, dense representations that are inefficient and still fail to fully capture meaning over longer distances[^1]. 
+N-grams are word combinations, sequences of size *n* that contain *n* words. For example bi-grams (*n* = 2) would look like `["The dog", "dog barks", "barks often"]`, tri-grams (*n* = 2) `["The dog barks", "dog barks often"]`. By representing text data as combinations, or sequences of words of varying length, we get to represent a bit more meaning - to the extent that it's related to word order and adjacency. For example, we get more context sensitivity than we would with simple word frequencies (e.g. the distinction between `happy` and `not happy`). However, while n-grams have the added benefit of additional short range context, they struggle with longer range dependencies. Simply increasing the size of your n-grams to capture more context leads to overly complex, dense representations that are inefficient and still fail to fully capture meaning over longer distances[^1].
+
+[^1]: You may also have heard of N-grams due to their association with one [Robert L. Mercer](https://scholar.google.com/citations?user=9VCF3hQAAAAJ&hl=en), famous for associations with Cambridge Analytica, Brexit campaign, Breitbart News, and for his stint at elite Hedge Fund Renaissance Technologies. Who says NLP doesn't pay?
 
 # Transformers
 
 It’s not enough to simply count words or look at combinations of words. The question remains: where do you draw the boundaries between letters, words, sentences, and contexts? The answer comes in the form of the **Transformer architecture**[^2], which preserves context and relevance by modeling the **relative importance** of different words through **self-attention**.
 
+[^2]: "Attention Is All You Need" - [Link](https://arxiv.org/abs/1706.03762)
+
 In this process, words are converted into **numerical representations** called **embeddings**, which capture their relationships to other words across multiple dimensions. These embeddings are adjusted based on the attention mechanism, which weighs how much focus each word should receive relative to others. Importantly, I say "words," but in practice, the model operates on **tokens** — units of analysis that may loosely correspond to words but can also include spaces, parts of words, punctuation, or combinations of these. Over time, as the model grows in size, it learns to assign precise **coordinates** (or embeddings) to each token, mapping them in a way that reflects their contextual importance and meaning.
 
 In practice, the use of word embeddings offers a semantically rich quantification of language. The extent to which this is the case is demonstrated in the ability of LLMs to capture nuances like synonyms, antonyms, or contextual similarities.
 
-In essence, by converting a language into embeddings, we're compressing its meaning into a lower-dimensional space. While this might feel like 'flattening' language, there's an optimistic view: embeddings translate one form of language into another. This compression doesn’t strip away meaning but instead encodes it in ways that align with our linguistic and cognitive frameworks, allowing models to capture rich semantic relationships and potentially offer us new ones. 
-
-
-[^1]: You may also have heard of N-grams due to their association with one [Robert L. Mercer](https://scholar.google.com/citations?user=9VCF3hQAAAAJ&hl=en), famous for associations with Cambridge Analytica, Brexit campaign, Breitbart News, and for his stint at elite Hedge Fund Renaissance Technologies. Who says NLP doesn't pay?
-
-[^2]: "Attention Is All You Need" - [Link](https://arxiv.org/abs/1706.03762)
-
+In essence, by converting a language into embeddings, we're compressing its meaning into a lower-dimensional space. While this might feel like 'flattening' language, there's an optimistic view: embeddings translate one form of language into another. This compression doesn’t strip away meaning but instead encodes it in ways that align with our linguistic and cognitive frameworks, allowing models to capture rich semantic relationships and potentially offer us new ones.

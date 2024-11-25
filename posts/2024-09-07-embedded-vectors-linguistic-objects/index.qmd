@@ -11,27 +11,31 @@ editor: visual
 open-graph:
   title: "Embedded vectors as linguistic objects"
   description: "Finding new structures of meaning"
-  image: embedded_vectors_as_linguistic_objects_6a7f2c1e-e961-4c5a-9b2d-85a0ca74bbc5.png
+  image: https://www.lumosinsight.co.uk/posts/2024-09-07-embedded-vectors-linguistic-objects/embedded_vectors_as_linguistic_objects_6a7f2c1e-e961-4c5a-9b2d-85a0ca74bbc5.png
 twitter-card:
-  card: "summary"
+  card: "summary_large_image"
   title: "Embedded vectors as linguistic objects"
   description: "Finding new structures of meaning"
-  image: embedded_vectors_as_linguistic_objects_6a7f2c1e-e961-4c5a-9b2d-85a0ca74bbc5.png
+  image: https://www.lumosinsight.co.uk/posts/2024-09-07-embedded-vectors-linguistic-objects/embedded_vectors_as_linguistic_objects_6a7f2c1e-e961-4c5a-9b2d-85a0ca74bbc5.png
 ---
 
 ![](embedded_vectors_as_linguistic_objects_6a7f2c1e-e961-4c5a-9b2d-85a0ca74bbc5.png)
 
-Recently, researchers have begun to explore the possibility that values derived from word embeddings may carry meaning we can apply to the words themselves. 
+Recently, researchers have begun to explore the possibility that values derived from word embeddings may carry meaning we can apply to the words themselves.
 
-# Word embeddings and psychometrics 
+# Word embeddings and psychometrics
 
-We can calculate word embeddings along with other metrics during the psychometric validation process. This provides us with information about the semantic similarity of items, and how this similarity is itself related to traditional psychometric statitistics. For example items whose embeddings have a higher _cosine similarity_, appear to be semantically similar and also elicit similar responses [^1][^2][^3]. That is to say, the metric derived from statistical relationships between words themselves carries some information about the meaning of the words. 
+We can calculate word embeddings along with other metrics during the psychometric validation process. This provides us with information about the semantic similarity of items, and how this similarity is itself related to traditional psychometric statitistics. For example items whose embeddings have a higher *cosine similarity*, appear to be semantically similar and also elicit similar responses [^1][^2][^3]. That is to say, the metric derived from statistical relationships between words themselves carries some information about the meaning of the words.
 
-We could simply think of this as a new form of evidence to be used in support of validity arguments, but it may well be worth considering whether the information in the statistical object that is an embeddings model may well take some kind of primacy over candidate response data. Rather than using human behaviour to shape our ontology, can we instead use semantic information? How about characterising it as both:
-- our responses to words, and 
-- the relationships between words 
+[^1]: [Hernandez and Nie (2022)](https://onlinelibrary.wiley.com/doi/full/10.1111/peps.12543) investigated the relationship between item embeddings and item-level intercorrelations. In their study, they trained a model to take pairs of items as input and predict the empirical correlation between them. This suggested that items with high semantic similarity also showed similar response patterns, opening new avenues for understanding how language influences response behavior.
 
-At the very least, it tells us something new, in addition to participant response data. At best, well, new dimensions to explore. The second cognitive revolution if you're bold. 
+[^2]: Relatedly [Wulff and Mata (2023)](https://osf.io/preprints/psyarxiv/9h7aw) follow up studies revealed that the the average cosine similarity between item embeddings could predict internal consistency reliability—a key psychometric metric, and items on different scales had lower similarities than items on the same scales
+
+[^3]: Also cosine similarity might not be similarity.
+
+We could simply think of this as a new form of evidence to be used in support of validity arguments, but it may well be worth considering whether the information in the statistical object that is an embeddings model may well take some kind of primacy over candidate response data. Rather than using human behaviour to shape our ontology, can we instead use semantic information? How about characterising it as both: - our responses to words, and - the relationships between words
+
+At the very least, it tells us something new, in addition to participant response data. At best, well, new dimensions to explore. The second cognitive revolution if you're bold.
 
 ## Cosine similarity
 
@@ -39,23 +43,16 @@ Anyway, the metric we're talking about, cosine similarity, is a metric used to q
 
 # Embeddings as a New Frontier for the Science of Meaning
 
-This new approach, which combines novel ways of representing linguistic data, may represent the new frontier in assessment development and measurement. While traditional methods focus on analyzing responses, embeddings allow us to look deeper into the language of the items themselves. By combining statistical evidence with linguistic analysis, we’re better equipped to refine scales, ensure validity, and understand the constructs. 
+This new approach, which combines novel ways of representing linguistic data, may represent the new frontier in assessment development and measurement. While traditional methods focus on analyzing responses, embeddings allow us to look deeper into the language of the items themselves. By combining statistical evidence with linguistic analysis, we’re better equipped to refine scales, ensure validity, and understand the constructs.
 
-From an assessment perspective, one of the only ways to address the impact of uncertainties around AI and test-taking is to make the assessment process more open, multidimensional. Where we once constrained the set of candidate options for the sake of brevity and construct specificity, perhaps we must now embrace a 'broader' assessment space. One conducted with the help of AI perhaps?  
+From an assessment perspective, one of the only ways to address the impact of uncertainties around AI and test-taking is to make the assessment process more open, multidimensional. Where we once constrained the set of candidate options for the sake of brevity and construct specificity, perhaps we must now embrace a 'broader' assessment space. One conducted with the help of AI perhaps?
 
-Of course, this opens the door to new applications, like using embeddings to **generate new psychometric items** or even expanding the range of our measurement processes, embracing higher dimensional datasets and the complexity involved in such analysese. It also allows us to identify items with **linguistic bias**, and to ask new questions: If two items are statistically related but linguistically distant, what does that say about the clarity of their meaning? 
+Of course, this opens the door to new applications, like using embeddings to **generate new psychometric items** or even expanding the range of our measurement processes, embracing higher dimensional datasets and the complexity involved in such analysese. It also allows us to identify items with **linguistic bias**, and to ask new questions: If two items are statistically related but linguistically distant, what does that say about the clarity of their meaning?
 
 # Combining responses and semantic structures
 
 On the one hand we have structural, statistical data about how people respond to questions, on the other we have multidimensional statistical objects that retain semantic quantities of the questions. How those interact is to be determined.
 
-Ultimately that brings us back to the beginning. Embeddings capture some degree of the nuances and subtelties of language, they take semantic information and quantify it, measure it. By representing words as numbers, we're then able to perform statistical operations on the things that exist within the structure of our language. And, in doing this, we have the opportunity to model hitherto unknown relationships between thoughts, concepts, categories, and cognitions. Not only as a form of supplementary evidence, but as a primary form of semantic relatedness.  
+Ultimately that brings us back to the beginning. Embeddings capture some degree of the nuances and subtelties of language, they take semantic information and quantify it, measure it. By representing words as numbers, we're then able to perform statistical operations on the things that exist within the structure of our language. And, in doing this, we have the opportunity to model hitherto unknown relationships between thoughts, concepts, categories, and cognitions. Not only as a form of supplementary evidence, but as a primary form of semantic relatedness.
 
-Beyond this, by looking at the the relationship between words and meaning from a different perspective, we might be able to develop a novel appreciation for the way in which thoughts and ideas fit together, and perhaps a more detailed view of our culture, philosophy, and language. 
-
-
-[^1]: [Hernandez and Nie (2022)](https://onlinelibrary.wiley.com/doi/full/10.1111/peps.12543) investigated the relationship between item embeddings and item-level intercorrelations. In their study, they trained a model to take pairs of items as input and predict the empirical correlation between them. This suggested that items with high semantic similarity also showed similar response patterns, opening new avenues for understanding how language influences response behavior.
-[^2]: Relatedly [Wulff and Mata (2023)](https://osf.io/preprints/psyarxiv/9h7aw) follow up studies revealed that the the average cosine similarity between item embeddings could predict internal consistency reliability—a key psychometric metric, and items on different scales had lower similarities than items on the same scales
-[^3]: Also cosine similarity might not be similarity.
-
-
+Beyond this, by looking at the the relationship between words and meaning from a different perspective, we might be able to develop a novel appreciation for the way in which thoughts and ideas fit together, and perhaps a more detailed view of our culture, philosophy, and language.
