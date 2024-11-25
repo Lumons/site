@@ -1,11 +1,10 @@
 ---
 open-graph:
-  card: summary
   title: "The Shape of Ideas"
   description: Part 2 - Focused Frequencies
   image: https://www.lumosinsight.co.uk/posts/2024-11-24-the-shape-of-ideas-part-2/What_is_the_shape_of_an_idea_-_focused_frequencies_abs_02c49888-1c0c-4826-a59e-182189e473c6.png
 twitter-card:
-  card: "summary"
+  card: "summary_large_image"
   title: "The Shape of Ideas"
   description: Part 2 - Focused Frequencies 
   image: https://www.lumosinsight.co.uk/posts/2024-11-24-the-shape-of-ideas-part-2/What_is_the_shape_of_an_idea_-_focused_frequencies_abs_02c49888-1c0c-4826-a59e-182189e473c6.png
