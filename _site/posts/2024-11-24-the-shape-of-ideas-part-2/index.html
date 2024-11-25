@@ -76,10 +76,12 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="The Shape of Ideas">
 <meta property="og:description" content="Part 2 - Focused Frequencies">
+<meta property="og:image" content="/posts/2024-11-24-the-shape-of-ideas-part-2/What_is_the_shape_of_an_idea_-_focused_frequencies_abs_02c49888-1c0c-4826-a59e-182189e473c6.png">
 <meta property="og:site_name" content="Lumos Insight">
 <meta name="twitter:title" content="The Shape of Ideas">
 <meta name="twitter:description" content="Part 2 - Focused Frequencies">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/posts/2024-11-24-the-shape-of-ideas-part-2/What_is_the_shape_of_an_idea_-_focused_frequencies_abs_02c49888-1c0c-4826-a59e-182189e473c6.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar docked">
@@ -155,18 +157,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#tf-idf-score" id="toc-tf-idf-score" class="nav-link" data-scroll-target="#tf-idf-score">TF-IDF Score:</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#tf-idf-per-chapter" id="toc-tf-idf-per-chapter" class="nav-link" data-scroll-target="#tf-idf-per-chapter">TF-IDF per chapter</a>
+  <li><a href="#chapter-analysis---tf-idf" id="toc-chapter-analysis---tf-idf" class="nav-link" data-scroll-target="#chapter-analysis---tf-idf">Chapter analysis - TF-IDF</a>
   <ul class="collapse">
-  <li><a href="#chapter-1-2" id="toc-chapter-1-2" class="nav-link" data-scroll-target="#chapter-1-2">Chapter 1</a></li>
-  <li><a href="#chapter-2-2" id="toc-chapter-2-2" class="nav-link" data-scroll-target="#chapter-2-2">Chapter 2</a></li>
-  <li><a href="#chapter-3-2" id="toc-chapter-3-2" class="nav-link" data-scroll-target="#chapter-3-2">Chapter 3</a></li>
-  <li><a href="#chapter-4-2" id="toc-chapter-4-2" class="nav-link" data-scroll-target="#chapter-4-2">Chapter 4</a></li>
-  <li><a href="#chapter-5-2" id="toc-chapter-5-2" class="nav-link" data-scroll-target="#chapter-5-2">Chapter 5</a></li>
-  <li><a href="#chapter-1-the-foundations-of-liberty" id="toc-chapter-1-the-foundations-of-liberty" class="nav-link" data-scroll-target="#chapter-1-the-foundations-of-liberty">Chapter 1: The Foundations of Liberty</a></li>
-  <li><a href="#chapter-2-the-importance-of-free-expression" id="toc-chapter-2-the-importance-of-free-expression" class="nav-link" data-scroll-target="#chapter-2-the-importance-of-free-expression">Chapter 2: The Importance of Free Expression</a></li>
-  <li><a href="#chapter-3-individuality-and-progress" id="toc-chapter-3-individuality-and-progress" class="nav-link" data-scroll-target="#chapter-3-individuality-and-progress">Chapter 3: Individuality and Progress</a></li>
-  <li><a href="#chapter-4-limits-of-societal-authority" id="toc-chapter-4-limits-of-societal-authority" class="nav-link" data-scroll-target="#chapter-4-limits-of-societal-authority">Chapter 4: Limits of Societal Authority</a></li>
-  <li><a href="#chapter-5-governance-and-responsibility" id="toc-chapter-5-governance-and-responsibility" class="nav-link" data-scroll-target="#chapter-5-governance-and-responsibility">Chapter 5: Governance and Responsibility</a></li>
+  <li><a href="#chapter-1-introductory-1" id="toc-chapter-1-introductory-1" class="nav-link" data-scroll-target="#chapter-1-introductory-1">Chapter 1: Introductory</a></li>
+  <li><a href="#chapter-2-of-the-liberty-of-thought-and-discussion-1" id="toc-chapter-2-of-the-liberty-of-thought-and-discussion-1" class="nav-link" data-scroll-target="#chapter-2-of-the-liberty-of-thought-and-discussion-1">Chapter 2: Of The Liberty Of Thought And Discussion</a></li>
+  <li><a href="#chapter-3-of-individuality-as-one-of-the-elements-of-well-being-1" id="toc-chapter-3-of-individuality-as-one-of-the-elements-of-well-being-1" class="nav-link" data-scroll-target="#chapter-3-of-individuality-as-one-of-the-elements-of-well-being-1">Chapter 3: Of Individuality, As One Of The Elements Of Well-being</a></li>
+  <li><a href="#chapter-4-of-the-limits-to-the-authority-of-society-over-the-individual-1" id="toc-chapter-4-of-the-limits-to-the-authority-of-society-over-the-individual-1" class="nav-link" data-scroll-target="#chapter-4-of-the-limits-to-the-authority-of-society-over-the-individual-1">Chapter 4: Of The Limits To The Authority Of Society Over The Individual</a></li>
+  <li><a href="#chapter-5-applications-1" id="toc-chapter-5-applications-1" class="nav-link" data-scroll-target="#chapter-5-applications-1">Chapter 5: Applications</a></li>
   </ul></li>
   <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a></li>
   </ul>
@@ -209,6 +206,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div style="text-align: center;">
+<p><img src="What_is_the_shape_of_an_idea_-_focused_frequencies_abs_02c49888-1c0c-4826-a59e-182189e473c6.png" alt="What is the shape of an idea?" width="75%"></p>
+</div>
 <p>In the previous post, we explored how examining <strong>word frequencies</strong> can help infer meaning from a text. We also demonstrated how analyzing <strong>word co-occurrence</strong> provides additional layers of information, allowing us to discern relationships between terms and their significance in shaping the broader themes of the document.</p>
 <p>In this post, we’ll expand on these approaches by focusing on more discrete chunks of text, such as individual chapters. This segmentation enables us to isolate the specific themes and concepts associated with particular sections, providing a clearer view of the detailed arguments that underpin the broader narrative. By examining these localized patterns, we can also better understand how overarching themes are constructed from more specific ideas.</p>
 <p>Finally, we’ll introduce a method for identifying the relative importance of words within the context of the entire document: <strong>TF-IDF (Term Frequency-Inverse Document Frequency)</strong>. This technique allows us to highlight the words that are particularly significant in a given section, shedding light on how distinct arguments and emphases contribute to the text as a whole. Using these methods, we’ll uncover new ways of exploring the structure and meaning of the work.</p>
@@ -551,7 +551,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
-<caption>Top 10 Word Frequencies - Chapter 5</caption>
+<caption>Top 10 Word Frequencies</caption>
 <thead>
 <tr class="header">
 <th style="text-align: right;" data-quarto-table-cell-role="th">doc_id</th>
@@ -1027,7 +1027,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="chapter-1-introductory" class="level2">
 <h2 class="anchored" data-anchor-id="chapter-1-introductory"><strong>Chapter 1: Introductory</strong></h2>
-<p>In the opening chapter, Mill establishes the central tension between society and the individual, evident in the frequent pairing of these terms. The co-occurrence matrix emphasizes: - “Society - Individual”: Reflecting the core question of where societal authority ends and personal liberty begins. Mill underscores the need to protect individuality from societal overreach. - “Government - Power”: Highlighting Mill’s concern with the historical expansion of governmental power and its potential to suppress freedoms. - “People - Power” (5): Exploring the risks of majority rule in democracies, where “the people” may wield power as oppressively as monarchs.</p>
+<p>In the opening chapter, Mill establishes the central tension between society and the individual, evident in the frequent pairing of these terms. The co-occurrence matrix emphasizes:</p>
+<ul>
+<li>“Society - Individual”: Reflecting the core question of where societal authority ends and personal liberty begins. Mill underscores the need to protect individuality from societal overreach.</li>
+<li>“Government - Power”: Highlighting Mill’s concern with the historical expansion of governmental power and its potential to suppress freedoms.</li>
+<li>“People - Power” (5): Exploring the risks of majority rule in democracies, where “the people” may wield power as oppressively as monarchs.</li>
+</ul>
 </section>
 <section id="chapter-2-of-the-liberty-of-thought-and-discussion" class="level2">
 <h2 class="anchored" data-anchor-id="chapter-2-of-the-liberty-of-thought-and-discussion"><strong>Chapter 2: Of The Liberty Of Thought And Discussion</strong></h2>
@@ -1035,22 +1040,30 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="chapter-3-of-individuality-as-one-of-the-elements-of-well-being" class="level2">
 <h2 class="anchored" data-anchor-id="chapter-3-of-individuality-as-one-of-the-elements-of-well-being"><strong>Chapter 3: Of Individuality, As One Of The Elements Of Well-being</strong></h2>
-<p>Here, Mill argues for the importance of individuality in resisting societal conformity: - “People - Conduct” (7): Highlighting Mill’s critique of the “tyranny of custom,” where societal expectations suppress individual decision-making. - “Individual - People” (6): Showing the tension between personal freedoms and societal norms, with individuality framed as essential for societal progress. - “Opinion - Mankind” (5): Connecting intellectual diversity with the advancement of humanity.</p>
+<p>Here, Mill argues for the importance of individuality in resisting societal conformity:</p>
+<ul>
+<li>“People - Conduct” (7): Highlighting Mill’s critique of the “tyranny of custom,” where societal expectations suppress individual decision-making.</li>
+<li>“Individual - People” (6): Showing the tension between personal freedoms and societal norms, with individuality framed as essential for societal progress.</li>
+<li>“Opinion - Mankind” (5): Connecting intellectual diversity with the advancement of humanity.</li>
+</ul>
 </section>
 <section id="chapter-4-of-the-limits-to-the-authority-of-society-over-the-individual" class="level2">
 <h2 class="anchored" data-anchor-id="chapter-4-of-the-limits-to-the-authority-of-society-over-the-individual"><strong>Chapter 4: Of The Limits To The Authority Of Society Over The Individual</strong></h2>
-<p>Mill explores the boundaries of societal control over individual actions, with co-occurrence analysis revealing: - “Society - Conduct” (8): Reflecting debates on when societal intervention in personal behavior is justified—specifically, when actions harm others. - “Individual - Society” (6): Highlighting the reciprocal obligations between individuals and the society that protects them. - “Opinion - Conduct” (5): Connecting how personal opinions influence actions and when these actions warrant societal scrutiny.</p>
+<p>Mill explores the boundaries of societal control over individual actions, with co-occurrence analysis revealing:</p>
+<ul>
+<li>“Society - Conduct” (8): Reflecting debates on when societal intervention in personal behavior is justified—specifically, when actions harm others.</li>
+<li>“Individual - Society” (6): Highlighting the reciprocal obligations between individuals and the society that protects them.</li>
+<li>“Opinion - Conduct” (5): Connecting how personal opinions influence actions and when these actions warrant societal scrutiny.</li>
+</ul>
 </section>
 <section id="chapter-5-applications" class="level2">
 <h2 class="anchored" data-anchor-id="chapter-5-applications"><strong>Chapter 5: Applications</strong></h2>
-<ul>
-<li>The final chapter applies Mill’s principles to practical governance, emphasizing the tension between liberty and state power
+<p>The final chapter applies Mill’s principles to practical governance, emphasizing the tension between liberty and state power:</p>
 <ul>
 <li>“Individual - Liberty” (5): Centralizing Mill’s belief that individual freedom is essential for personal and societal progress.</li>
 <li>“Power - Government” (5): Highlighting Mill’s critique of bureaucratic overreach and the need to limit governmental authority.</li>
 <li>“Principle - Liberty” (5): Reflecting Mill’s philosophical groundwork for determining when societal intervention is justified.</li>
 <li>“Conduct - Society” (3): Reinforcing the nuanced balance between personal autonomy and collective welfare.</li>
-</ul></li>
 </ul>
 </section>
 <section id="progression-through-the-text" class="level2">
@@ -1089,10 +1102,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="tf-idf-per-chapter" class="level1">
-<h1>TF-IDF per chapter</h1>
-<section id="chapter-1-2" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-1-2">Chapter 1</h2>
+<section id="chapter-analysis---tf-idf" class="level1">
+<h1>Chapter analysis - TF-IDF</h1>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Chapter 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Chapter 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Chapter 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false">Chapter 4</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-5" role="tab" aria-controls="tabset-3-5" aria-selected="false">Chapter 5</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -1308,9 +1323,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-</section>
-<section id="chapter-2-2" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-2-2">Chapter 2</h2>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -1422,9 +1436,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-</section>
-<section id="chapter-3-2" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-3-2">Chapter 3</h2>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -1528,9 +1541,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-</section>
-<section id="chapter-4-2" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-4-2">Chapter 4</h2>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -1682,9 +1694,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-</section>
-<section id="chapter-5-2" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-5-2">Chapter 5</h2>
+</div>
+<div id="tabset-3-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-5-tab">
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -1788,27 +1799,29 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <p>By identifying words that are of particular importance in each of the chapters, TF-IDF analysis offers a lens through which each chapter’s unique thematic focus becomes more apparent, sharpening our understanding of Mill’s arguments and their progression. By highlighting the most distinct terms, TF-IDF complements our earlier co-occurrence analyses, allowing us to isolate chapter-specific priorities and showing how Mill develops his broader principles of liberty and governance across the text.</p>
+<section id="chapter-1-introductory-1" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-1-introductory-1">Chapter 1: Introductory</h2>
+<p>TF-IDF reveals the chapter’s emphasis on external authority and limitations on governance. The focus on terms like <em>“external,”</em> <em>“mandates,”</em> <em>“rulers,”</em> and <em>“limitation”</em> underscores Mill’s effort to historically and philosophically ground his argument for limiting societal and governmental interference. At the same time, terms like <em>“independence”</em> and <em>“rightfully”</em> highlight the chapter’s normative goals, advocating for autonomy and the ethical justification of interventions. Together, these terms demonstrate how Mill frames his argument for liberty, balancing historical context with philosophical rigor.</p>
 </section>
-<section id="chapter-1-the-foundations-of-liberty" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-1-the-foundations-of-liberty">Chapter 1: The Foundations of Liberty</h2>
-<p>TF-IDF reveals the chapter’s emphasis on external authority and limitations on governance. The focus on terms like “external,” “mandates,” “rulers,” and “limitation” underscores Mill’s effort to historically and philosophically ground his argument for limiting societal and governmental interference. At the same time, terms like “independence” and “rightfully” highlight the chapter’s normative goals, advocating for autonomy and the ethical justification of interventions. Together, these terms demonstrate how Mill frames his argument for liberty, balancing historical context with philosophical rigor.</p>
+<section id="chapter-2-of-the-liberty-of-thought-and-discussion-1" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-2-of-the-liberty-of-thought-and-discussion-1">Chapter 2: Of The Liberty Of Thought And Discussion</h2>
+<p>The TF-IDF terms for Chapter 2 emphasize Mill’s core argument about the value of free speech and open debate in the search for truth. Terms like <em>“doctrines,”</em> <em>“false,”</em> and <em>“truth”</em> reflect the chapter’s focus on the intellectual marketplace, where ideas compete and evolve. <em>“Infallibility”</em> and <em>“error”</em> underscore Mill’s critique of dogmatism and his belief in the fallibility of human judgment, reinforcing the need for intellectual humility and openness. Together, these terms highlight Mill’s defense of dissent and his insistence that progress depends on the continual testing and refinement of ideas through dialogue and disagreement.</p>
 </section>
-<section id="chapter-2-the-importance-of-free-expression" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-2-the-importance-of-free-expression">Chapter 2: The Importance of Free Expression</h2>
-<p>The TF-IDF terms for Chapter 2 emphasize Mill’s core argument about the value of free speech and open debate in the search for truth. Terms like “doctrines,” “false,” and “truth” reflect the chapter’s focus on the intellectual marketplace, where ideas compete and evolve. “Infallibility” and “error” underscore Mill’s critique of dogmatism and his belief in the fallibility of human judgment, reinforcing the need for intellectual humility and openness. Together, these terms highlight Mill’s defense of dissent and his insistence that progress depends on the continual testing and refinement of ideas through dialogue and disagreement.</p>
+<section id="chapter-3-of-individuality-as-one-of-the-elements-of-well-being-1" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-3-of-individuality-as-one-of-the-elements-of-well-being-1">Chapter 3: Of Individuality, As One Of The Elements Of Well-being</h2>
+<p>The TF-IDF terms for Chapter 3 align with Mill’s celebration of individuality and critique of societal conformity. Terms like <em>“originality,”</em> <em>“genius,”</em> and <em>“impulses”</em> emphasize the vitality and creativity that come from embracing individuality, while <em>“customs,”</em> <em>“conformity,”</em> and “mediocrity” highlight the dangers of suppressing it. The chapter calls for a balance, where customs are respected but not blindly followed, and eccentricity is valued as a marker of a free and progressive society. This analysis underscores Mill’s belief that societal advancement depends on protecting spaces for individuality and creativity to thrive.</p>
 </section>
-<section id="chapter-3-individuality-and-progress" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-3-individuality-and-progress">Chapter 3: Individuality and Progress</h2>
-<p>The TF-IDF terms for Chapter 3 align with Mill’s celebration of individuality and critique of societal conformity. Terms like “originality,” “genius,” and “impulses” emphasize the vitality and creativity that come from embracing individuality, while “customs,” “conformity,” and “mediocrity” highlight the dangers of suppressing it. The chapter calls for a balance, where customs are respected but not blindly followed, and eccentricity is valued as a marker of a free and progressive society. This analysis underscores Mill’s belief that societal advancement depends on protecting spaces for individuality and creativity to thrive.</p>
+<section id="chapter-4-of-the-limits-to-the-authority-of-society-over-the-individual-1" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-4-of-the-limits-to-the-authority-of-society-over-the-individual-1">Chapter 4: Of The Limits To The Authority Of Society Over The Individual</h2>
+<p>The top TF-IDF terms for Chapter 4 align with Mill’s critique of societal overreach into individual liberties. Words like <em>“punished,”</em> <em>“amusements,”</em> and <em>“distaste”</em> reflect his focus on the boundaries of legitimate societal control, while terms like <em>“fermented”</em> and <em>“pork”</em> illustrate his use of specific examples to highlight cultural and moral biases. The analysis emphasizes Mill’s advocacy for individual freedom, arguing that society should only intervene when actions cause demonstrable harm to others, not merely when they offend prevailing norms or preferences.</p>
 </section>
-<section id="chapter-4-limits-of-societal-authority" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-4-limits-of-societal-authority">Chapter 4: Limits of Societal Authority</h2>
-<p>The top TF-IDF terms for Chapter 4 align with Mill’s critique of societal overreach into individual liberties. Words like “punished,” “amusements,” and “distaste” reflect his focus on the boundaries of legitimate societal control, while terms like “fermented” and “pork” illustrate his use of specific examples to highlight cultural and moral biases. The analysis emphasizes Mill’s advocacy for individual freedom, arguing that society should only intervene when actions cause demonstrable harm to others, not merely when they offend prevailing norms or preferences.</p>
-</section>
-<section id="chapter-5-governance-and-responsibility" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-5-governance-and-responsibility">Chapter 5: Governance and Responsibility</h2>
-<p>The TF-IDF analysis for Chapter 5 highlights its focus on governance, education, and societal obligations. Terms like “bureaucracy,” “central,” and “localities” reflect Mill’s emphasis on balancing centralized authority with local autonomy to foster individual and community development. Meanwhile, terms like “child,” “examination,” and “engagements” underscore the chapter’s concern with societal responsibilities in education and moral obligations. The interplay between these themes demonstrates Mill’s nuanced approach to ensuring liberty while maintaining social order and fostering collective progress.</p>
+<section id="chapter-5-applications-1" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-5-applications-1">Chapter 5: Applications</h2>
+<p>The TF-IDF analysis for Chapter 5 highlights its focus on governance, education, and societal obligations. Terms like <em>“bureaucracy,”</em> <em>“central,”</em> and <em>“localities”</em> reflect Mill’s emphasis on balancing centralized authority with local autonomy to foster individual and community development. Meanwhile, terms like <em>“child,”</em> <em>“examination,”</em> and <em>“engagements”</em> underscore the chapter’s concern with societal responsibilities in education and moral obligations. The interplay between these themes demonstrates Mill’s nuanced approach to ensuring liberty while maintaining social order and fostering collective progress.</p>
 </section>
 </section>
 <section id="conclusions" class="level1">

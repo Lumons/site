@@ -105,7 +105,7 @@
     "href": "posts.html",
     "title": "Posts",
     "section": "",
-    "text": "The Shape of Ideas\n\n\n\n\n\n\nThematic analysis\n\n\nTextual visualisation\n\n\n\nPart 1 - Frequencies\n\n\n\n\n\nNov 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nThe Shape of Ideas\n\n\n\n\n\n\nThematic analysis\n\n\nTextual visualisation\n\n\n\nPart 2\n\n\n\n\n\nNov 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nMeasuring Meaning\n\n\n\n\n\n\nSemantic quantification\n\n\n\nTurning words into numbers\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nBeyond Responding\n\n\n\n\n\n\nPsychometric validation\n\n\n\nUsing behaviours as meaning\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nEmbedded vectors as linguistic objects\n\n\n\n\n\n\nSemantic quantification\n\n\nSemantic and Conceptual clustering\n\n\n\nFinding new structures of meaning\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCultivating Journalling Habits with AI\n\n\n\n\n\n\nLarge Language Models\n\n\nKnowledge management\n\n\n\nLearning by doing it the hard way\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nThe SECI model & knowledge creation\n\n\n\n\n\n\nKnowledge\n\n\nLearning\n\n\n\nAs knowledge changes, so must we. \n\n\n\n\n\nJun 6, 2023\n\n\n\n\n\n\nNo matching items",
+    "text": "The Shape of Ideas\n\n\n\n\n\n\nThematic analysis\n\n\nTextual visualisation\n\n\n\nPart 2 - Focused Frequencies\n\n\n\n\n\nNov 24, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nThe Shape of Ideas\n\n\n\n\n\n\nThematic analysis\n\n\nTextual visualisation\n\n\n\nPart 1 - Frequencies\n\n\n\n\n\nNov 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nMeasuring Meaning\n\n\n\n\n\n\nSemantic quantification\n\n\n\nTurning words into numbers\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nBeyond Responding\n\n\n\n\n\n\nPsychometric validation\n\n\n\nUsing behaviours as meaning\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nEmbedded vectors as linguistic objects\n\n\n\n\n\n\nSemantic quantification\n\n\nSemantic and Conceptual clustering\n\n\n\nFinding new structures of meaning\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCultivating Journalling Habits with AI\n\n\n\n\n\n\nLarge Language Models\n\n\nKnowledge management\n\n\n\nLearning by doing it the hard way\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nThe SECI model & knowledge creation\n\n\n\n\n\n\nKnowledge\n\n\nLearning\n\n\n\nAs knowledge changes, so must we. \n\n\n\n\n\nJun 6, 2023\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Posts"
     ]
@@ -514,5 +514,348 @@
     "title": "The Shape of Ideas",
     "section": "",
     "text": "I’ve been fascinated for a while now by the prospect that knowledge, concepts, and ideas might be represented as geometric forms. Put simply, I’ve felt drawn to the question, “What is the shape of an idea?” This might sound like an ambitious question to answer—and it’s fair to say that I’m not quite there yet. Still, it’s fertile ground for exploration. After all, we’re living in an age characterized by the proliferation of analytical techniques suited for just this kind of inquiry.\nThese methods are, admittedly, quite specialized, rooted in fields like quantitative linguistics and computer science. But thanks to these very tools, we now have accessible resources—like chatbots, text analysis libraries, and visualization software—that help us learn, experiment, and build on our understanding. And what is it that we should be doing with these tools, if not not satisfying our curiosity by answering ambitious questions?\nWe may not yet be able to literally “see” an idea’s shape, but we can get closer to it by uncovering patterns and connections in language that hint at the structure of thought itself. Starting with a straightforward approach like Term Frequency (TF) analysis, we can identify the most frequently occurring words and concepts in a text. This might seem simple, but it lays a foundation, showing us the key ideas that will pave the way for further exploration. From there, we can take it a step further, examining co-occurrences and visualising the relationships between words, slowly beginning to sketch the contours of an idea’s “shape” in language.\n\nThe Text\nHere, I start with the text On Liberty by John Stuart Mill. A seminal work in political philosophy, On Liberty provides a framework for exploring the balance between state authority and individual freedoms. Mill argues for the importance of personal autonomy, emphasizing that individuals should be free to pursue their own paths, provided they do not harm others in the process. His work highlights the need for limits on societal and governmental control, advocating for the protection of individual rights as essential to a vibrant, progressive society.\nTo begin with, we need to load in the text.\n\n\n\nNext, we need to break this text down into individual words, a process known as tokenization. We’ll also remove common words that don’t add much meaning, like “and” or “are.” After tokenizing the text words, and removing stopwords, we calculate Term Frequency by counting the occurrence of each word. See below, where the word frequencies have been calculated and then sorted, to show the top 10 words and their frequencies.\n\n\n\n\nTop 10 Most Frequent Words\n\n\nWord\nFrequency\n\n\n\n\nopinion\n153\n\n\nsociety\n115\n\n\nhuman\n106\n\n\nopinions\n104\n\n\npeople\n97\n\n\ntruth\n96\n\n\npersons\n93\n\n\nliberty\n91\n\n\nconduct\n88\n\n\nindividual\n88\n\n\n\n\n\n\n\n\nAlright, now we have a list of words and their frequencies. While these frequencies give us a sense of the text’s main content, they don’t really illustrate the relationships between concepts or the progression of ideas throughout the work. Some terms may need cleaning up (for instance, “opinion” vs. “opinions” or “persons” vs. “people”), but even that requires judgment about whether these variations carry different meanings or appear in distinct contexts. For now, we’ll work with the terms as they are and focus on visualizing the relationships between them.\n\n\nCo-occurrence analysis\nTo visualize the relationships between our top 10 most frequent words, we’ll examine how they occur together within the text. This approach—called a co-occurrence analysis—will help reveal patterns and associations between terms.\nFirst, we define a window of co-occurrence—in this case, 1—which essentially means we’re looking at pairs of consecutive words. Whenever two of these words appear side-by-side in the text, we count that as a co-occurrence (don’t forget, we’ve removed stopwords, so these words will co-occur more than you may think).\nNote that this window choice of 1 could be whatever we want it to be. However, by keeping the window small for now we limit our focus to direct, immediate relationships rather than looser connections that might dilute the strength of association.\nBelow, we can see that of our top 10 most frequently occurring words, the 2 that appear together the most are opinion and truth, followed by society and individual. Immediately, this makes intuitive sense, afterall On Liberty is an exploration of the relationship between society and individuals, and explores how this is in part due to the nature of/ how they interact with truth and opinion\nBelow, we can see that among our top 10 most frequently occurring words, the pair that appears together most often is opinion and truth, followed by society and individual. This immediately aligns with the themes of On Liberty, which we already know to be an exploration of the relationship between society and individuals, and how these interactions are shaped by concepts of truth and opinion.\n\n\n\n\nTop 10 Word Co-Occurrences\n\n\nWord 1\nWord 2\nFrequency\n\n\n\n\nopinion\ntruth\n29\n\n\nsociety\nindividual\n26\n\n\nopinions\nopinion\n23\n\n\ntruth\nopinion\n21\n\n\ntruth\nopinions\n20\n\n\nindividual\nsociety\n17\n\n\nopinions\ntruth\n17\n\n\nconduct\nsociety\n16\n\n\nhuman\npersons\n16\n\n\nindividual\nliberty\n15\n\n\n\n\n\n\n\n\nSo that’s quite satisfying, at least we know that a simple count of word frequencies and co-occurrences can get us some pretty representative information. This isn’t quite yet the shape of an idea though, we need a few more steps to visualise these relationships. The next step is to create a co-occurrence matrix.\n\n\nCo-occurrence network graph\nA co-occurrence matrix is a table that shows how often each word appears alongside every other word within a specified window of text. In this matrix, rows and columns represent words, and each cell contains the co-occurrence count for that word pair. For instance, if liberty and individual appear near each other 15 times, the matrix will show this count in the corresponding cell. This matrix provides a comprehensive view of all pairwise word relationships in the text, quantifying the connections between each word.\nOnce we have this co-occurrence matrix, we can take it a step further by translating it into a network graph. In the network graph, each word is represented as a node and the connections between them—based on their co-occurrence counts—are shown as edges. The weight of each edge (i.e., the thickness of the line connecting two words) reflects the frequency of co-occurrence.\n\n\n\n\n\n\n\n\n\nNow we have a visual representation of the relationships between the top 10 words in John Stuart Mill’s On Liberty. Technically speaking, this is a relatively simple achievement, but it’s been a valuable exercise in setting up foundational concepts we’ll revisit later. Word frequency alone is a fairly basic approach, but it serves as a stepping stone toward more sophisticated methods like TF-IDF. Eventually, we’ll be extracting topics statistically, representing words as embeddings and performing more complex analyses, but for now, this is a useful start.\n\n\n\n\nOn Liberty has become, partly by chance and partly by choice, my go-to text for exploring text analysis projects. Even with these basic techniques, the key themes of the text are already beginning to emerge. The tension between society and the individual appears, in part, as a struggle over truth and opinion. While this may not be exactly what I meant by identifying the “shape of an idea,” it’s quite fitting and tells us something valuable about the shape of ideas—that they’re molded by the individuals who hold them and the world they inhabit."
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html",
+    "title": "The Shape of Ideas",
+    "section": "",
+    "text": "In the previous post, we explored how examining word frequencies can help infer meaning from a text. We also demonstrated how analyzing word co-occurrence provides additional layers of information, allowing us to discern relationships between terms and their significance in shaping the broader themes of the document.\nIn this post, we’ll expand on these approaches by focusing on more discrete chunks of text, such as individual chapters. This segmentation enables us to isolate the specific themes and concepts associated with particular sections, providing a clearer view of the detailed arguments that underpin the broader narrative. By examining these localized patterns, we can also better understand how overarching themes are constructed from more specific ideas.\nFinally, we’ll introduce a method for identifying the relative importance of words within the context of the entire document: TF-IDF (Term Frequency-Inverse Document Frequency). This technique allows us to highlight the words that are particularly significant in a given section, shedding light on how distinct arguments and emphases contribute to the text as a whole. Using these methods, we’ll uncover new ways of exploring the structure and meaning of the work."
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#frequency-table",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#frequency-table",
+    "title": "The Shape of Ideas 2",
+    "section": "Frequency table",
+    "text": "Frequency table\nFollowing code chunk is supposed to count frequencies per chapter (top 10?)\nThe below tabset is supposed to show chapter by chapter, the top 10 word frequencies\n\nChapter 1Chapter 2Chapter 3Chapter 4Chapter 5\n\n\n\n\n\n\nTop 10 Word Frequencies\n\n\ndoc_id\nword\nfrequency\n\n\n\n\n1\nsociety\n27\n\n\n1\npower\n26\n\n\n1\ngovernment\n21\n\n\n1\nliberty\n20\n\n\n1\nindividual\n19\n\n\n1\npeople\n18\n\n\n1\nconduct\n16\n\n\n1\nopinion\n16\n\n\n1\nprinciple\n13\n\n\n1\nmankind\n12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTop 10 Word Frequencies\n\n\ndoc_id\nword\nfrequency\n\n\n\n\n2\nopinion\n98\n\n\n2\ntruth\n85\n\n\n2\nopinions\n67\n\n\n2\nmankind\n33\n\n\n2\ntrue\n31\n\n\n2\nmind\n28\n\n\n2\nhuman\n27\n\n\n2\npersons\n27\n\n\n2\npeople\n26\n\n\n2\ndoctrines\n26\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTop 10 Word Frequencies\n\n\ndoc_id\nword\nfrequency\n\n\n\n\n3\nhuman\n46\n\n\n3\npeople\n28\n\n\n3\ncharacter\n24\n\n\n3\nnature\n22\n\n\n3\nlife\n21\n\n\n3\nindividuality\n19\n\n\n3\nstrong\n18\n\n\n3\npersons\n17\n\n\n3\nopinions\n15\n\n\n3\ncustom\n15\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTop 10 Word Frequencies\n\n\ndoc_id\nword\nfrequency\n\n\n\n\n4\nsociety\n37\n\n\n4\nconduct\n30\n\n\n4\nperson\n28\n\n\n4\npublic\n26\n\n\n4\nsocial\n22\n\n\n4\nmoral\n19\n\n\n4\npersons\n19\n\n\n4\nindividual\n17\n\n\n4\nopinion\n17\n\n\n4\nwrong\n15\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTop 10 Word Frequencies - Chapter 5\n\n\ndoc_id\nword\nfrequency\n\n\n\n\n5\ngovernment\n35\n\n\n5\nliberty\n34\n\n\n5\neducation\n25\n\n\n5\nfree\n24\n\n\n5\npublic\n23\n\n\n5\npersons\n21\n\n\n5\nsociety\n20\n\n\n5\nperson\n18\n\n\n5\nfreedom\n18\n\n\n5\nquestion\n16"
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#tf-idf-per-chapter",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#tf-idf-per-chapter",
+    "title": "The Shape of Ideas 2",
+    "section": "TF-IDF per chapter",
+    "text": "TF-IDF per chapter"
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#co-occurrence-matrix",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#co-occurrence-matrix",
+    "title": "The Shape of Ideas 2",
+    "section": "Co-occurrence matrix",
+    "text": "Co-occurrence matrix"
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-1-1",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-1-1",
+    "title": "The Shape of Ideas 2",
+    "section": "Chapter 1",
+    "text": "Chapter 1\n\n\n\n\nTop 10 Word Co-Occurrences\n\n\nWord 1\nWord 2\nFrequency\n\n\n\n\nsociety\nindividual\n8\n\n\nconduct\nopinion\n5\n\n\ngovernment\npower\n5\n\n\nindividual\nsociety\n5\n\n\npeople\npower\n5\n\n\npower\ngovernment\n5\n\n\nopinion\nsociety\n4\n\n\ngovernment\nopinion\n3\n\n\ngovernment\npeople\n3\n\n\nindividual\nopinion\n3"
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-2-1",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-2-1",
+    "title": "The Shape of Ideas 2",
+    "section": "Chapter 2",
+    "text": "Chapter 2\n\n\n\n\nTop 10 Word Co-Occurrences\n\n\nWord 1\nWord 2\nFrequency\n\n\n\n\nmankind\nopinion\n12\n\n\nopinion\nmankind\n12\n\n\npeople\nopinion\n9\n\n\nmankind\npeople\n5\n\n\nopinion\nconduct\n5\n\n\nconduct\nmankind\n4\n\n\ngovernment\npeople\n4\n\n\nopinion\npeople\n4\n\n\npeople\nconduct\n4\n\n\nconduct\npeople\n3"
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-3-1",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-3-1",
+    "title": "The Shape of Ideas 2",
+    "section": "Chapter 3",
+    "text": "Chapter 3\n\n\n\n\nTop 10 Word Co-Occurrences\n\n\nWord 1\nWord 2\nFrequency\n\n\n\n\npeople\nconduct\n7\n\n\nindividual\npeople\n6\n\n\nopinion\nmankind\n5\n\n\nconduct\npeople\n3\n\n\nliberty\npeople\n3\n\n\npeople\nopinion\n3\n\n\npeople\nsociety\n3\n\n\npower\nopinion\n3\n\n\npower\nsociety\n3\n\n\nsociety\npeople\n3"
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-4-1",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-4-1",
+    "title": "The Shape of Ideas 2",
+    "section": "Chapter 4",
+    "text": "Chapter 4\n\n\n\n\nTop 10 Word Co-Occurrences\n\n\nWord 1\nWord 2\nFrequency\n\n\n\n\nsociety\nconduct\n8\n\n\nconduct\nsociety\n6\n\n\nindividual\nsociety\n6\n\n\nconduct\nindividual\n5\n\n\nopinion\nconduct\n5\n\n\nconduct\nopinion\n4\n\n\nopinion\npeople\n4\n\n\nsociety\nindividual\n4\n\n\nconduct\npeople\n3\n\n\nliberty\nsociety\n3"
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-5-1",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-5-1",
+    "title": "The Shape of Ideas 2",
+    "section": "Chapter 5",
+    "text": "Chapter 5\n\n\n\n\nTop 10 Word Co-Occurrences\n\n\nWord 1\nWord 2\nFrequency\n\n\n\n\nindividual\nliberty\n5\n\n\npower\ngovernment\n5\n\n\nprinciple\nliberty\n5\n\n\nconduct\nprinciple\n4\n\n\nliberty\ngovernment\n4\n\n\nliberty\npeople\n4\n\n\nsociety\nconduct\n4\n\n\nconduct\nindividual\n3\n\n\nconduct\nsociety\n3\n\n\ngovernment\nconduct\n3"
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-1-introductory",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-1-introductory",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 1: Introductory",
+    "text": "Chapter 1: Introductory\nIn the opening chapter, Mill establishes the central tension between society and the individual, evident in the frequent pairing of these terms. The co-occurrence matrix emphasizes: - “Society - Individual”: Reflecting the core question of where societal authority ends and personal liberty begins. Mill underscores the need to protect individuality from societal overreach. - “Government - Power”: Highlighting Mill’s concern with the historical expansion of governmental power and its potential to suppress freedoms. - “People - Power” (5): Exploring the risks of majority rule in democracies, where “the people” may wield power as oppressively as monarchs."
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-2-of-the-liberty-of-thought-and-discussion",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-2-of-the-liberty-of-thought-and-discussion",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 2: Of The Liberty Of Thought And Discussion",
+    "text": "Chapter 2: Of The Liberty Of Thought And Discussion\nThis chapter is concerned with the value of free expression and debate. Word co-occurrences analyis highlights the importance of: - “Mankind - Opinion” (12): Highlighting Mill’s argument that the progress of humanity depends on the collision of diverse opinions, which challenge norms and uncover truths. - “People - Opinion” (9): Reflecting the relationship between collective societal beliefs and individual dissent. Mill defends the necessity of tolerating unpopular opinions. - “Mankind - People” (5): Emphasizing the collective benefits of individual intellectual freedom."
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-3-of-individuality-as-one-of-the-elements-of-well-being",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-3-of-individuality-as-one-of-the-elements-of-well-being",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 3: Of Individuality, As One Of The Elements Of Well-being",
+    "text": "Chapter 3: Of Individuality, As One Of The Elements Of Well-being\nHere, Mill argues for the importance of individuality in resisting societal conformity: - “People - Conduct” (7): Highlighting Mill’s critique of the “tyranny of custom,” where societal expectations suppress individual decision-making. - “Individual - People” (6): Showing the tension between personal freedoms and societal norms, with individuality framed as essential for societal progress. - “Opinion - Mankind” (5): Connecting intellectual diversity with the advancement of humanity."
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-4-of-the-limits-to-the-authority-of-society-over-the-individual",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-4-of-the-limits-to-the-authority-of-society-over-the-individual",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 4: Of The Limits To The Authority Of Society Over The Individual",
+    "text": "Chapter 4: Of The Limits To The Authority Of Society Over The Individual\nMill explores the boundaries of societal control over individual actions, with co-occurrence analysis revealing: - “Society - Conduct” (8): Reflecting debates on when societal intervention in personal behavior is justified—specifically, when actions harm others. - “Individual - Society” (6): Highlighting the reciprocal obligations between individuals and the society that protects them. - “Opinion - Conduct” (5): Connecting how personal opinions influence actions and when these actions warrant societal scrutiny."
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-5-applications",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-5-applications",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 5: Applications",
+    "text": "Chapter 5: Applications\n\nThe final chapter applies Mill’s principles to practical governance, emphasizing the tension between liberty and state power\n\n“Individual - Liberty” (5): Centralizing Mill’s belief that individual freedom is essential for personal and societal progress.\n“Power - Government” (5): Highlighting Mill’s critique of bureaucratic overreach and the need to limit governmental authority.\n“Principle - Liberty” (5): Reflecting Mill’s philosophical groundwork for determining when societal intervention is justified.\n“Conduct - Society” (3): Reinforcing the nuanced balance between personal autonomy and collective welfare."
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#progression-through-the-text",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#progression-through-the-text",
+    "title": "The Shape of Ideas",
+    "section": "Progression Through the Text",
+    "text": "Progression Through the Text\nWhen applied across each of the chapters, word co-occurrence and network analyses reveal a progression of themes throughout the text:\n\nIntroductory (Chapter 1): Focused on establishing the tension between societal authority and individual liberty.\nOf The Liberty Of Thought And Discussion (Chapter 2): Emphasizes intellectual freedom as a prerequisite for societal progress.\nOf Individuality, As One Of The Elements Of Well-being (Chapter 3): Advocates for personal autonomy as a counterbalance to societal conformity.\nOf The Limits To The Authority Of Society Over The Individual (Chapter 4): Explores when societal intervention in individual conduct is justified.\nApplications (Chapter 5): Applies these principles to practical governance, advocating for decentralized power and personal responsibility."
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#what-does-tf-idf-measure",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#what-does-tf-idf-measure",
+    "title": "The Shape of Ideas",
+    "section": "What Does TF-IDF Measure?",
+    "text": "What Does TF-IDF Measure?\n\nTerm Frequency (TF)\nTF is a straightforward measure of how often a word appears in a specific document, relative to the total number of words in that document. For example, if the word “liberty” appears 50 times in Chapter 1, and Chapter 1 contains 1,000 words, the term frequency for “liberty” in that chapter is 0.05 (5%).\n\n\nInverse Document Frequency (IDF)\nIDF measures how unique or rare a word is across the entire collection of documents (in this case, the chapters of On Liberty). Words that appear in many or all chapters (like “society” or “individual”) receive a low IDF score because they are not specific to any single chapter. Conversely, words that appear in only one or a few chapters receive a high IDF score, indicating that they are particularly characteristic of those sections.\n\n\nTF-IDF Score:\nThe final TF-IDF score is calculated by multiplying a word’s TF by its IDF. This score prioritizes words that are frequent in a specific document but relatively rare across the rest of the collection, helping us identify terms that best represent the unique focus of each chapter.\nWhy Is TF-IDF Useful? TF-IDF adds nuance to our analysis by addressing the shortcomings of simple frequency-based methods. While co-occurrence counts reveal relationships between common terms, they don’t differentiate between words that are central to a specific chapter and words that are common across the entire text. TF-IDF fills this gap, pinpointing the key terms that make each chapter distinct.\nFor example:\nIn Chapter 1, “tyranny” might have a high TF-IDF score because it appears frequently there but less so in subsequent chapters. This would suggest that the chapter has a particular focus on critiquing tyranny, even if “liberty” is more frequent across the entire text. In Chapter 3, terms like “individuality” or “custom” might stand out, reflecting its emphasis on personal autonomy and societal norms. By applying TF-IDF, we can uncover not just recurring themes but the specific terms and ideas that define each chapter, providing a sharper lens for understanding the structure and argument of On Liberty. This technique is particularly valuable for examining how Mill shifts his focus from general principles to more applied discussions, and for highlighting the unique vocabulary that drives his argument in each section.\nTF-IDF, therefore, is not just another measure of word frequency; it is a tool for weighting words by their contextual importance."
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-1-2",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-1-2",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 1",
+    "text": "Chapter 1\n\n\n\n\nTop 10 TF-IDF Words by Chapter\n\n\nChapter\nWord\nn\ntf\nidf\nTF-IDF Score\n\n\n\n\n1\nexternal\n5\n0.0026\n1.6094\n0.0042\n\n\n1\nmandates\n3\n0.0016\n1.6094\n0.0025\n\n\n1\nruled\n3\n0.0016\n1.6094\n0.0025\n\n\n1\nrulers\n8\n0.0042\n0.5108\n0.0022\n\n\n1\nindependence\n4\n0.0021\n0.9163\n0.0019\n\n\n1\nlimitation\n4\n0.0021\n0.9163\n0.0019\n\n\n1\nrightfully\n4\n0.0021\n0.9163\n0.0019\n\n\n1\nanswerable\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nascendancy\n2\n0.0011\n1.6094\n0.0017\n\n\n1\ndislikings\n2\n0.0011\n1.6094\n0.0017\n\n\n1\ndisturbed\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nelective\n2\n0.0011\n1.6094\n0.0017\n\n\n1\ngreece\n2\n0.0011\n1.6094\n0.0017\n\n\n1\ninfringe\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nliking\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nlikings\n2\n0.0011\n1.6094\n0.0017\n\n\n1\noccupied\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nperceived\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nportions\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nruling\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nservility\n2\n0.0011\n1.6094\n0.0017\n\n\n1\ntyrannising\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nvultures\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nwait\n2\n0.0011\n1.6094\n0.0017"
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-2-2",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-2-2",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 2",
+    "text": "Chapter 2\n\n\n\n\nTop 10 TF-IDF Words by Chapter\n\n\nChapter\nWord\nn\ntf\nidf\nTF-IDF Score\n\n\n\n\n2\ndoctrines\n26\n0.0050\n0.9163\n0.0045\n\n\n2\nfalse\n13\n0.0025\n1.6094\n0.0040\n\n\n2\ntruth\n85\n0.0162\n0.2231\n0.0036\n\n\n2\ninfallibility\n11\n0.0021\n1.6094\n0.0034\n\n\n2\nerror\n16\n0.0031\n0.9163\n0.0028\n\n\n2\nethics\n8\n0.0015\n1.6094\n0.0025\n\n\n2\npersecution\n14\n0.0027\n0.9163\n0.0024\n\n\n2\nchristian\n25\n0.0048\n0.5108\n0.0024\n\n\n2\nassumption\n7\n0.0013\n1.6094\n0.0021\n\n\n2\nhearing\n7\n0.0013\n1.6094\n0.0021\n\n\n2\nrejected\n7\n0.0013\n1.6094\n0.0021"
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-3-2",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-3-2",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 3",
+    "text": "Chapter 3\n\n\n\n\nTop 10 TF-IDF Words by Chapter\n\n\nChapter\nWord\nn\ntf\nidf\nTF-IDF Score\n\n\n\n\n3\noriginality\n10\n0.0040\n1.6094\n0.0064\n\n\n3\ngenius\n8\n0.0032\n1.6094\n0.0051\n\n\n3\nimpulses\n13\n0.0052\n0.9163\n0.0047\n\n\n3\ncustomary\n5\n0.0020\n1.6094\n0.0032\n\n\n3\nweak\n5\n0.0020\n1.6094\n0.0032\n\n\n3\ncustoms\n8\n0.0032\n0.9163\n0.0029\n\n\n3\nconformity\n4\n0.0016\n1.6094\n0.0026\n\n\n3\neccentricity\n4\n0.0016\n1.6094\n0.0026\n\n\n3\nmediocrity\n4\n0.0016\n1.6094\n0.0026\n\n\n3\nnoble\n4\n0.0016\n1.6094\n0.0026"
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-4-2",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-4-2",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 4",
+    "text": "Chapter 4\n\n\n\n\nTop 10 TF-IDF Words by Chapter\n\n\nChapter\nWord\nn\ntf\nidf\nTF-IDF Score\n\n\n\n\n4\npunished\n5\n0.0019\n1.6094\n0.0031\n\n\n4\namusements\n4\n0.0015\n1.6094\n0.0025\n\n\n4\ndistaste\n4\n0.0015\n1.6094\n0.0025\n\n\n4\ngross\n4\n0.0015\n1.6094\n0.0025\n\n\n4\nalliance\n3\n0.0011\n1.6094\n0.0018\n\n\n4\nbarbarism\n3\n0.0011\n1.6094\n0.0018\n\n\n4\nbreaks\n3\n0.0011\n1.6094\n0.0018\n\n\n4\ndispleases\n3\n0.0011\n1.6094\n0.0018\n\n\n4\ndistinction\n3\n0.0011\n1.6094\n0.0018\n\n\n4\nfermented\n3\n0.0011\n1.6094\n0.0018\n\n\n4\ninvades\n3\n0.0011\n1.6094\n0.0018\n\n\n4\nmussulmans\n3\n0.0011\n1.6094\n0.0018\n\n\n4\npork\n3\n0.0011\n1.6094\n0.0018\n\n\n4\nsunday\n3\n0.0011\n1.6094\n0.0018\n\n\n4\nvicious\n3\n0.0011\n1.6094\n0.0018\n\n\n4\nworkmen\n3\n0.0011\n1.6094\n0.0018"
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-5-2",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-5-2",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 5",
+    "text": "Chapter 5\n\n\n\n\nTop 10 TF-IDF Words by Chapter\n\n\nChapter\nWord\nn\ntf\nidf\nTF-IDF Score\n\n\n\n\n5\nbureaucracy\n11\n0.0035\n1.6094\n0.0056\n\n\n5\ncrime\n9\n0.0028\n1.6094\n0.0046\n\n\n5\ncentral\n8\n0.0025\n1.6094\n0.0040\n\n\n5\nlocal\n8\n0.0025\n1.6094\n0.0040\n\n\n5\nchild\n7\n0.0022\n1.6094\n0.0035\n\n\n5\nengagements\n6\n0.0019\n1.6094\n0.0030\n\n\n5\nexamination\n6\n0.0019\n1.6094\n0.0030\n\n\n5\nlocalities\n6\n0.0019\n1.6094\n0.0030\n\n\n5\ntrade\n6\n0.0019\n1.6094\n0.0030\n\n\n5\nparties\n10\n0.0031\n0.9163\n0.0029\n\n\n\n\n\n\n\n\nBy identifying words that are of particular importance in each of the chapters, TF-IDF analysis offers a lens through which each chapter’s unique thematic focus becomes more apparent, sharpening our understanding of Mill’s arguments and their progression. By highlighting the most distinct terms, TF-IDF complements our earlier co-occurrence analyses, allowing us to isolate chapter-specific priorities and showing how Mill develops his broader principles of liberty and governance across the text."
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-1-the-foundations-of-liberty",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-1-the-foundations-of-liberty",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 1: The Foundations of Liberty",
+    "text": "Chapter 1: The Foundations of Liberty\nTF-IDF reveals the chapter’s emphasis on external authority and limitations on governance. The focus on terms like “external,” “mandates,” “rulers,” and “limitation” underscores Mill’s effort to historically and philosophically ground his argument for limiting societal and governmental interference. At the same time, terms like “independence” and “rightfully” highlight the chapter’s normative goals, advocating for autonomy and the ethical justification of interventions. Together, these terms demonstrate how Mill frames his argument for liberty, balancing historical context with philosophical rigor."
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-2-the-importance-of-free-expression",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-2-the-importance-of-free-expression",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 2: The Importance of Free Expression",
+    "text": "Chapter 2: The Importance of Free Expression\nThe TF-IDF terms for Chapter 2 emphasize Mill’s core argument about the value of free speech and open debate in the search for truth. Terms like “doctrines,” “false,” and “truth” reflect the chapter’s focus on the intellectual marketplace, where ideas compete and evolve. “Infallibility” and “error” underscore Mill’s critique of dogmatism and his belief in the fallibility of human judgment, reinforcing the need for intellectual humility and openness. Together, these terms highlight Mill’s defense of dissent and his insistence that progress depends on the continual testing and refinement of ideas through dialogue and disagreement."
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-3-individuality-and-progress",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-3-individuality-and-progress",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 3: Individuality and Progress",
+    "text": "Chapter 3: Individuality and Progress\nThe TF-IDF terms for Chapter 3 align with Mill’s celebration of individuality and critique of societal conformity. Terms like “originality,” “genius,” and “impulses” emphasize the vitality and creativity that come from embracing individuality, while “customs,” “conformity,” and “mediocrity” highlight the dangers of suppressing it. The chapter calls for a balance, where customs are respected but not blindly followed, and eccentricity is valued as a marker of a free and progressive society. This analysis underscores Mill’s belief that societal advancement depends on protecting spaces for individuality and creativity to thrive."
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-4-limits-of-societal-authority",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-4-limits-of-societal-authority",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 4: Limits of Societal Authority",
+    "text": "Chapter 4: Limits of Societal Authority\nThe top TF-IDF terms for Chapter 4 align with Mill’s critique of societal overreach into individual liberties. Words like “punished,” “amusements,” and “distaste” reflect his focus on the boundaries of legitimate societal control, while terms like “fermented” and “pork” illustrate his use of specific examples to highlight cultural and moral biases. The analysis emphasizes Mill’s advocacy for individual freedom, arguing that society should only intervene when actions cause demonstrable harm to others, not merely when they offend prevailing norms or preferences."
+  },
+  {
+    "objectID": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-5-governance-and-responsibility",
+    "href": "posts/2024-11-the-shape-of-ideas-part-2/index.html#chapter-5-governance-and-responsibility",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 5: Governance and Responsibility",
+    "text": "Chapter 5: Governance and Responsibility\nThe TF-IDF analysis for Chapter 5 highlights its focus on governance, education, and societal obligations. Terms like “bureaucracy,” “central,” and “localities” reflect Mill’s emphasis on balancing centralized authority with local autonomy to foster individual and community development. Meanwhile, terms like “child,” “examination,” and “engagements” underscore the chapter’s concern with societal responsibilities in education and moral obligations. The interplay between these themes demonstrates Mill’s nuanced approach to ensuring liberty while maintaining social order and fostering collective progress."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html",
+    "title": "The Shape of Ideas",
+    "section": "",
+    "text": "In the previous post, we explored how examining word frequencies can help infer meaning from a text. We also demonstrated how analyzing word co-occurrence provides additional layers of information, allowing us to discern relationships between terms and their significance in shaping the broader themes of the document.\nIn this post, we’ll expand on these approaches by focusing on more discrete chunks of text, such as individual chapters. This segmentation enables us to isolate the specific themes and concepts associated with particular sections, providing a clearer view of the detailed arguments that underpin the broader narrative. By examining these localized patterns, we can also better understand how overarching themes are constructed from more specific ideas.\nFinally, we’ll introduce a method for identifying the relative importance of words within the context of the entire document: TF-IDF (Term Frequency-Inverse Document Frequency). This technique allows us to highlight the words that are particularly significant in a given section, shedding light on how distinct arguments and emphases contribute to the text as a whole. Using these methods, we’ll uncover new ways of exploring the structure and meaning of the work."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-1-introductory",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-1-introductory",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 1: Introductory",
+    "text": "Chapter 1: Introductory\nIn the opening chapter, Mill establishes the central tension between society and the individual, evident in the frequent pairing of these terms. The co-occurrence matrix emphasizes:\n\n“Society - Individual”: Reflecting the core question of where societal authority ends and personal liberty begins. Mill underscores the need to protect individuality from societal overreach.\n“Government - Power”: Highlighting Mill’s concern with the historical expansion of governmental power and its potential to suppress freedoms.\n“People - Power” (5): Exploring the risks of majority rule in democracies, where “the people” may wield power as oppressively as monarchs."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-2-of-the-liberty-of-thought-and-discussion",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-2-of-the-liberty-of-thought-and-discussion",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 2: Of The Liberty Of Thought And Discussion",
+    "text": "Chapter 2: Of The Liberty Of Thought And Discussion\nThis chapter is concerned with the value of free expression and debate. Word co-occurrences analyis highlights the importance of: - “Mankind - Opinion” (12): Highlighting Mill’s argument that the progress of humanity depends on the collision of diverse opinions, which challenge norms and uncover truths. - “People - Opinion” (9): Reflecting the relationship between collective societal beliefs and individual dissent. Mill defends the necessity of tolerating unpopular opinions. - “Mankind - People” (5): Emphasizing the collective benefits of individual intellectual freedom."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-3-of-individuality-as-one-of-the-elements-of-well-being",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-3-of-individuality-as-one-of-the-elements-of-well-being",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 3: Of Individuality, As One Of The Elements Of Well-being",
+    "text": "Chapter 3: Of Individuality, As One Of The Elements Of Well-being\nHere, Mill argues for the importance of individuality in resisting societal conformity:\n\n“People - Conduct” (7): Highlighting Mill’s critique of the “tyranny of custom,” where societal expectations suppress individual decision-making.\n“Individual - People” (6): Showing the tension between personal freedoms and societal norms, with individuality framed as essential for societal progress.\n“Opinion - Mankind” (5): Connecting intellectual diversity with the advancement of humanity."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-4-of-the-limits-to-the-authority-of-society-over-the-individual",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-4-of-the-limits-to-the-authority-of-society-over-the-individual",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 4: Of The Limits To The Authority Of Society Over The Individual",
+    "text": "Chapter 4: Of The Limits To The Authority Of Society Over The Individual\nMill explores the boundaries of societal control over individual actions, with co-occurrence analysis revealing:\n\n“Society - Conduct” (8): Reflecting debates on when societal intervention in personal behavior is justified—specifically, when actions harm others.\n“Individual - Society” (6): Highlighting the reciprocal obligations between individuals and the society that protects them.\n“Opinion - Conduct” (5): Connecting how personal opinions influence actions and when these actions warrant societal scrutiny."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-5-applications",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-5-applications",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 5: Applications",
+    "text": "Chapter 5: Applications\nThe final chapter applies Mill’s principles to practical governance, emphasizing the tension between liberty and state power:\n\n“Individual - Liberty” (5): Centralizing Mill’s belief that individual freedom is essential for personal and societal progress.\n“Power - Government” (5): Highlighting Mill’s critique of bureaucratic overreach and the need to limit governmental authority.\n“Principle - Liberty” (5): Reflecting Mill’s philosophical groundwork for determining when societal intervention is justified.\n“Conduct - Society” (3): Reinforcing the nuanced balance between personal autonomy and collective welfare."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#progression-through-the-text",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#progression-through-the-text",
+    "title": "The Shape of Ideas",
+    "section": "Progression Through the Text",
+    "text": "Progression Through the Text\nWhen applied across each of the chapters, word co-occurrence and network analyses reveal a progression of themes throughout the text:\n\nIntroductory (Chapter 1): Focused on establishing the tension between societal authority and individual liberty.\nOf The Liberty Of Thought And Discussion (Chapter 2): Emphasizes intellectual freedom as a prerequisite for societal progress.\nOf Individuality, As One Of The Elements Of Well-being (Chapter 3): Advocates for personal autonomy as a counterbalance to societal conformity.\nOf The Limits To The Authority Of Society Over The Individual (Chapter 4): Explores when societal intervention in individual conduct is justified.\nApplications (Chapter 5): Applies these principles to practical governance, advocating for decentralized power and personal responsibility."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#what-does-tf-idf-measure",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#what-does-tf-idf-measure",
+    "title": "The Shape of Ideas",
+    "section": "What Does TF-IDF Measure?",
+    "text": "What Does TF-IDF Measure?\n\nTerm Frequency (TF)\nTF is a straightforward measure of how often a word appears in a specific document, relative to the total number of words in that document. For example, if the word “liberty” appears 50 times in Chapter 1, and Chapter 1 contains 1,000 words, the term frequency for “liberty” in that chapter is 0.05 (5%).\n\n\nInverse Document Frequency (IDF)\nIDF measures how unique or rare a word is across the entire collection of documents (in this case, the chapters of On Liberty). Words that appear in many or all chapters (like “society” or “individual”) receive a low IDF score because they are not specific to any single chapter. Conversely, words that appear in only one or a few chapters receive a high IDF score, indicating that they are particularly characteristic of those sections.\n\n\nTF-IDF Score:\nThe final TF-IDF score is calculated by multiplying a word’s TF by its IDF. This score prioritizes words that are frequent in a specific document but relatively rare across the rest of the collection, helping us identify terms that best represent the unique focus of each chapter.\nWhy Is TF-IDF Useful? TF-IDF adds nuance to our analysis by addressing the shortcomings of simple frequency-based methods. While co-occurrence counts reveal relationships between common terms, they don’t differentiate between words that are central to a specific chapter and words that are common across the entire text. TF-IDF fills this gap, pinpointing the key terms that make each chapter distinct.\nFor example:\nIn Chapter 1, “tyranny” might have a high TF-IDF score because it appears frequently there but less so in subsequent chapters. This would suggest that the chapter has a particular focus on critiquing tyranny, even if “liberty” is more frequent across the entire text. In Chapter 3, terms like “individuality” or “custom” might stand out, reflecting its emphasis on personal autonomy and societal norms. By applying TF-IDF, we can uncover not just recurring themes but the specific terms and ideas that define each chapter, providing a sharper lens for understanding the structure and argument of On Liberty. This technique is particularly valuable for examining how Mill shifts his focus from general principles to more applied discussions, and for highlighting the unique vocabulary that drives his argument in each section.\nTF-IDF, therefore, is not just another measure of word frequency; it is a tool for weighting words by their contextual importance."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-1-2",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-1-2",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 1",
+    "text": "Chapter 1\n\n\n\n\nTop 10 TF-IDF Words by Chapter\n\n\nChapter\nWord\nn\ntf\nidf\nTF-IDF Score\n\n\n\n\n1\nexternal\n5\n0.0026\n1.6094\n0.0042\n\n\n1\nmandates\n3\n0.0016\n1.6094\n0.0025\n\n\n1\nruled\n3\n0.0016\n1.6094\n0.0025\n\n\n1\nrulers\n8\n0.0042\n0.5108\n0.0022\n\n\n1\nindependence\n4\n0.0021\n0.9163\n0.0019\n\n\n1\nlimitation\n4\n0.0021\n0.9163\n0.0019\n\n\n1\nrightfully\n4\n0.0021\n0.9163\n0.0019\n\n\n1\nanswerable\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nascendancy\n2\n0.0011\n1.6094\n0.0017\n\n\n1\ndislikings\n2\n0.0011\n1.6094\n0.0017\n\n\n1\ndisturbed\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nelective\n2\n0.0011\n1.6094\n0.0017\n\n\n1\ngreece\n2\n0.0011\n1.6094\n0.0017\n\n\n1\ninfringe\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nliking\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nlikings\n2\n0.0011\n1.6094\n0.0017\n\n\n1\noccupied\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nperceived\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nportions\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nruling\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nservility\n2\n0.0011\n1.6094\n0.0017\n\n\n1\ntyrannising\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nvultures\n2\n0.0011\n1.6094\n0.0017\n\n\n1\nwait\n2\n0.0011\n1.6094\n0.0017"
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-2-2",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-2-2",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 2",
+    "text": "Chapter 2\n\n\n\n\nTop 10 TF-IDF Words by Chapter\n\n\nChapter\nWord\nn\ntf\nidf\nTF-IDF Score\n\n\n\n\n2\ndoctrines\n26\n0.0050\n0.9163\n0.0045\n\n\n2\nfalse\n13\n0.0025\n1.6094\n0.0040\n\n\n2\ntruth\n85\n0.0162\n0.2231\n0.0036\n\n\n2\ninfallibility\n11\n0.0021\n1.6094\n0.0034\n\n\n2\nerror\n16\n0.0031\n0.9163\n0.0028\n\n\n2\nethics\n8\n0.0015\n1.6094\n0.0025\n\n\n2\npersecution\n14\n0.0027\n0.9163\n0.0024\n\n\n2\nchristian\n25\n0.0048\n0.5108\n0.0024\n\n\n2\nassumption\n7\n0.0013\n1.6094\n0.0021\n\n\n2\nhearing\n7\n0.0013\n1.6094\n0.0021\n\n\n2\nrejected\n7\n0.0013\n1.6094\n0.0021"
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-3-2",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-3-2",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 3",
+    "text": "Chapter 3\n\n\n\n\nTop 10 TF-IDF Words by Chapter\n\n\nChapter\nWord\nn\ntf\nidf\nTF-IDF Score\n\n\n\n\n3\noriginality\n10\n0.0040\n1.6094\n0.0064\n\n\n3\ngenius\n8\n0.0032\n1.6094\n0.0051\n\n\n3\nimpulses\n13\n0.0052\n0.9163\n0.0047\n\n\n3\ncustomary\n5\n0.0020\n1.6094\n0.0032\n\n\n3\nweak\n5\n0.0020\n1.6094\n0.0032\n\n\n3\ncustoms\n8\n0.0032\n0.9163\n0.0029\n\n\n3\nconformity\n4\n0.0016\n1.6094\n0.0026\n\n\n3\neccentricity\n4\n0.0016\n1.6094\n0.0026\n\n\n3\nmediocrity\n4\n0.0016\n1.6094\n0.0026\n\n\n3\nnoble\n4\n0.0016\n1.6094\n0.0026"
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-4-2",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-4-2",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 4",
+    "text": "Chapter 4\n\n\n\n\nTop 10 TF-IDF Words by Chapter\n\n\nChapter\nWord\nn\ntf\nidf\nTF-IDF Score\n\n\n\n\n4\npunished\n5\n0.0019\n1.6094\n0.0031\n\n\n4\namusements\n4\n0.0015\n1.6094\n0.0025\n\n\n4\ndistaste\n4\n0.0015\n1.6094\n0.0025\n\n\n4\ngross\n4\n0.0015\n1.6094\n0.0025\n\n\n4\nalliance\n3\n0.0011\n1.6094\n0.0018\n\n\n4\nbarbarism\n3\n0.0011\n1.6094\n0.0018\n\n\n4\nbreaks\n3\n0.0011\n1.6094\n0.0018\n\n\n4\ndispleases\n3\n0.0011\n1.6094\n0.0018\n\n\n4\ndistinction\n3\n0.0011\n1.6094\n0.0018\n\n\n4\nfermented\n3\n0.0011\n1.6094\n0.0018\n\n\n4\ninvades\n3\n0.0011\n1.6094\n0.0018\n\n\n4\nmussulmans\n3\n0.0011\n1.6094\n0.0018\n\n\n4\npork\n3\n0.0011\n1.6094\n0.0018\n\n\n4\nsunday\n3\n0.0011\n1.6094\n0.0018\n\n\n4\nvicious\n3\n0.0011\n1.6094\n0.0018\n\n\n4\nworkmen\n3\n0.0011\n1.6094\n0.0018"
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-5-2",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-5-2",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 5",
+    "text": "Chapter 5\n\n\n\n\nTop 10 TF-IDF Words by Chapter\n\n\nChapter\nWord\nn\ntf\nidf\nTF-IDF Score\n\n\n\n\n5\nbureaucracy\n11\n0.0035\n1.6094\n0.0056\n\n\n5\ncrime\n9\n0.0028\n1.6094\n0.0046\n\n\n5\ncentral\n8\n0.0025\n1.6094\n0.0040\n\n\n5\nlocal\n8\n0.0025\n1.6094\n0.0040\n\n\n5\nchild\n7\n0.0022\n1.6094\n0.0035\n\n\n5\nengagements\n6\n0.0019\n1.6094\n0.0030\n\n\n5\nexamination\n6\n0.0019\n1.6094\n0.0030\n\n\n5\nlocalities\n6\n0.0019\n1.6094\n0.0030\n\n\n5\ntrade\n6\n0.0019\n1.6094\n0.0030\n\n\n5\nparties\n10\n0.0031\n0.9163\n0.0029\n\n\n\n\n\n\n\n\n:::\nBy identifying words that are of particular importance in each of the chapters, TF-IDF analysis offers a lens through which each chapter’s unique thematic focus becomes more apparent, sharpening our understanding of Mill’s arguments and their progression. By highlighting the most distinct terms, TF-IDF complements our earlier co-occurrence analyses, allowing us to isolate chapter-specific priorities and showing how Mill develops his broader principles of liberty and governance across the text."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-1-the-foundations-of-liberty",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-1-the-foundations-of-liberty",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 1: The Foundations of Liberty",
+    "text": "Chapter 1: The Foundations of Liberty\nTF-IDF reveals the chapter’s emphasis on external authority and limitations on governance. The focus on terms like “external,” “mandates,” “rulers,” and “limitation” underscores Mill’s effort to historically and philosophically ground his argument for limiting societal and governmental interference. At the same time, terms like “independence” and “rightfully” highlight the chapter’s normative goals, advocating for autonomy and the ethical justification of interventions. Together, these terms demonstrate how Mill frames his argument for liberty, balancing historical context with philosophical rigor."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-2-the-importance-of-free-expression",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-2-the-importance-of-free-expression",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 2: The Importance of Free Expression",
+    "text": "Chapter 2: The Importance of Free Expression\nThe TF-IDF terms for Chapter 2 emphasize Mill’s core argument about the value of free speech and open debate in the search for truth. Terms like “doctrines,” “false,” and “truth” reflect the chapter’s focus on the intellectual marketplace, where ideas compete and evolve. “Infallibility” and “error” underscore Mill’s critique of dogmatism and his belief in the fallibility of human judgment, reinforcing the need for intellectual humility and openness. Together, these terms highlight Mill’s defense of dissent and his insistence that progress depends on the continual testing and refinement of ideas through dialogue and disagreement."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-3-individuality-and-progress",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-3-individuality-and-progress",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 3: Individuality and Progress",
+    "text": "Chapter 3: Individuality and Progress\nThe TF-IDF terms for Chapter 3 align with Mill’s celebration of individuality and critique of societal conformity. Terms like “originality,” “genius,” and “impulses” emphasize the vitality and creativity that come from embracing individuality, while “customs,” “conformity,” and “mediocrity” highlight the dangers of suppressing it. The chapter calls for a balance, where customs are respected but not blindly followed, and eccentricity is valued as a marker of a free and progressive society. This analysis underscores Mill’s belief that societal advancement depends on protecting spaces for individuality and creativity to thrive."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-4-limits-of-societal-authority",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-4-limits-of-societal-authority",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 4: Limits of Societal Authority",
+    "text": "Chapter 4: Limits of Societal Authority\nThe top TF-IDF terms for Chapter 4 align with Mill’s critique of societal overreach into individual liberties. Words like “punished,” “amusements,” and “distaste” reflect his focus on the boundaries of legitimate societal control, while terms like “fermented” and “pork” illustrate his use of specific examples to highlight cultural and moral biases. The analysis emphasizes Mill’s advocacy for individual freedom, arguing that society should only intervene when actions cause demonstrable harm to others, not merely when they offend prevailing norms or preferences."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-5-governance-and-responsibility",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-5-governance-and-responsibility",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 5: Governance and Responsibility",
+    "text": "Chapter 5: Governance and Responsibility\nThe TF-IDF analysis for Chapter 5 highlights its focus on governance, education, and societal obligations. Terms like “bureaucracy,” “central,” and “localities” reflect Mill’s emphasis on balancing centralized authority with local autonomy to foster individual and community development. Meanwhile, terms like “child,” “examination,” and “engagements” underscore the chapter’s concern with societal responsibilities in education and moral obligations. The interplay between these themes demonstrates Mill’s nuanced approach to ensuring liberty while maintaining social order and fostering collective progress."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-1-introductory-1",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-1-introductory-1",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 1: Introductory",
+    "text": "Chapter 1: Introductory\nTF-IDF reveals the chapter’s emphasis on external authority and limitations on governance. The focus on terms like “external,” “mandates,” “rulers,” and “limitation” underscores Mill’s effort to historically and philosophically ground his argument for limiting societal and governmental interference. At the same time, terms like “independence” and “rightfully” highlight the chapter’s normative goals, advocating for autonomy and the ethical justification of interventions. Together, these terms demonstrate how Mill frames his argument for liberty, balancing historical context with philosophical rigor."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-2-of-the-liberty-of-thought-and-discussion-1",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-2-of-the-liberty-of-thought-and-discussion-1",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 2: Of The Liberty Of Thought And Discussion",
+    "text": "Chapter 2: Of The Liberty Of Thought And Discussion\nThe TF-IDF terms for Chapter 2 emphasize Mill’s core argument about the value of free speech and open debate in the search for truth. Terms like “doctrines,” “false,” and “truth” reflect the chapter’s focus on the intellectual marketplace, where ideas compete and evolve. “Infallibility” and “error” underscore Mill’s critique of dogmatism and his belief in the fallibility of human judgment, reinforcing the need for intellectual humility and openness. Together, these terms highlight Mill’s defense of dissent and his insistence that progress depends on the continual testing and refinement of ideas through dialogue and disagreement."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-3-of-individuality-as-one-of-the-elements-of-well-being-1",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-3-of-individuality-as-one-of-the-elements-of-well-being-1",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 3: Of Individuality, As One Of The Elements Of Well-being",
+    "text": "Chapter 3: Of Individuality, As One Of The Elements Of Well-being\nThe TF-IDF terms for Chapter 3 align with Mill’s celebration of individuality and critique of societal conformity. Terms like “originality,” “genius,” and “impulses” emphasize the vitality and creativity that come from embracing individuality, while “customs,” “conformity,” and “mediocrity” highlight the dangers of suppressing it. The chapter calls for a balance, where customs are respected but not blindly followed, and eccentricity is valued as a marker of a free and progressive society. This analysis underscores Mill’s belief that societal advancement depends on protecting spaces for individuality and creativity to thrive."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-4-of-the-limits-to-the-authority-of-society-over-the-individual-1",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-4-of-the-limits-to-the-authority-of-society-over-the-individual-1",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 4: Of The Limits To The Authority Of Society Over The Individual",
+    "text": "Chapter 4: Of The Limits To The Authority Of Society Over The Individual\nThe top TF-IDF terms for Chapter 4 align with Mill’s critique of societal overreach into individual liberties. Words like “punished,” “amusements,” and “distaste” reflect his focus on the boundaries of legitimate societal control, while terms like “fermented” and “pork” illustrate his use of specific examples to highlight cultural and moral biases. The analysis emphasizes Mill’s advocacy for individual freedom, arguing that society should only intervene when actions cause demonstrable harm to others, not merely when they offend prevailing norms or preferences."
+  },
+  {
+    "objectID": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-5-applications-1",
+    "href": "posts/2024-11-24-the-shape-of-ideas-part-2/index.html#chapter-5-applications-1",
+    "title": "The Shape of Ideas",
+    "section": "Chapter 5: Applications",
+    "text": "Chapter 5: Applications\nThe TF-IDF analysis for Chapter 5 highlights its focus on governance, education, and societal obligations. Terms like “bureaucracy,” “central,” and “localities” reflect Mill’s emphasis on balancing centralized authority with local autonomy to foster individual and community development. Meanwhile, terms like “child,” “examination,” and “engagements” underscore the chapter’s concern with societal responsibilities in education and moral obligations. The interplay between these themes demonstrates Mill’s nuanced approach to ensuring liberty while maintaining social order and fostering collective progress."
   }
 ]

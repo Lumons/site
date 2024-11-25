@@ -1,0 +1,738 @@
+---
+open-graph:
+  card: summary
+  title: "The Shape of Ideas"
+  description: Part 2 - Focused Frequencies
+  image: /posts/2024-11-24-the-shape-of-ideas-part-2/What_is_the_shape_of_an_idea_-_focused_frequencies_abs_02c49888-1c0c-4826-a59e-182189e473c6.png
+twitter-card:
+  card: "summary"
+  title: "The Shape of Ideas"
+  description: Part 2 - Focused Frequencies 
+  image: /posts/2024-11-24-the-shape-of-ideas-part-2/What_is_the_shape_of_an_idea_-_focused_frequencies_abs_02c49888-1c0c-4826-a59e-182189e473c6.png
+title: "The Shape of Ideas"
+description: Part 2 - Focused Frequencies 
+date: 2024-11-24
+format:
+    html:    
+        include-after-body: "../../giscus.html"
+categories: [Thematic analysis, Textual visualisation]
+image: What_is_the_shape_of_an_idea_-_focused_frequencies_abs_02c49888-1c0c-4826-a59e-182189e473c6.png
+editor: visual
+execute:
+  echo: false   # No code will be shown in the document
+  warning: false # No warnings will be shown in the document
+  message: false # No messages will be shown in the document
+---
+
+<div style="text-align: center;">
+  <img src="What_is_the_shape_of_an_idea_-_focused_frequencies_abs_02c49888-1c0c-4826-a59e-182189e473c6.png" alt="What is the shape of an idea?" width="75%">
+</div>
+
+```{r}
+
+library(tidytext)
+library(dplyr)
+library(igraph)
+library(knitr)
+library(tidyverse)
+library(widyr)          # For pairwise_count function
+library(kableExtra)
+
+
+```
+
+In the previous post, we explored how examining **word frequencies** can help infer meaning from a text. We also demonstrated how analyzing **word co-occurrence** provides additional layers of information, allowing us to discern relationships between terms and their significance in shaping the broader themes of the document.
+
+In this post, we’ll expand on these approaches by focusing on more discrete chunks of text, such as individual chapters. This segmentation enables us to isolate the specific themes and concepts associated with particular sections, providing a clearer view of the detailed arguments that underpin the broader narrative. By examining these localized patterns, we can also better understand how overarching themes are constructed from more specific ideas.
+
+Finally, we’ll introduce a method for identifying the relative importance of words within the context of the entire document: **TF-IDF (Term Frequency-Inverse Document Frequency)**. This technique allows us to highlight the words that are particularly significant in a given section, shedding light on how distinct arguments and emphases contribute to the text as a whole. Using these methods, we’ll uncover new ways of exploring the structure and meaning of the work.
+
+```{r}
+
+# Example full text (replace this with the actual text)
+#text <- "Freedom and justice are essential for a fair society. #Liberty and equality are pillars of rights..."
+
+text <- scan("On Liberty.txt", what = "character", sep = "\n")
+
+text_df <- tibble(doc_id = 1:length(text), text = text)
+
+#text_df <- text_df %>%
+#  summarize(text = paste(text, collapse = " "))
+
+```
+
+# Chapter analysis - Word frequencies
+
+With the text loaded, I've manually pulled out the chapter names as well as the beginning and end lines for each of the chapters. This allows us to associate each line in the text - and ultimately each word from the text - with the relevant chapter. 
+
+```{r}
+
+# Chapters
+
+chapter_title <- c("Introductory",
+                   "Of The Liberty Of Thought And Discussion",
+                   "Of Individuality, As One Of The Elements Of Well-being",
+                   "Of The Limits To The Authority Of Society Over The Individual",
+                   "Applications")
+chapter_number <- c(1:5)
+
+chapter_df <- data.frame(Chapter = chapter_number, Chapter_Title = chapter_title)
+
+# Display with kable
+chapter_df %>%
+  kable("html", caption = "Chapters in 'On Liberty'", col.names = c("Chapter", "Chapter Title")) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), position = "center") %>%
+  column_spec(1, width = "5em")  # Specify width for Chapter column
+         
+
+```
+
+
+```{r}
+# Assuming `text_df` is your dataframe with `doc_id` and `text` columns
+
+# Define line numbers for each chapter range
+ch1_lines <- 390:875
+ch2_lines <- 878:2224
+ch3_lines <- 2287:2950
+ch4_lines <- 2982:3647
+ch5_lines <- 3663:4470
+# Combine lines for each chapter into a single string
+ch1_text <- text_df %>% filter(doc_id %in% ch1_lines) %>% summarize(text = paste(text, collapse = " ")) %>% pull(text)
+ch2_text <- text_df %>% filter(doc_id %in% ch2_lines) %>% summarize(text = paste(text, collapse = " ")) %>% pull(text)
+ch3_text <- text_df %>% filter(doc_id %in% ch3_lines) %>% summarize(text = paste(text, collapse = " ")) %>% pull(text)
+ch4_text <- text_df %>% filter(doc_id %in% ch4_lines) %>% summarize(text = paste(text, collapse = " ")) %>% pull(text)
+ch5_text <- text_df %>% filter(doc_id %in% ch5_lines) %>% summarize(text = paste(text, collapse = " ")) %>% pull(text)
+
+# Create a tibble with combined chapter texts
+chapter_texts <- tibble(
+  doc_id = 1:5,
+  text = c(ch1_text, ch2_text, ch3_text, ch4_text, ch5_text)
+)
+
+# Tokenize, remove stop words, and calculate TF-IDF
+tokens <- chapter_texts %>%
+  unnest_tokens(word, text) %>%
+  anti_join(stop_words, by = "word")  # Remove common stopwords
+
+```
+
+As in the preceding work, we can pull out the words that are most frequent. In this instance, we'll take the top 10 most frequent words from each chapter.
+
+```{r}
+# First, create frequency tables by chapter
+
+frequency_tables <- tokens %>%
+  count(doc_id, word, sort = TRUE) %>%
+  group_by(doc_id) %>%
+  slice_max(n, n = 10) %>%
+  ungroup() %>%
+  pivot_wider(
+    names_from = word,
+    values_from = n,
+    values_fill = 0
+  )
+
+frequency_tables_long <- frequency_tables %>%
+pivot_longer(
+  cols = -doc_id,
+  names_to = "word",
+  values_to = "frequency"
+)
+
+```
+
+::: {.panel-tabset}
+
+## Chapter 1
+```{r}
+
+# Chapter 1 Table
+
+word_counts.1 <- frequency_tables_long %>%
+filter(doc_id == 1)
+
+word_counts.1 %>%
+  arrange(desc(frequency)) %>%
+  head(10) %>%
+  kable("html", caption = "Top 10 Word Frequencies") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"))
+  
+```
+
+## Chapter 2
+```{r}
+
+word_counts.2 <- frequency_tables_long %>%
+filter(doc_id == 2)
+
+# Chapter 2 Table
+word_counts.2 %>%
+  arrange(desc(frequency)) %>%
+  head(10) %>%
+  kable("html", caption = "Top 10 Word Frequencies") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"))
+
+```
+
+## Chapter 3
+```{r}
+
+word_counts.3 <- frequency_tables_long %>%
+filter(doc_id == 3)
+
+# Chapter 3 Table
+word_counts.3 %>%
+  arrange(desc(frequency)) %>%
+  head(10) %>%
+  kable("html", caption = "Top 10 Word Frequencies") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"))
+
+```
+
+## Chapter 4
+```{r}
+
+word_counts.4 <- frequency_tables_long %>%
+filter(doc_id == 4)
+
+# Chapter 4 Table
+word_counts.4 %>%
+  arrange(desc(frequency)) %>%
+  head(10) %>%
+  kable("html", caption = "Top 10 Word Frequencies") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"))
+
+```
+
+## Chapter 5
+```{r}
+
+word_counts.5 <- frequency_tables_long %>%
+filter(doc_id == 5)
+
+
+# Chapter 5 Table
+word_counts.5 %>%
+  arrange(desc(frequency)) %>%
+  head(10) %>%
+  kable("html", caption = "Top 10 Word Frequencies") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"))
+
+```
+
+:::
+
+While we could use these in a preliminary approach to extracting meaning from each chapter, we'll leave that until the next chapter where we focus on word-occurrences instead. 
+
+# Chapter analysis - Word co-occurrences and network graphs 
+
+As we were able to reveal through previou analysis John Stuart Mill’s On Liberty explores the balance between individual freedom and societal authority. Analyzing word co-occurrence frequencies within each chapter, paired with network graphs, gives us a quantitative and visual means of understanding how Mill develops his arguments across the text. Each chapter’s thematic focus is illuminated by the most frequent word pairings, revealing both the ideas themselves and their progression throughout the essay.
+
+::: {.panel-tabset}
+
+## Chapter 1
+```{r}
+
+filtered_tokens <- tokens %>%
+  filter(doc_id == 1) %>%
+  filter(word %in% word_counts.1$word[1:10]) %>%
+  mutate(word_id = row_number())  # Re-assign word IDs after filtering
+
+# Set window size for co-occurrences
+window_size <- 1
+
+
+word_pairs <- filtered_tokens %>%
+  crossing(window = 1:window_size) %>%
+  mutate(window_id = word_id + window) %>%
+  inner_join(
+    filtered_tokens %>% select(word_id, word_y = word),
+    by = c("window_id" = "word_id")
+  ) %>%
+  rename(word_x = word) %>%
+  filter(word_x != word_y) %>%
+  count(word_x, word_y, sort = TRUE)
+
+
+# Create a kable table to display the top 10 word pairs by co-occurrence frequency
+word_pairs %>%
+  head(10) %>%  # Show only the top 10 pairs for simplicity
+  kable("html", col.names = c("Word 1", "Word 2", "Frequency"), caption = "Top 10 Word Co-Occurrences") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), position = "center") %>%
+  column_spec(1, width = "5em")  # Set width for the first column only
+
+# Create co-occurrence matrix
+cooccurrence_matrix <- word_pairs %>%
+  pivot_wider(names_from = word_x, values_from = n, values_fill = 0) %>%
+  column_to_rownames(var = "word_y") %>%
+  as.matrix()
+
+graph <- graph_from_data_frame(word_pairs, directed = FALSE)
+
+par(bg = "lightgray")  # Set background color for the plot
+
+plot(graph, 
+     layout = layout_with_fr(graph),
+     vertex.size = degree(graph) * 2,               # Node size based on degree
+     vertex.color = "#D35400",                      # Dark burnt orange for nodes
+     vertex.frame.color = "#8B4513",                # Darker brown for node borders
+     vertex.label.color = "#0B3D91",                # Navy blue for label text for high contrast
+     vertex.label.cex = 0.6,                        # Font size for labels
+     vertex.label.font = 2,                         # Bold font for labels
+     edge.color = "#1F618D",                        # Rich navy blue for edges
+     edge.width = E(graph)$n / max(E(graph)$n) * 8,  # Edge thickness based on co-occurrence
+     edge.arrow.size = 0                           # Remove arrows for undirected edges
+)
+
+
+```
+
+## Chapter 2
+```{r}
+
+filtered_tokens <- tokens %>%
+  filter(doc_id == 2) %>%
+  filter(word %in% word_counts.2$word[1:10]) %>%
+  mutate(word_id = row_number())  # Re-assign word IDs after filtering
+
+# Set window size for co-occurrences
+window_size <- 1
+
+
+word_pairs <- filtered_tokens %>%
+  crossing(window = 1:window_size) %>%
+  mutate(window_id = word_id + window) %>%
+  inner_join(
+    filtered_tokens %>% select(word_id, word_y = word),
+    by = c("window_id" = "word_id")
+  ) %>%
+  rename(word_x = word) %>%
+  filter(word_x != word_y) %>%
+  count(word_x, word_y, sort = TRUE)
+
+
+# Create a kable table to display the top 10 word pairs by co-occurrence frequency
+word_pairs %>%
+  head(10) %>%  # Show only the top 10 pairs for simplicity
+  kable("html", col.names = c("Word 1", "Word 2", "Frequency"), caption = "Top 10 Word Co-Occurrences") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), position = "center") %>%
+  column_spec(1, width = "5em")  # Set width for the first column only
+
+# Create co-occurrence matrix
+cooccurrence_matrix <- word_pairs %>%
+  pivot_wider(names_from = word_x, values_from = n, values_fill = 0) %>%
+  column_to_rownames(var = "word_y") %>%
+  as.matrix()
+
+graph <- graph_from_data_frame(word_pairs, directed = FALSE)
+
+par(bg = "lightgray")  # Set background color for the plot
+
+plot(graph, 
+     layout = layout_with_fr(graph),
+     vertex.size = degree(graph) * 2,               # Node size based on degree
+     vertex.color = "#D35400",                      # Dark burnt orange for nodes
+     vertex.frame.color = "#8B4513",                # Darker brown for node borders
+     vertex.label.color = "#0B3D91",                # Navy blue for label text for high contrast
+     vertex.label.cex = 0.6,                        # Font size for labels
+     vertex.label.font = 2,                         # Bold font for labels
+     edge.color = "#1F618D",                        # Rich navy blue for edges
+     edge.width = E(graph)$n / max(E(graph)$n) * 8,  # Edge thickness based on co-occurrence
+     edge.arrow.size = 0                           # Remove arrows for undirected edges
+)
+
+
+```
+
+## Chapter 3
+
+```{r}
+
+filtered_tokens <- tokens %>%
+  filter(doc_id == 3) %>%
+  filter(word %in% word_counts.3$word[1:10]) %>%
+  mutate(word_id = row_number())  # Re-assign word IDs after filtering
+
+# Set window size for co-occurrences
+window_size <- 1
+
+
+word_pairs <- filtered_tokens %>%
+  crossing(window = 1:window_size) %>%
+  mutate(window_id = word_id + window) %>%
+  inner_join(
+    filtered_tokens %>% select(word_id, word_y = word),
+    by = c("window_id" = "word_id")
+  ) %>%
+  rename(word_x = word) %>%
+  filter(word_x != word_y) %>%
+  count(word_x, word_y, sort = TRUE)
+
+
+# Create a kable table to display the top 10 word pairs by co-occurrence frequency
+word_pairs %>%
+  head(10) %>%  # Show only the top 10 pairs for simplicity
+  kable("html", col.names = c("Word 1", "Word 2", "Frequency"), caption = "Top 10 Word Co-Occurrences") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), position = "center") %>%
+  column_spec(1, width = "5em")  # Set width for the first column only
+
+# Create co-occurrence matrix
+cooccurrence_matrix <- word_pairs %>%
+  pivot_wider(names_from = word_x, values_from = n, values_fill = 0) %>%
+  column_to_rownames(var = "word_y") %>%
+  as.matrix()
+
+graph <- graph_from_data_frame(word_pairs, directed = FALSE)
+
+par(bg = "lightgray")  # Set background color for the plot
+
+plot(graph, 
+     layout = layout_with_fr(graph),
+     vertex.size = degree(graph) * 2,               # Node size based on degree
+     vertex.color = "#D35400",                      # Dark burnt orange for nodes
+     vertex.frame.color = "#8B4513",                # Darker brown for node borders
+     vertex.label.color = "#0B3D91",                # Navy blue for label text for high contrast
+     vertex.label.cex = 0.6,                        # Font size for labels
+     vertex.label.font = 2,                         # Bold font for labels
+     edge.color = "#1F618D",                        # Rich navy blue for edges
+     edge.width = E(graph)$n / max(E(graph)$n) * 8,  # Edge thickness based on co-occurrence
+     edge.arrow.size = 0                           # Remove arrows for undirected edges
+)
+
+```
+
+## Chapter 4
+
+```{r}
+
+filtered_tokens <- tokens %>%
+  filter(doc_id == 4) %>%
+  filter(word %in% word_counts.4$word[1:10]) %>%
+  mutate(word_id = row_number())  # Re-assign word IDs after filtering
+
+# Set window size for co-occurrences
+window_size <- 1
+
+word_pairs <- filtered_tokens %>%
+  crossing(window = 1:window_size) %>%
+  mutate(window_id = word_id + window) %>%
+  inner_join(
+    filtered_tokens %>% select(word_id, word_y = word),
+    by = c("window_id" = "word_id")
+  ) %>%
+  rename(word_x = word) %>%
+  filter(word_x != word_y) %>%
+  count(word_x, word_y, sort = TRUE)
+
+
+# Create a kable table to display the top 10 word pairs by co-occurrence frequency
+word_pairs %>%
+  head(10) %>%  # Show only the top 10 pairs for simplicity
+  kable("html", col.names = c("Word 1", "Word 2", "Frequency"), caption = "Top 10 Word Co-Occurrences") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), position = "center") %>%
+  column_spec(1, width = "5em")  # Set width for the first column only
+
+# Create co-occurrence matrix
+cooccurrence_matrix <- word_pairs %>%
+  pivot_wider(names_from = word_x, values_from = n, values_fill = 0) %>%
+  column_to_rownames(var = "word_y") %>%
+  as.matrix()
+
+graph <- graph_from_data_frame(word_pairs, directed = FALSE)
+
+par(bg = "lightgray")  # Set background color for the plot
+
+plot(graph, 
+     layout = layout_with_fr(graph),
+     vertex.size = degree(graph) * 2,               # Node size based on degree
+     vertex.color = "#D35400",                      # Dark burnt orange for nodes
+     vertex.frame.color = "#8B4513",                # Darker brown for node borders
+     vertex.label.color = "#0B3D91",                # Navy blue for label text for high contrast
+     vertex.label.cex = 0.6,                        # Font size for labels
+     vertex.label.font = 2,                         # Bold font for labels
+     edge.color = "#1F618D",                        # Rich navy blue for edges
+     edge.width = E(graph)$n / max(E(graph)$n) * 8,  # Edge thickness based on co-occurrence
+     edge.arrow.size = 0                           # Remove arrows for undirected edges
+)
+
+```
+
+## Chapter 5
+
+```{r}
+
+filtered_tokens <- tokens %>%
+  filter(doc_id == 5) %>%
+  filter(word %in% word_counts.5$word[1:10]) %>%
+  mutate(word_id = row_number())  # Re-assign word IDs after filtering
+
+# Set window size for co-occurrences
+window_size <- 1
+
+
+word_pairs <- filtered_tokens %>%
+  crossing(window = 1:window_size) %>%
+  mutate(window_id = word_id + window) %>%
+  inner_join(
+    filtered_tokens %>% select(word_id, word_y = word),
+    by = c("window_id" = "word_id")
+  ) %>%
+  rename(word_x = word) %>%
+  filter(word_x != word_y) %>%
+  count(word_x, word_y, sort = TRUE)
+
+
+# Create a kable table to display the top 10 word pairs by co-occurrence frequency
+word_pairs %>%
+  head(10) %>%  # Show only the top 10 pairs for simplicity
+  kable("html", col.names = c("Word 1", "Word 2", "Frequency"), caption = "Top 10 Word Co-Occurrences") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), position = "center") %>%
+  column_spec(1, width = "5em")  # Set width for the first column only
+
+# Create co-occurrence matrix
+cooccurrence_matrix <- word_pairs %>%
+  pivot_wider(names_from = word_x, values_from = n, values_fill = 0) %>%
+  column_to_rownames(var = "word_y") %>%
+  as.matrix()
+
+graph <- graph_from_data_frame(word_pairs, directed = FALSE)
+
+par(bg = "lightgray")  # Set background color for the plot
+
+plot(graph, 
+     layout = layout_with_fr(graph),
+     vertex.size = degree(graph) * 2,               # Node size based on degree
+     vertex.color = "#D35400",                      # Dark burnt orange for nodes
+     vertex.frame.color = "#8B4513",                # Darker brown for node borders
+     vertex.label.color = "#0B3D91",                # Navy blue for label text for high contrast
+     vertex.label.cex = 0.6,                        # Font size for labels
+     vertex.label.font = 2,                         # Bold font for labels
+     edge.color = "#1F618D",                        # Rich navy blue for edges
+     edge.width = E(graph)$n / max(E(graph)$n) * 8,  # Edge thickness based on co-occurrence
+     edge.arrow.size = 0                           # Remove arrows for undirected edges
+)
+
+```
+
+:::
+
+## **Chapter 1: Introductory**
+
+In the opening chapter, Mill establishes the central tension between society and the individual, evident in the frequent pairing of these terms. The co-occurrence matrix emphasizes:
+
+- "Society - Individual": Reflecting the core question of where societal authority ends and personal liberty begins. Mill underscores the need to protect individuality from societal overreach.
+- "Government - Power": Highlighting Mill's concern with the historical expansion of governmental power and its potential to suppress freedoms.
+- "People - Power" (5): Exploring the risks of majority rule in democracies, where "the people" may wield power as oppressively as monarchs.
+
+
+## **Chapter 2: Of The Liberty Of Thought And Discussion**
+
+This chapter is concerned with the  value of free expression and debate. Word co-occurrences analyis highlights the importance of:
+- "Mankind - Opinion" (12): Highlighting Mill’s argument that the progress of humanity depends on the collision of diverse opinions, which challenge norms and uncover truths.
+- "People - Opinion" (9): Reflecting the relationship between collective societal beliefs and individual dissent. Mill defends the necessity of tolerating unpopular opinions.
+- "Mankind - People" (5): Emphasizing the collective benefits of individual intellectual freedom.
+
+
+## **Chapter 3: Of Individuality, As One Of The Elements Of Well-being**
+
+Here, Mill argues for the importance of individuality in resisting societal conformity:
+
+- "People - Conduct" (7): Highlighting Mill’s critique of the "tyranny of custom," where societal expectations suppress individual decision-making.
+- "Individual - People" (6): Showing the tension between personal freedoms and societal norms, with individuality framed as essential for societal progress.
+- "Opinion - Mankind" (5): Connecting intellectual diversity with the advancement of humanity.
+
+
+## **Chapter 4: Of The Limits To The Authority Of Society Over The Individual**
+
+Mill explores the boundaries of societal control over individual actions, with co-occurrence analysis revealing:
+
+- "Society - Conduct" (8): Reflecting debates on when societal intervention in personal behavior is justified—specifically, when actions harm others.
+- "Individual - Society" (6): Highlighting the reciprocal obligations between individuals and the society that protects them.
+- "Opinion - Conduct" (5): Connecting how personal opinions influence actions and when these actions warrant societal scrutiny.
+
+
+## **Chapter 5: Applications**
+The final chapter applies Mill's principles to practical governance, emphasizing the tension between liberty and state power:
+
+- "Individual - Liberty" (5): Centralizing Mill’s belief that individual freedom is essential for personal and societal progress.
+- "Power - Government" (5): Highlighting Mill’s critique of bureaucratic overreach and the need to limit governmental authority.
+- "Principle - Liberty" (5): Reflecting Mill’s philosophical groundwork for determining when societal intervention is justified.
+- "Conduct - Society" (3): Reinforcing the nuanced balance between personal autonomy and collective welfare.
+
+## Progression Through the Text
+
+When applied across each of the chapters, word co-occurrence and network analyses reveal a progression of themes throughout the text:
+
+- Introductory (Chapter 1): Focused on establishing the tension between societal authority and individual liberty.
+- Of The Liberty Of Thought And Discussion (Chapter 2): Emphasizes intellectual freedom as a prerequisite for societal progress.
+- Of Individuality, As One Of The Elements Of Well-being (Chapter 3): Advocates for personal autonomy as a counterbalance to societal conformity.
+- Of The Limits To The Authority Of Society Over The Individual (Chapter 4): Explores when societal intervention in individual conduct is justified.
+- Applications (Chapter 5): Applies these principles to practical governance, advocating for decentralized power and personal responsibility.
+
+# Term Frequency-Inverse Document Frequency (TF-IDF)
+
+So far, we’ve explored the text through word counts and co-occurrence frequencies, which have provided a broad understanding of the thematic dimensions and conceptual relationships in On Liberty. Examining these metrics at the chapter level has added a layer of  resolution to our analysis, revealing not just overarching themes but also the specific concerns of each chapter and the progression of ideas through the text. While word counts and co-occurrences are powerful tools, they are limited in one important way: they treat all words and chapters as if they are equally significant within he text, without considering how much weight a particular word carries in relation to the rest of the work.
+
+An alterntive approach to **Term Frequency-Inverse Document Frequency (TF-IDF)** comes into it. Unlike simple word counts, TF-IDF evaluates not just how often a word appears (its term frequency, TF) but also how unique or significant that word is within the context of the entire text (its inverse document frequency, IDF). By combining these two measures, TF-IDF highlights words that are both frequent in a given section (or "document") but rare elsewhere in the text. This allows us to identify terms that are most characteristic of each chapter's content.
+
+## What Does TF-IDF Measure?
+
+### Term Frequency (TF)
+
+TF is a straightforward measure of how often a word appears in a specific document, relative to the total number of words in that document. For example, if the word *"liberty"* appears 50 times in Chapter 1, and Chapter 1 contains 1,000 words, the term frequency for "liberty" in that chapter is 0.05 (5%).
+
+### Inverse Document Frequency (IDF)
+
+IDF measures how unique or rare a word is across the entire collection of documents (in this case, the chapters of On Liberty). Words that appear in many or all chapters (like "society" or "individual") receive a low IDF score because they are not specific to any single chapter. Conversely, words that appear in only one or a few chapters receive a high IDF score, indicating that they are particularly characteristic of those sections.
+
+### TF-IDF Score:
+
+The final TF-IDF score is calculated by multiplying a word’s TF by its IDF. This score prioritizes words that are frequent in a specific document but relatively rare across the rest of the collection, helping us identify terms that best represent the unique focus of each chapter.
+
+Why Is TF-IDF Useful?
+TF-IDF adds nuance to our analysis by addressing the shortcomings of simple frequency-based methods. While co-occurrence counts reveal relationships between common terms, they don’t differentiate between words that are central to a specific chapter and words that are common across the entire text. TF-IDF fills this gap, pinpointing the key terms that make each chapter distinct.
+
+For example:
+
+In Chapter 1, "tyranny" might have a high TF-IDF score because it appears frequently there but less so in subsequent chapters. This would suggest that the chapter has a particular focus on critiquing tyranny, even if "liberty" is more frequent across the entire text.
+In Chapter 3, terms like "individuality" or "custom" might stand out, reflecting its emphasis on personal autonomy and societal norms.
+By applying TF-IDF, we can uncover not just recurring themes but the specific terms and ideas that define each chapter, providing a sharper lens for understanding the structure and argument of On Liberty. This technique is particularly valuable for examining how Mill shifts his focus from general principles to more applied discussions, and for highlighting the unique vocabulary that drives his argument in each section.
+
+TF-IDF, therefore, is not just another measure of word frequency; it is a tool for weighting words by their contextual importance.
+
+
+# Chapter analysis - TF-IDF
+
+```{r}
+
+# Calculate TF-IDF for each token in each chapter
+tf_idf_scores <- tokens %>%
+  count(doc_id, word, sort = TRUE) %>%
+  bind_tf_idf(word, doc_id, n) %>%
+  arrange(desc(tf_idf)) %>%
+  mutate(tf_idf = round(tf_idf, 4)) %>%
+  mutate(tf = round(tf, 4)) %>%
+  mutate(idf = round(idf, 4))
+
+
+```
+
+
+::: {.panel-tabset}
+
+## Chapter 1
+
+```{r}
+
+#TF-IDF table 
+tf_idf_table <- tf_idf_scores %>%
+  filter(doc_id == 1) %>%
+  slice_max(tf_idf, n = 10) %>%
+  ungroup() %>%
+  rename(Chapter = doc_id, Word = word, `TF-IDF Score` = tf_idf) %>%
+  kable("html", caption = "Top 10 TF-IDF Words by Chapter") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c ("striped", "hover", "condensed"))
+
+tf_idf_table
+
+```
+
+## Chapter 2
+
+```{r}
+
+#TF-IDF table 
+tf_idf_table <- tf_idf_scores %>%
+  filter(doc_id == 2) %>%
+  slice_max(tf_idf, n = 10) %>%
+  ungroup() %>%
+  rename(Chapter = doc_id, Word = word, `TF-IDF Score` = tf_idf) %>%
+  kable("html", caption = "Top 10 TF-IDF Words by Chapter") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c ("striped", "hover", "condensed"))
+
+tf_idf_table
+
+```
+
+## Chapter 3
+
+```{r}
+
+#TF-IDF table 
+tf_idf_table <- tf_idf_scores %>%
+  filter(doc_id == 3) %>%
+  slice_max(tf_idf, n = 10) %>%
+  ungroup() %>%
+  rename(Chapter = doc_id, Word = word, `TF-IDF Score` = tf_idf) %>%
+  kable("html", caption = "Top 10 TF-IDF Words by Chapter") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c ("striped", "hover", "condensed"))
+
+tf_idf_table
+
+```
+
+## Chapter 4
+
+```{r}
+
+#TF-IDF table 
+tf_idf_table <- tf_idf_scores %>%
+  filter(doc_id == 4) %>%
+  slice_max(tf_idf, n = 10) %>%
+  ungroup() %>%
+  rename(Chapter = doc_id, Word = word, `TF-IDF Score` = tf_idf) %>%
+  kable("html", caption = "Top 10 TF-IDF Words by Chapter") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c ("striped", "hover", "condensed"))
+
+tf_idf_table
+
+```
+
+
+## Chapter 5
+
+```{r}
+
+#TF-IDF table 
+tf_idf_table <- tf_idf_scores %>%
+  filter(doc_id == 5) %>%
+  slice_max(tf_idf, n = 10) %>%
+  ungroup() %>%
+  rename(Chapter = doc_id, Word = word, `TF-IDF Score` = tf_idf) %>%
+  kable("html", caption = "Top 10 TF-IDF Words by Chapter") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c ("striped", "hover", "condensed"))
+
+tf_idf_table
+
+```
+
+:::
+
+By identifying words that are of particular importance in each of the chapters, TF-IDF analysis offers a lens through which each chapter's unique thematic focus becomes more apparent, sharpening our understanding of Mill's arguments and their progression. By highlighting the most distinct terms, TF-IDF complements our earlier co-occurrence analyses, allowing us to isolate chapter-specific priorities and showing how Mill develops his broader principles of liberty and governance across the text.
+
+## Chapter 1: Introductory
+
+TF-IDF reveals the chapter’s emphasis on external authority and limitations on governance. The focus on terms like *"external,"* *"mandates,"* *"rulers,"* and *"limitation"* underscores Mill’s effort to historically and philosophically ground his argument for limiting societal and governmental interference. At the same time, terms like *"independence"* and *"rightfully"* highlight the chapter’s normative goals, advocating for autonomy and the ethical justification of interventions. Together, these terms demonstrate how Mill frames his argument for liberty, balancing historical context with philosophical rigor.
+
+## Chapter 2: Of The Liberty Of Thought And Discussion
+
+The TF-IDF terms for Chapter 2 emphasize Mill’s core argument about the value of free speech and open debate in the search for truth. Terms like *"doctrines,"* *"false,"* and *"truth"* reflect the chapter’s focus on the intellectual marketplace, where ideas compete and evolve. *"Infallibility"* and *"error"* underscore Mill’s critique of dogmatism and his belief in the fallibility of human judgment, reinforcing the need for intellectual humility and openness. Together, these terms highlight Mill’s defense of dissent and his insistence that progress depends on the continual testing and refinement of ideas through dialogue and disagreement.
+
+## Chapter 3: Of Individuality, As One Of The Elements Of Well-being
+
+The TF-IDF terms for Chapter 3 align with Mill’s celebration of individuality and critique of societal conformity. Terms like *"originality,"* *"genius,"* and *"impulses"* emphasize the vitality and creativity that come from embracing individuality, while *"customs,"* *"conformity,"* and "mediocrity" highlight the dangers of suppressing it. The chapter calls for a balance, where customs are respected but not blindly followed, and eccentricity is valued as a marker of a free and progressive society. This analysis underscores Mill’s belief that societal advancement depends on protecting spaces for individuality and creativity to thrive.
+
+## Chapter 4: Of The Limits To The Authority Of Society Over The Individual
+
+The top TF-IDF terms for Chapter 4 align with Mill’s critique of societal overreach into individual liberties. Words like *"punished,"* *"amusements,"* and *"distaste"* reflect his focus on the boundaries of legitimate societal control, while terms like *"fermented"* and *"pork"* illustrate his use of specific examples to highlight cultural and moral biases. The analysis emphasizes Mill’s advocacy for individual freedom, arguing that society should only intervene when actions cause demonstrable harm to others, not merely when they offend prevailing norms or preferences.
+
+## Chapter 5: Applications
+
+The TF-IDF analysis for Chapter 5 highlights its focus on governance, education, and societal obligations. Terms like *"bureaucracy,"* *"central,"* and *"localities"* reflect Mill's emphasis on balancing centralized authority with local autonomy to foster individual and community development. Meanwhile, terms like *"child,"* *"examination,"* and *"engagements"* underscore the chapter's concern with societal responsibilities in education and moral obligations. The interplay between these themes demonstrates Mill's nuanced approach to ensuring liberty while maintaining social order and fostering collective progress.
+
+# Conclusions
+
+As we demonstrated in the previous post, much can be achieved in text interpretation simply by counting words. However, a more nuanced understanding emerges when we consider the specific context—focusing on individual chapters rather than the text as a whole—and give attention to words that are particularly relevant within that context. In this analysis, we sketched the outlines of the arguments in each chapter by analyzing word frequencies, exploring word co-occurrences, and interpreting these patterns through the lens of the words most critical to that part of the text.
+
+Previously, we were able to establish the general themes of the text. Now, we can break this down into a more nuanced and detailed picture. Word co-occurrences help us identify relevant terms by their contextual relationships, while TF-IDF highlights the unique contributions of each chapter to the overall argument. This dual approach provides deeper insights into the text's structure, enhances our appreciation of its thematic progression, and offers a simple yet effective way to visualize its intricacies.

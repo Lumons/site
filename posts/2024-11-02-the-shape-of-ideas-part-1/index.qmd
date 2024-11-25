@@ -1,5 +1,6 @@
 ---
 open-graph:
+  card: "summary"
   title: "The Shape of Ideas"
   description: "Part 1 - Frequencies."
   image: /posts/2024-11-02-the-shape-of-ideas-part-1/What_is_the_shape_of_an_idea_abstract_geometric_6a6b27a8-eabd-4399-91a2-c88aab7e7399.png
@@ -91,8 +92,10 @@ word_counts %>%
   head(10) %>%
   rename(Frequency = n, Word = word) %>%  # Rename columns for better display
   kable("html", caption = "Top 10 Most Frequent Words") %>%
-  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"))
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), position = "center") %>%
+  column_spec(1, width = "5em")  # Set width for the first column only
 
+  
 ```
 
 Alright, now we have a list of words and their frequencies. While these frequencies give us a sense of the text’s main content, they don’t really illustrate the relationships between concepts or the progression of ideas throughout the work. Some terms may need cleaning up (for instance, "opinion" vs. "opinions" or "persons" vs. "people"), but even that requires judgment about whether these variations carry different meanings or appear in distinct contexts. For now, we’ll work with the terms as they are and focus on visualizing the relationships between them.
@@ -137,7 +140,8 @@ word_pairs <- filtered_tokens %>%
 word_pairs %>%
   head(10) %>%  # Show only the top 10 pairs for simplicity
   kable("html", col.names = c("Word 1", "Word 2", "Frequency"), caption = "Top 10 Word Co-Occurrences") %>%
-  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"))
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), position = "center") %>%
+  column_spec(1, width = "5em")  # Set width for the first column only
 
 
 ```
