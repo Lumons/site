@@ -23,9 +23,9 @@ execute:
   message: false # No messages will be shown in the document
 ---
 
-<div style="text-align: center;">
-  <img src="What_is_the_shape_of_an_idea_-_focused_frequencies_abs_02c49888-1c0c-4826-a59e-182189e473c6.png" alt="What is the shape of an idea?" width="75%">
-</div>
+::: {style="text-align: center;"}
+<img src="What_is_the_shape_of_an_idea_-_focused_frequencies_abs_02c49888-1c0c-4826-a59e-182189e473c6.png" alt="What is the shape of an idea?" width="75%"/>
+:::
 
 ```{r}
 
@@ -62,7 +62,7 @@ text_df <- tibble(doc_id = 1:length(text), text = text)
 
 # Chapter analysis - Word frequencies
 
-With the text loaded, I've manually pulled out the chapter names as well as the beginning and end lines for each of the chapters. This allows us to associate each line in the text - and ultimately each word from the text - with the relevant chapter. 
+With the text loaded, I've manually pulled out the chapter names as well as the beginning and end lines for each of the chapters. This allows us to associate each line in the text - and ultimately each word from the text - with the relevant chapter.
 
 ```{r}
 
@@ -85,7 +85,6 @@ chapter_df %>%
          
 
 ```
-
 
 ```{r}
 # Assuming `text_df` is your dataframe with `doc_id` and `text` columns
@@ -141,9 +140,9 @@ pivot_longer(
 
 ```
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Chapter 1
+
 ```{r}
 
 # Chapter 1 Table
@@ -160,6 +159,7 @@ word_counts.1 %>%
 ```
 
 ## Chapter 2
+
 ```{r}
 
 word_counts.2 <- frequency_tables_long %>%
@@ -175,6 +175,7 @@ word_counts.2 %>%
 ```
 
 ## Chapter 3
+
 ```{r}
 
 word_counts.3 <- frequency_tables_long %>%
@@ -190,6 +191,7 @@ word_counts.3 %>%
 ```
 
 ## Chapter 4
+
 ```{r}
 
 word_counts.4 <- frequency_tables_long %>%
@@ -205,6 +207,7 @@ word_counts.4 %>%
 ```
 
 ## Chapter 5
+
 ```{r}
 
 word_counts.5 <- frequency_tables_long %>%
@@ -219,18 +222,17 @@ word_counts.5 %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"))
 
 ```
-
 :::
 
-While we could use these in a preliminary approach to extracting meaning from each chapter, we'll leave that until the next chapter where we focus on word-occurrences instead. 
+While we could use these in a preliminary approach to extracting meaning from each chapter, we'll leave that until the next chapter where we focus on word-occurrences instead.
 
-# Chapter analysis - Word co-occurrences and network graphs 
+# Chapter analysis - Word co-occurrences and network graphs
 
 As we were able to reveal through previou analysis John Stuart Mill’s On Liberty explores the balance between individual freedom and societal authority. Analyzing word co-occurrence frequencies within each chapter, paired with network graphs, gives us a quantitative and visual means of understanding how Mill develops his arguments across the text. Each chapter’s thematic focus is illuminated by the most frequent word pairings, revealing both the ideas themselves and their progression throughout the essay.
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Chapter 1
+
 ```{r}
 
 filtered_tokens <- tokens %>%
@@ -288,6 +290,7 @@ plot(graph,
 ```
 
 ## Chapter 2
+
 ```{r}
 
 filtered_tokens <- tokens %>%
@@ -513,65 +516,64 @@ plot(graph,
 )
 
 ```
-
 :::
 
 ## **Chapter 1: Introductory**
 
 In the opening chapter, Mill establishes the central tension between society and the individual, evident in the frequent pairing of these terms. The co-occurrence matrix emphasizes:
 
-- "Society - Individual": Reflecting the core question of where societal authority ends and personal liberty begins. Mill underscores the need to protect individuality from societal overreach.
-- "Government - Power": Highlighting Mill's concern with the historical expansion of governmental power and its potential to suppress freedoms.
-- "People - Power" (5): Exploring the risks of majority rule in democracies, where "the people" may wield power as oppressively as monarchs.
-
+-   "Society - Individual": Reflecting the core question of where societal authority ends and personal liberty begins. Mill underscores the need to protect individuality from societal overreach.
+-   "Government - Power": Highlighting Mill's concern with the historical expansion of governmental power and its potential to suppress freedoms.
+-   "People - Power" (5): Exploring the risks of majority rule in democracies, where "the people" may wield power as oppressively as monarchs.
 
 ## **Chapter 2: Of The Liberty Of Thought And Discussion**
 
-This chapter is concerned with the  value of free expression and debate. Word co-occurrences analyis highlights the importance of:
-- "Mankind - Opinion" (12): Highlighting Mill’s argument that the progress of humanity depends on the collision of diverse opinions, which challenge norms and uncover truths.
-- "People - Opinion" (9): Reflecting the relationship between collective societal beliefs and individual dissent. Mill defends the necessity of tolerating unpopular opinions.
-- "Mankind - People" (5): Emphasizing the collective benefits of individual intellectual freedom.
+This chapter is concerned with the value of free expression and debate. Word co-occurrences analysis highlights the importance of:
 
+-   "Mankind - Opinion" (12): Highlighting Mill’s argument that the progress of humanity depends on the collision of diverse opinions, which challenge norms and uncover truths.
+
+-   "People - Opinion" (9): Reflecting the relationship between collective societal beliefs and individual dissent. Mill defends the necessity of tolerating unpopular opinions.
+
+-    "Mankind - People" (5): Emphasizing the collective benefits of individual intellectual freedom.
 
 ## **Chapter 3: Of Individuality, As One Of The Elements Of Well-being**
 
 Here, Mill argues for the importance of individuality in resisting societal conformity:
 
-- "People - Conduct" (7): Highlighting Mill’s critique of the "tyranny of custom," where societal expectations suppress individual decision-making.
-- "Individual - People" (6): Showing the tension between personal freedoms and societal norms, with individuality framed as essential for societal progress.
-- "Opinion - Mankind" (5): Connecting intellectual diversity with the advancement of humanity.
-
+-   "People - Conduct" (7): Highlighting Mill’s critique of the "tyranny of custom," where societal expectations suppress individual decision-making.
+-   "Individual - People" (6): Showing the tension between personal freedoms and societal norms, with individuality framed as essential for societal progress.
+-   "Opinion - Mankind" (5): Connecting intellectual diversity with the advancement of humanity.
 
 ## **Chapter 4: Of The Limits To The Authority Of Society Over The Individual**
 
 Mill explores the boundaries of societal control over individual actions, with co-occurrence analysis revealing:
 
-- "Society - Conduct" (8): Reflecting debates on when societal intervention in personal behavior is justified—specifically, when actions harm others.
-- "Individual - Society" (6): Highlighting the reciprocal obligations between individuals and the society that protects them.
-- "Opinion - Conduct" (5): Connecting how personal opinions influence actions and when these actions warrant societal scrutiny.
-
+-   "Society - Conduct" (8): Reflecting debates on when societal intervention in personal behavior is justified—specifically, when actions harm others.
+-   "Individual - Society" (6): Highlighting the reciprocal obligations between individuals and the society that protects them.
+-   "Opinion - Conduct" (5): Connecting how personal opinions influence actions and when these actions warrant societal scrutiny.
 
 ## **Chapter 5: Applications**
+
 The final chapter applies Mill's principles to practical governance, emphasizing the tension between liberty and state power:
 
-- "Individual - Liberty" (5): Centralizing Mill’s belief that individual freedom is essential for personal and societal progress.
-- "Power - Government" (5): Highlighting Mill’s critique of bureaucratic overreach and the need to limit governmental authority.
-- "Principle - Liberty" (5): Reflecting Mill’s philosophical groundwork for determining when societal intervention is justified.
-- "Conduct - Society" (3): Reinforcing the nuanced balance between personal autonomy and collective welfare.
+-   "Individual - Liberty" (5): Centralizing Mill’s belief that individual freedom is essential for personal and societal progress.
+-   "Power - Government" (5): Highlighting Mill’s critique of bureaucratic overreach and the need to limit governmental authority.
+-   "Principle - Liberty" (5): Reflecting Mill’s philosophical groundwork for determining when societal intervention is justified.
+-   "Conduct - Society" (3): Reinforcing the nuanced balance between personal autonomy and collective welfare.
 
 ## Progression Through the Text
 
 When applied across each of the chapters, word co-occurrence and network analyses reveal a progression of themes throughout the text:
 
-- Introductory (Chapter 1): Focused on establishing the tension between societal authority and individual liberty.
-- Of The Liberty Of Thought And Discussion (Chapter 2): Emphasizes intellectual freedom as a prerequisite for societal progress.
-- Of Individuality, As One Of The Elements Of Well-being (Chapter 3): Advocates for personal autonomy as a counterbalance to societal conformity.
-- Of The Limits To The Authority Of Society Over The Individual (Chapter 4): Explores when societal intervention in individual conduct is justified.
-- Applications (Chapter 5): Applies these principles to practical governance, advocating for decentralized power and personal responsibility.
+-   Introductory (Chapter 1): Focused on establishing the tension between societal authority and individual liberty.
+-   Of The Liberty Of Thought And Discussion (Chapter 2): Emphasizes intellectual freedom as a prerequisite for societal progress.
+-   Of Individuality, As One Of The Elements Of Well-being (Chapter 3): Advocates for personal autonomy as a counterbalance to societal conformity.
+-   Of The Limits To The Authority Of Society Over The Individual (Chapter 4): Explores when societal intervention in individual conduct is justified.
+-   Applications (Chapter 5): Applies these principles to practical governance, advocating for decentralized power and personal responsibility.
 
 # Term Frequency-Inverse Document Frequency (TF-IDF)
 
-So far, we’ve explored the text through word counts and co-occurrence frequencies, which have provided a broad understanding of the thematic dimensions and conceptual relationships in On Liberty. Examining these metrics at the chapter level has added a layer of  resolution to our analysis, revealing not just overarching themes but also the specific concerns of each chapter and the progression of ideas through the text. While word counts and co-occurrences are powerful tools, they are limited in one important way: they treat all words and chapters as if they are equally significant within he text, without considering how much weight a particular word carries in relation to the rest of the work.
+So far, we’ve explored the text through word counts and co-occurrence frequencies, which have provided a broad understanding of the thematic dimensions and conceptual relationships in On Liberty. Examining these metrics at the chapter level has added a layer of resolution to our analysis, revealing not just overarching themes but also the specific concerns of each chapter and the progression of ideas through the text. While word counts and co-occurrences are powerful tools, they are limited in one important way: they treat all words and chapters as if they are equally significant within he text, without considering how much weight a particular word carries in relation to the rest of the work.
 
 An alterntive approach to **Term Frequency-Inverse Document Frequency (TF-IDF)** comes into it. Unlike simple word counts, TF-IDF evaluates not just how often a word appears (its term frequency, TF) but also how unique or significant that word is within the context of the entire text (its inverse document frequency, IDF). By combining these two measures, TF-IDF highlights words that are both frequent in a given section (or "document") but rare elsewhere in the text. This allows us to identify terms that are most characteristic of each chapter's content.
 
@@ -589,17 +591,13 @@ IDF measures how unique or rare a word is across the entire collection of docume
 
 The final TF-IDF score is calculated by multiplying a word’s TF by its IDF. This score prioritizes words that are frequent in a specific document but relatively rare across the rest of the collection, helping us identify terms that best represent the unique focus of each chapter.
 
-Why Is TF-IDF Useful?
-TF-IDF adds nuance to our analysis by addressing the shortcomings of simple frequency-based methods. While co-occurrence counts reveal relationships between common terms, they don’t differentiate between words that are central to a specific chapter and words that are common across the entire text. TF-IDF fills this gap, pinpointing the key terms that make each chapter distinct.
+Why Is TF-IDF Useful? TF-IDF adds nuance to our analysis by addressing the shortcomings of simple frequency-based methods. While co-occurrence counts reveal relationships between common terms, they don’t differentiate between words that are central to a specific chapter and words that are common across the entire text. TF-IDF fills this gap, pinpointing the key terms that make each chapter distinct.
 
 For example:
 
-In Chapter 1, "tyranny" might have a high TF-IDF score because it appears frequently there but less so in subsequent chapters. This would suggest that the chapter has a particular focus on critiquing tyranny, even if "liberty" is more frequent across the entire text.
-In Chapter 3, terms like "individuality" or "custom" might stand out, reflecting its emphasis on personal autonomy and societal norms.
-By applying TF-IDF, we can uncover not just recurring themes but the specific terms and ideas that define each chapter, providing a sharper lens for understanding the structure and argument of On Liberty. This technique is particularly valuable for examining how Mill shifts his focus from general principles to more applied discussions, and for highlighting the unique vocabulary that drives his argument in each section.
+In Chapter 1, "tyranny" might have a high TF-IDF score because it appears frequently there but less so in subsequent chapters. This would suggest that the chapter has a particular focus on critiquing tyranny, even if "liberty" is more frequent across the entire text. In Chapter 3, terms like "individuality" or "custom" might stand out, reflecting its emphasis on personal autonomy and societal norms. By applying TF-IDF, we can uncover not just recurring themes but the specific terms and ideas that define each chapter, providing a sharper lens for understanding the structure and argument of On Liberty. This technique is particularly valuable for examining how Mill shifts his focus from general principles to more applied discussions, and for highlighting the unique vocabulary that drives his argument in each section.
 
 TF-IDF, therefore, is not just another measure of word frequency; it is a tool for weighting words by their contextual importance.
-
 
 # Chapter analysis - TF-IDF
 
@@ -617,9 +615,7 @@ tf_idf_scores <- tokens %>%
 
 ```
 
-
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Chapter 1
 
 ```{r}
@@ -688,7 +684,6 @@ tf_idf_table
 
 ```
 
-
 ## Chapter 5
 
 ```{r}
@@ -705,7 +700,6 @@ tf_idf_table <- tf_idf_scores %>%
 tf_idf_table
 
 ```
-
 :::
 
 By identifying words that are of particular importance in each of the chapters, TF-IDF analysis offers a lens through which each chapter's unique thematic focus becomes more apparent, sharpening our understanding of Mill's arguments and their progression. By highlighting the most distinct terms, TF-IDF complements our earlier co-occurrence analyses, allowing us to isolate chapter-specific priorities and showing how Mill develops his broader principles of liberty and governance across the text.
