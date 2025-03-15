@@ -11,12 +11,12 @@ editor: visual
 open-graph:
   title: "Local Augmentation"
   description: Putting things together
-  image: https://www.lumosinsight.co.uk/posts/2024-09-06-measuring-meaning/The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png
+  image: https://www.lumosinsight.co.uk/posts/2025-03-15-local-augmentation/local_augmentation_abstract_1e293712-badf-4d94-9310-79aa6a4e46db.png
 twitter-card:
   card: "summary_large_image"
   title: "Local Augmentation"
   description: Putting things together
-  image: https://www.lumosinsight.co.uk/posts/2024-09-06-measuring-meaning/The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png
+  image: https://www.lumosinsight.co.uk/posts/2025-03-15-local-augmentation/local_augmentation_abstract_1e293712-badf-4d94-9310-79aa6a4e46db.png
 ---
 
 ::: {style="text-align: center;"}
