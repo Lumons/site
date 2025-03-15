@@ -6,7 +6,7 @@ format:
     html:    
         include-after-body: "../../giscus.html"
 categories: [Knowledge management, Cognitive augmentation]
-image: /home/luke/repos/site/posts/2025-03-15-local-augmentation/local_augmentation_abstract_1e293712-badf-4d94-9310-79aa6a4e46db.png
+image: local_augmentation_abstract_1e293712-badf-4d94-9310-79aa6a4e46db.png
 editor: visual
 open-graph:
   title: "Local Augmentation"
