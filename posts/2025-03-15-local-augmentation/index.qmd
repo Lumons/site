@@ -19,6 +19,10 @@ twitter-card:
   image: https://www.lumosinsight.co.uk/posts/2024-09-06-measuring-meaning/The_stuff_of_thought_7ddbf523-f23d-421c-8765-578850f389b7.png
 ---
 
+::: {style="text-align: center;"}
+<img src="local_augmentation_abstract_1e293712-badf-4d94-9310-79aa6a4e46db.png" alt="Local Augmentation" width="75%"/>
+:::
+
 
 I’ve been using local LLMs for a while now, in a couple of different ways. Part of this usage is straightforward interaction: pushing their limits, seeing how far I can go, and also exploring aspects of natural language processing (NLP).
 
