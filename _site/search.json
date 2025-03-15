@@ -105,7 +105,7 @@
     "href": "posts.html",
     "title": "Posts",
     "section": "",
-    "text": "The Shape of Ideas\n\n\n\n\n\n\nThematic analysis\n\n\nTextual visualisation\n\n\n\nPart 2 - Focused Frequencies\n\n\n\n\n\nNov 24, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nThe Shape of Ideas\n\n\n\n\n\n\nThematic analysis\n\n\nTextual visualisation\n\n\n\nPart 1 - Frequencies\n\n\n\n\n\nNov 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nMeasuring Meaning\n\n\n\n\n\n\nSemantic quantification\n\n\n\nTurning words into numbers\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nBeyond Responding\n\n\n\n\n\n\nPsychometric validation\n\n\n\nUsing behaviours as meaning\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nEmbedded vectors as linguistic objects\n\n\n\n\n\n\nSemantic quantification\n\n\nSemantic and Conceptual clustering\n\n\n\nFinding new structures of meaning\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCultivating Journalling Habits with AI\n\n\n\n\n\n\nLarge Language Models\n\n\nKnowledge management\n\n\n\nLearning by doing it the hard way\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nThe SECI model & knowledge creation\n\n\n\n\n\n\nKnowledge\n\n\nLearning\n\n\n\nAs knowledge changes, so must we. \n\n\n\n\n\nJun 6, 2023\n\n\n\n\n\n\nNo matching items",
+    "text": "Local Augmentation\n\n\n\n\n\n\nKnowledge management\n\n\nCognitive augmentation\n\n\n\nPutting things together\n\n\n\n\n\nMar 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nThe Shape of Ideas\n\n\n\n\n\n\nThematic analysis\n\n\nTextual visualisation\n\n\n\nPart 2 - Focused Frequencies\n\n\n\n\n\nNov 24, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nThe Shape of Ideas\n\n\n\n\n\n\nThematic analysis\n\n\nTextual visualisation\n\n\n\nPart 1 - Frequencies\n\n\n\n\n\nNov 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nMeasuring Meaning\n\n\n\n\n\n\nSemantic quantification\n\n\n\nTurning words into numbers\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nBeyond Responding\n\n\n\n\n\n\nPsychometric validation\n\n\n\nUsing behaviours as meaning\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nEmbedded vectors as linguistic objects\n\n\n\n\n\n\nSemantic quantification\n\n\nSemantic and Conceptual clustering\n\n\n\nFinding new structures of meaning\n\n\n\n\n\nSep 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCultivating Journalling Habits with AI\n\n\n\n\n\n\nLarge Language Models\n\n\nKnowledge management\n\n\n\nLearning by doing it the hard way\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nThe SECI model & knowledge creation\n\n\n\n\n\n\nKnowledge\n\n\nLearning\n\n\n\nAs knowledge changes, so must we. \n\n\n\n\n\nJun 6, 2023\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Posts"
     ]
@@ -857,5 +857,40 @@
     "title": "The Shape of Ideas",
     "section": "Chapter 5: Applications",
     "text": "Chapter 5: Applications\nThe TF-IDF analysis for Chapter 5 highlights its focus on governance, education, and societal obligations. Terms like “bureaucracy,” “central,” and “localities” reflect Mill’s emphasis on balancing centralized authority with local autonomy to foster individual and community development. Meanwhile, terms like “child,” “examination,” and “engagements” underscore the chapter’s concern with societal responsibilities in education and moral obligations. The interplay between these themes demonstrates Mill’s nuanced approach to ensuring liberty while maintaining social order and fostering collective progress."
+  },
+  {
+    "objectID": "posts/2025-03-15-local-augmentation/index.html",
+    "href": "posts/2025-03-15-local-augmentation/index.html",
+    "title": "Local Augmentation",
+    "section": "",
+    "text": "I’ve been using local LLMs for a while now, in a couple of different ways. Part of this usage is straightforward interaction: pushing their limits, seeing how far I can go, and also exploring aspects of natural language processing (NLP).\nIf I’m going to keep experimenting, I want to objectify and measure the text outputs I’m getting. That’s part of the motivation behind some of the work I’ve done previously, where I’m playing with different ways of extracting and quantifying meaning in text."
+  },
+  {
+    "objectID": "posts/2025-03-15-local-augmentation/index.html#text-analytics-pipelines",
+    "href": "posts/2025-03-15-local-augmentation/index.html#text-analytics-pipelines",
+    "title": "Local Augmentation",
+    "section": "Text Analytics Pipelines",
+    "text": "Text Analytics Pipelines\nOne recent application has been to incorporate LLMs into an analytics pipeline:\n\nSummarizing text that has already been partitioned according to certain rules or categories.\nProviding an immediate thematic overview by grouping text into already-existing categories. So far, this is mostly text analysis–not as heavy on LLM usage as I initially thought. I’ve still relied on topic modeling with TF-IDF, n-gram counts, word frequency, and co-occurrence to see how words or ideas cluster together.\n\nHowever, one area I want to explore more is word co-occurrence combined with word embeddings. The idea is to generate a series of “coordinates” (e.g., sentence or paragraph embeddings) and compare similarities across time to map how ideas form and develop. That’s something I’ll be dabbling with soon."
+  },
+  {
+    "objectID": "posts/2025-03-15-local-augmentation/index.html#daily-audio-logs",
+    "href": "posts/2025-03-15-local-augmentation/index.html#daily-audio-logs",
+    "title": "Local Augmentation",
+    "section": "Daily Audio Logs",
+    "text": "Daily Audio Logs\nDaily logs and check-ins were one of my earliest experiments:\n\nI started with a custom GUI chat to record day-to-day happenings.\nThis quickly became unwieldy, so I switched to simply recording audio files.\nNow, my focus is on the analysis and extraction of structured information from those recordings.\n\nThe workflow (in principle):\n\nTranscribe the audio using a speech-to-text tool.\nFeed that text to an LLM with a specific prompt that instructs it to return a JSON object containing dates, events, “remind me” items, or anything else worth extracting.\nStore that JSON in a database for easy retrieval and queries.\n\nThe biggest challenge now is deciding how best to store the data. I’m leaning toward a local PostgreSQL server, but that’s a topic for an entirely separate post."
+  },
+  {
+    "objectID": "posts/2025-03-15-local-augmentation/index.html#document-annotations",
+    "href": "posts/2025-03-15-local-augmentation/index.html#document-annotations",
+    "title": "Local Augmentation",
+    "section": "Document Annotations",
+    "text": "Document Annotations\nAnother area where LLMs have helped is processing my document annotations:\nI’ve been making a lot more highlights and notes—on my computer and my e-book reader. These have always felt ephemeral and scattered across different filesystems. Now, when I finish reading, I extract the annotations and summarize them using an LLM. I’m still experimenting with context windows and how prompts should incorporate page references, but even a basic summary of my notes is valuable. It lets me quickly revisit what I’ve read. And by embedding these summaries (or the text itself), I can later query them in a more dynamic way."
+  },
+  {
+    "objectID": "posts/2025-03-15-local-augmentation/index.html#document-parsing",
+    "href": "posts/2025-03-15-local-augmentation/index.html#document-parsing",
+    "title": "Local Augmentation",
+    "section": "Document Parsing",
+    "text": "Document Parsing\nThe next big step is processing documents themselves: - Parsing meaning and structuring the content in ways that make it easy to query, summarize, or compare against annotations. - I’m experimenting with storing these parsed chunks in a local database for further analysis. - I even built a simple Discord bot that, in theory, can access this database to answer questions about the documents.\nWhat’s Missing? I still feel like I lack a standardized approach to analyzing and representing all this textual data. That’s the challenge: figuring out a consistent format, pipeline, or schema for local LLM usage that meshes well with more traditional text analysis (like LDA, TF-IDF, etc.).\nIn the near future, I plan to:\n\nRefine the pipeline for summarizing daily logs, so it’s fully automated.\nContinue testing different embeddings and ways of measuring text similarity or co-occurrence.\nImprove the annotation summary process, particularly how context is managed.\nDevelop a robust approach for integrating these structured logs and annotations into a database."
   }
 ]
