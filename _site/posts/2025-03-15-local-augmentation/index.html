@@ -184,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="local_augmentation_abstract_1e293712-badf-4d94-9310-79aa6a4e46db.png" alt="Local Augmentation" width="75%"></p>
 </div>
 <p>I’ve been using local LLMs for a while now, in a couple of different ways. Part of this usage is straightforward interaction: pushing their limits, seeing how far I can go, and also exploring aspects of natural language processing (NLP).</p>
-<p>If I’m going to keep experimenting, I want to objectify and measure the text outputs I’m getting. That’s part of the motivation behind some of the work I’ve done <a href="https://www.lumosinsight.co.uk/posts/2024-11-02-the-shape-of-ideas-part-1/">previously</a>, where I’m playing with different ways of extracting and quantifying meaning in text.</p>
+<p>If I’m going to keep experimenting, I want to objectify and measure the text outputs I’m getting. That’s part of the motivation behind some of the work I’ve done <a href="https://www.lumosinsight.co.uk/posts/2024-11-02-the-shape-of-ideas-part-1/">previously</a>, where I’m playing with different ways of extracting and quantifying meaning in text. That’s just one use-case though, falling more in the bucket of ‘traditional’ natural language processing. I didn’t need LLM’s to do most of that previously, though it’s certainly helped to learn about them. However, I have noticed that the remainder of my LLM based activities include production of structured output from unstructured data (read, constraining outputs to json), as well as transforming or reconfiguring text in some way (for example, summarising).</p>
 <section id="text-analytics-pipelines" class="level2">
 <h2 class="anchored" data-anchor-id="text-analytics-pipelines">Text Analytics Pipelines</h2>
 <p>One recent application has been to incorporate LLMs into an analytics pipeline:</p>
@@ -217,7 +217,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="document-parsing" class="level2">
 <h2 class="anchored" data-anchor-id="document-parsing">Document Parsing</h2>
-<p>The next big step is processing documents themselves: - Parsing meaning and structuring the content in ways that make it easy to query, summarize, or compare against annotations. - I’m experimenting with storing these parsed chunks in a local database for further analysis. - I even built a simple Discord bot that, in theory, can access this database to answer questions about the documents.</p>
+<p>The next big step is processing documents themselves:</p>
+<ul>
+<li><p>Parsing meaning and structuring the content in ways that make it easy to query, summarize, or compare against annotations.</p></li>
+<li><p>I’m experimenting with storing these parsed chunks in a local database for further analysis.</p></li>
+<li><p>I even built a simple Discord bot that, in theory, can access this database to answer questions about the documents.</p></li>
+</ul>
 <p>What’s Missing? I still feel like I lack a standardized approach to analyzing and representing all this textual data. That’s the challenge: figuring out a consistent format, pipeline, or schema for local LLM usage that meshes well with more traditional text analysis (like LDA, TF-IDF, etc.).</p>
 <p>In the near future, I plan to:</p>
 <ul>

@@ -23,18 +23,16 @@ twitter-card:
 <img src="local_augmentation_abstract_1e293712-badf-4d94-9310-79aa6a4e46db.png" alt="Local Augmentation" width="75%"/>
 :::
 
-
 I’ve been using local LLMs for a while now, in a couple of different ways. Part of this usage is straightforward interaction: pushing their limits, seeing how far I can go, and also exploring aspects of natural language processing (NLP).
 
-If I’m going to keep experimenting, I want to objectify and measure the text outputs I’m getting. That’s part of the motivation behind some of the work I've done [previously](https://www.lumosinsight.co.uk/posts/2024-11-02-the-shape-of-ideas-part-1/), where I’m playing with different ways of extracting and quantifying meaning in text.
+If I’m going to keep experimenting, I want to objectify and measure the text outputs I’m getting. That’s part of the motivation behind some of the work I've done [previously](https://www.lumosinsight.co.uk/posts/2024-11-02-the-shape-of-ideas-part-1/), where I’m playing with different ways of extracting and quantifying meaning in text. That's just one use-case though, falling more in the bucket of 'traditional' natural language processing. I didn't need LLM's to do most of that previously, though it's certainly helped to learn about them. However, I have noticed that the remainder of my LLM based activities include production of structured output from unstructured data (read, constraining outputs to json), as well as transforming or reconfiguring text in some way (for example, summarising).
 
 ## Text Analytics Pipelines
 
 One recent application has been to incorporate LLMs into an analytics pipeline:
 
-- Summarizing text that has already been partitioned according to certain rules or categories.
-- Providing an immediate thematic overview by grouping text into already-existing categories.
-So far, this is mostly text analysis–not as heavy on LLM usage as I initially thought. I’ve still relied on topic modeling with TF-IDF, n-gram counts, word frequency, and co-occurrence to see how words or ideas cluster together.
+-   Summarizing text that has already been partitioned according to certain rules or categories.
+-   Providing an immediate thematic overview by grouping text into already-existing categories. So far, this is mostly text analysis–not as heavy on LLM usage as I initially thought. I’ve still relied on topic modeling with TF-IDF, n-gram counts, word frequency, and co-occurrence to see how words or ideas cluster together.
 
 However, one area I want to explore more is word co-occurrence combined with word embeddings. The idea is to generate a series of “coordinates” (e.g., sentence or paragraph embeddings) and compare similarities across time to map how ideas form and develop. That’s something I’ll be dabbling with soon.
 
@@ -42,41 +40,39 @@ However, one area I want to explore more is word co-occurrence combined with wor
 
 Daily logs and check-ins were one of my earliest experiments:
 
-- I started with a custom GUI chat to record day-to-day happenings.
-- This quickly became unwieldy, so I switched to simply recording audio files.
-- Now, my focus is on the analysis and extraction of structured information from those recordings.
-  
+-   I started with a custom GUI chat to record day-to-day happenings.
+-   This quickly became unwieldy, so I switched to simply recording audio files.
+-   Now, my focus is on the analysis and extraction of structured information from those recordings.
+
 The workflow (in principle):
 
-- Transcribe the audio using a speech-to-text tool.
-- Feed that text to an LLM with a specific prompt that instructs it to return a JSON object containing dates, events, “remind me” items, or anything else worth extracting.
-- Store that JSON in a database for easy retrieval and queries.
-  
+-   Transcribe the audio using a speech-to-text tool.
+-   Feed that text to an LLM with a specific prompt that instructs it to return a JSON object containing dates, events, “remind me” items, or anything else worth extracting.
+-   Store that JSON in a database for easy retrieval and queries.
+
 The biggest challenge now is deciding how best to store the data. I’m leaning toward a local PostgreSQL server, but that’s a topic for an entirely separate post.
 
 ## Document Annotations
+
 Another area where LLMs have helped is processing my document annotations:
 
-I’ve been making a lot more highlights and notes—on my computer and my e-book reader.
-These have always felt ephemeral and scattered across different filesystems.
-Now, when I finish reading, I extract the annotations and summarize them using an LLM.
-I’m still experimenting with context windows and how prompts should incorporate page references, but even a basic summary of my notes is valuable. It lets me quickly revisit what I’ve read. And by embedding these summaries (or the text itself), I can later query them in a more dynamic way.
+I’ve been making a lot more highlights and notes—on my computer and my e-book reader. These have always felt ephemeral and scattered across different filesystems. Now, when I finish reading, I extract the annotations and summarize them using an LLM. I’m still experimenting with context windows and how prompts should incorporate page references, but even a basic summary of my notes is valuable. It lets me quickly revisit what I’ve read. And by embedding these summaries (or the text itself), I can later query them in a more dynamic way.
 
 ## Document Parsing
-The next big step is processing documents themselves: 
-- Parsing meaning and structuring the content in ways that make it easy to query, summarize, or compare against annotations.
-- I’m experimenting with storing these parsed chunks in a local database for further analysis.
-- I even built a simple Discord bot that, in theory, can access this database to answer questions about the documents.
 
-What’s Missing?
-I still feel like I lack a standardized approach to analyzing and representing all this textual data. That’s the challenge: figuring out a consistent format, pipeline, or schema for local LLM usage that meshes well with more traditional text analysis (like LDA, TF-IDF, etc.).
+The next big step is processing documents themselves:
+
+-   Parsing meaning and structuring the content in ways that make it easy to query, summarize, or compare against annotations.
+
+-   I’m experimenting with storing these parsed chunks in a local database for further analysis.
+
+-   I even built a simple Discord bot that, in theory, can access this database to answer questions about the documents.
+
+What’s Missing? I still feel like I lack a standardized approach to analyzing and representing all this textual data. That’s the challenge: figuring out a consistent format, pipeline, or schema for local LLM usage that meshes well with more traditional text analysis (like LDA, TF-IDF, etc.).
 
 In the near future, I plan to:
 
-- Refine the pipeline for summarizing daily logs, so it’s fully automated.
-- Continue testing different embeddings and ways of measuring text similarity or co-occurrence.
-- Improve the annotation summary process, particularly how context is managed.
-- Develop a robust approach for integrating these structured logs and annotations into a database.
-
-
-
+-   Refine the pipeline for summarizing daily logs, so it’s fully automated.
+-   Continue testing different embeddings and ways of measuring text similarity or co-occurrence.
+-   Improve the annotation summary process, particularly how context is managed.
+-   Develop a robust approach for integrating these structured logs and annotations into a database.
