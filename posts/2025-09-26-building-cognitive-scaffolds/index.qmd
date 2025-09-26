@@ -1,0 +1,116 @@
+---
+open-graph:
+  title: "Building Cognitive Scaffolds: Instruction Verbs and Language Proficiency"
+  description: "Exploring how instruction verbs form the building blocks of learning, mapped onto CEFR levels and cognitive development."
+  image: https://www.lumosinsight.co.uk/posts/2025-09-26-building-cognitive-scaffolds/header.png
+  image-alt: "Stylised architectural scaffold over a brain, with verbs like match, explain, synthesise inscribed on beams"
+
+twitter-card:
+  card: "summary_large_image"
+  title: "Building Cognitive Scaffolds: Instruction Verbs and Language Proficiency"
+  description: "Exploring how instruction verbs form the building blocks of learning, mapped onto CEFR levels and cognitive development."
+  image: https://www.lumosinsight.co.uk/posts/2025-09-26-building-cognitive-scaffolds/header.png
+  image-alt: "Stylised architectural scaffold over a brain, with verbs like match, explain, synthesise inscribed on beams"
+
+title: "Building Cognitive Scaffolds: Instruction Verbs and Language Proficiency"
+description: "Instruction verbs as cognitive building blocks, linked to CEFR levels, with insights from skill acquisition, levels of processing, and cognitive load."
+date: 2025-09-26
+
+format:
+  html:    
+    include-after-body: "../../giscus.html"
+
+categories: [Learning Science, Language, Cognitive Psychology]
+tags: [CEFR, ESL, Instruction Verbs, Scaffolding, Skill Acquisition, Levels of Processing, Cognitive Load]
+
+cover-image: header.png
+cover-image-alt: "Stylised architectural scaffold over a brain, with verbs like match, explain, synthesise inscribed on beams"
+
+editor: visual
+
+execute:
+  echo: false
+  warning: false
+  message: false
+
+toc: true
+toc-depth: 2
+
+canonical-url: https://www.lumosinsight.co.uk/posts/2025-09-26-building-cognitive-scaffolds/
+---
+
+![](header.png){fig-align="center" width="100%"}
+
+# Instruction Verbs as Building Blocks of Learning
+
+Recently I was introduced to the importance of *instruction verbs* in the teaching of English as a second language. Far from being incidental, they are fundamental in their contribution: they represent the **building blocks** that allow teachers to guide learners step by step into greater complexity.
+
+------------------------------------------------------------------------
+
+## From matching to complexity
+
+Let’s take one of the simplest examples: **matching**. It is a common task in language learning, where learners are asked to match words, phrases, or sentences with their corresponding meanings, translations, or images. On the surface this reinforces vocabulary and comprehension, but underneath it connects to something deeper: *categorisation*. To match is to group things together based on shared features, and as this loop becomes automatic it allows higher-order processes to be built on top.
+
+Other instruction verbs operate the same way. Words like:
+
+-   *repeat*\
+-   *identify*\
+-   *circle*\
+-   *copy*\
+-   *say*\
+-   *listen*
+
+At first glance, these look mechanical. But they describe actions that learners can *feel themselves doing*. Their meaning and their phenomenology are tightly bound. This makes them effective building blocks: once mastered, they become the foundations on which more complex routines — *summarising, describing, explaining* — can be layered.
+
+------------------------------------------------------------------------
+
+## Scaffolding and CEFR
+
+In education, this stepwise growth is often described as *scaffolding*: the structured support that helps learners attempt tasks just beyond their current level, gradually withdrawn as independence develops.
+
+One place where this progression is clearly formalised is the **Common European Framework of Reference for Languages (CEFR)**[^1]. It describes six levels of language attainment — **A1, A2, B1, B2, C1, C2** — each framed by “can-do” statements. What’s striking is how closely these levels map to the natural expansion of instructional verbs: from simple perceptual routines, to controlled production, to metacognition, and eventually to creative, discourse-level reasoning.
+
+[^1]: Common European Framework of Reference for Languages (Council of Europe). Available at: https://www.coe.int/en/web/common-european-framework-reference-languages
+
+### CEFR levels and instructional verbs
+
+| CEFR Level | Example *Can-Do* Descriptors                                                                                                                          | Suggested Instructional Verbs                         | Notes on Progression                                                     |
+|-----------------|-------------------|--------------------|-----------------|
+| **A1**     | Understand and use familiar everyday expressions; introduce themselves; ask and answer simple questions.                                              | *identify, repeat, say, listen, match, copy*          | Mechanical and perceptual routines that establish the base for learning. |
+| **A2**     | Understand sentences related to immediate relevance (family, shopping, local geography); handle simple routine tasks.                                 | *complete, choose, label, respond, order, categorise* | Controlled production — selecting, arranging, categorising.              |
+| **B1**     | Deal with most situations while travelling; produce simple connected text; describe experiences, hopes, and plans.                                    | *compare, explain, construct, transform, predict*     | Early metacognitive moves: reshaping and linking representations.        |
+| **B2**     | Understand the main ideas of complex text; interact with fluency and spontaneity; produce clear, detailed writing.                                    | *analyse, evaluate, justify, reformulate, sequence*   | Adds problem-solving, nuance, and self-monitoring.                       |
+| **C1**     | Express ideas fluently and flexibly; produce well-structured, detailed text; use language effectively for social, academic, or professional purposes. | *debate, hypothesise, synthesise, design, argue*      | Discourse-level control and hypothetical reasoning.                      |
+| **C2**     | Understand virtually everything heard or read; summarise information from different sources; express themselves precisely and spontaneously.          | *create, adapt, integrate, perform, publish*          | Creative production, cross-genre adaptation, and linguistic risk-taking. |
+
+------------------------------------------------------------------------
+
+## Why this matters
+
+Looking at CEFR through the lens of instruction verbs makes clear that language learning is not just about vocabulary or grammar, but about **cognitive complexity**.
+
+-   At lower levels, verbs like *match* and *repeat* strengthen perceptual loops.\
+-   At mid levels, verbs like *compare* and *explain* begin to train self-monitoring and transformation.\
+-   At higher levels, verbs like *debate* or *synthesise* open up discourse-level reasoning and creativity.
+
+The key is that these verbs **don’t disappear**. *Matching* is still relevant at C1, but now it might mean matching evidence to arguments rather than words to pictures. What changes is the **scale and abstraction** of the action.
+
+------------------------------------------------------------------------
+
+## A cognitive turn
+
+This progression doesn’t just describe language learning — it reflects a broader principle in how cognition develops. Complex thought builds on simple perceptual routines.
+
+-   **Skill acquisition theory** (Anderson, 1982[^2]) describes movement from explicit instructions (*cognitive stage*), to refinement and linking (*associative stage*), to fluent and flexible performance (*autonomous stage*). Instruction verbs follow this arc closely.\
+-   **Levels of processing theory** (Craik & Lockhart, 1972[^3]) suggests that learning deepens as we move from surface operations (*repeat, match*) to relational and semantic processing (*analyse, evaluate, create*). Each verb marks a shift in depth.\
+-   **Cognitive load theory** (Sweller, 1988[^4]) reminds us that low-level routines must become automatic before higher-level reasoning can emerge. Verbs like *copy* or *repeat* may feel trivial, but they lighten the load for later, more abstract processes.
+
+[^2]: Anderson, J. R. (1982). Acquisition of cognitive skill. *Psychological Review, 89*(4), 369–406.
+
+[^3]: Craik, F. I. M., & Lockhart, R. S. (1972). Levels of processing: A framework for memory research. *Journal of Verbal Learning and Verbal Behavior, 11*(6), 671–684.
+
+[^4]: Sweller, J. (1988). Cognitive load during problem solving: Effects on learning. *Cognitive Science, 12*(2), 257–285.
+
+Seen this way, CEFR’s progression is more than a teaching framework. It mirrors the way human cognition builds itself: from **mechanical acts**, through **reflective and self-directed acts**, to **creative, abstract, discourse-level reasoning**.
+
+------------------------------------------------------------------------
