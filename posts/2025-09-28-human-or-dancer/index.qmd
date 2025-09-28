@@ -1,0 +1,112 @@
+---
+title: "Human or Dancer?"
+description: "Reflecting on Midson’s *Cyborg Theology*, Haraway’s cyborg provocation, and why The Killers might have more to do with theology than we think."
+date: 2025-09-28
+categories: [theology, technology, culture]
+tags: [cyborgs, haraway, midson, theology, music, killers]
+canonical-url: https://www.lumosinsight.co.uk/posts/human-or-dancer/
+cover-image: header.png
+cover-image-alt: "Human or Dancer?"
+
+open-graph:
+  title: "Human or Dancer?"
+  description: "Reflecting on Midson’s *Cyborg Theology*, Haraway’s cyborg provocation, and why The Killers might have more to do with theology than we think."
+  image: https://www.lumosinsight.co.uk/posts/header.png
+  image-alt: "Human or Dancer?"
+
+twitter-card:
+  card: "summary_large_image"
+  title: "Human or Dancer?"
+  description: "Reflecting on Midson’s *Cyborg Theology*, Haraway’s cyborg provocation, and why The Killers might have more to do with theology than we think."
+  image: https://www.lumosinsight.co.uk/posts/header.png
+  image-alt: "Human or Dancer?"
+
+format:
+  html:
+    include-after-body: "../../giscus.html"
+
+editor: visual
+
+execute:
+  echo: false
+  warning: false
+  message: false
+
+toc: true
+toc-depth: 2
+---
+
+![](header.png){fig-align="center" width="100%"}
+
+In a previous post I explored how technology forces us to re-evaluate our humanity, and how the very qualities on which we base our distinctiveness can leave our self-concepts vulnerable as machines evolve. That post was provoked by my holiday reading list, which also included Midson’s *Cyborg Theology*[^1], a book that unsurprisingly deals with this very theme.
+
+[^1]: Midson, S. A. (2017). *Cyborg Theology: Humans, Technology and God*. Bloomsbury Publishing.
+
+## The cyborg as corruption
+
+A central theme in cultural and theological responses to technology is the idea that increasing reliance on, or merging with, technology represents a corruption of what it means to be human. The cyborg becomes a threat — not just to our humanity, but to our connection with nature, and, within theological narratives, to our divinity.
+
+This latter point is key for Midson. *Cyborg Theology* offers a theological–anthropological treatment of the cyborg and its place within the Judeo-Christian tradition. The cyborg (literally, a “cybernetic organism”) here is not only a biological–technological hybrid but also a conceptual challenge: it forces us to reconsider how humans, technology, and the divine interrelate.
+
+Although a theological analysis may not sound immediately relevant to everyone, Midson makes a strong case that the stories driving our present realities are steeped in theological assumptions. Whether we think of Icarus flying too close to the sun, Prometheus stealing fire from the gods, or contemporary tales of technological hubris, these myths resurface whenever we narrate our anxieties about machines surpassing us. Even the everyday stories we tell each other about automation, AI, and biotech carry theological strands, whether we recognize them or not.
+
+## Haraway’s provocation
+
+For Midson, the trap lies in the Judeo-Christian framework itself. This tradition positions humanity in a triangular tension — bound to God, distinct from nature, and defined against technology. Within this view, the cyborg is always “other,” its integration with technology casting suspicion on both our creatureliness and our divine likeness.
+
+Donna Haraway’s *Cyborg Manifesto*[^2] crystallizes this challenge when she writes:
+
+[^2]: Haraway, D. J. (1985/2016). *A Cyborg Manifesto*, in *Manifestly Haraway*. University of Minnesota Press.
+
+> “The cyborg would not recognize the Garden of Eden; it is not made of mud and cannot dream of returning to dust.”
+
+Haraway’s point is that the cyborg resists nostalgic longings for an original human essence. It cannot return to an Edenic origin story — because it never shared it. This provocation forces us to confront the ways our categories of nature, spirit, and humanity break down in technologically mediated societies. As she puts it elsewhere, cyborgs are “about transgressed boundaries, potent fusions, and dangerous possibilities.”
+
+Yet for Midson, Haraway’s brilliance is also her limitation. By placing the cyborg outside both nature and divinity, she risks leaving us with no way forward. If the cyborg is fundamentally alien, then our present entanglement with technology can only ever be narrated as loss — a kind of existential cul-de-sac.
+
+## Reinterpreting the cyborg
+
+Midson’s central project, then, is to reinterpret the cyborg in a theologically relevant way — one that does not define it as anti-human or contrary to divinity. At the very least, he seeks to create space for theological engagement with the cyborg that avoids casting it purely as corruption.
+
+One path is to place our relationship with technology at the heart of what it means to be human. This perspective echoes Philip Hefner’s claim that humanity’s divinity lies in its creative status as “co-creator”[^3], as well as Andy Clark’s vision of human–technology entanglement:
+
+[^3]: Hefner, P. (1993). *The Human Factor: Evolution, Culture, and Religion*. Fortress Press.
+
+> “Our cyborg future, like our cyborg present and our cyborg past, will depend on a variety of tools, techniques, practices, and innovations… These will be technologies to live with, to work with, and to think through.”[^4]
+
+[^4]: Clark, A. (2003). *Natural-Born Cyborgs: Minds, Technologies, and the Future of Human Intelligence*. Oxford University Press.
+
+For Clark, the mingling of human and technological “fluids” is not an aberration but the very essence of what makes us distinct as a species.
+
+But Midson argues that even these accounts remain trapped in anthropocentrism. They still define humanity substantively — by what we do, create, or extend — rather than taking seriously Haraway’s challenge to rethink the human altogether.
+
+## Toward theological cyborgology
+
+Here Midson takes up Haraway’s imagery of the “spiral dance,” a ritual she describes as both spiritual and political. For Haraway, the cyborg and the goddess are bound in an endless, boundary-crossing dance; for Midson, this becomes a way to imagine theological anthropology without defaulting to human-centred categories.
+
+As he puts it:
+
+> “Technologies are but some of the actors, (con)fusing with multiple others, as they dance the spiral dance. We may never be able to fully understand it, but we can become more aware of the moves that the dancers take and appreciate the profundness and intricacy of it all. *Imago Dei*, in a theological cyborgology, is likely to be about this choreography that brings together multiple actors.”
+
+The move is subtle but profound. Rather than defining the cyborg as corruption or as a mere extension of human creativity, Midson reframes the human–divine–technological relationship as choreography — a complex interplay where no single actor holds the centre. In this, he extends Haraway’s boundary-blurring vision into a theological register, offering a way of thinking about cyborg identity that neither romanticizes Eden nor forecloses divinity.
+
+## Human or Dancer?
+
+In the 2008 song *Human*, Brandon Flowers of The Killers sings:
+
+> Are we human, or are we dancer?\
+> My sign is vital\
+> My hands are cold\
+> And I'm on my knees\
+> Looking for the answer\
+> Are we human, or are we dancer?
+
+The line provoked much confusion, though in an interview with *Rolling Stone* Flowers attributed its inspiration to a remark from Hunter S. Thompson: “We’re raising a generation of dancers, afraid to take one step out of line.”[^5]
+
+[^5]: Brandon Flowers interview, *Rolling Stone*, 2008. [Link](https://www.rollingstone.com/music/music-news/brandon-flowers-wound-up-over-misquoting-of-killers-human-78756/)
+
+In Thompson’s context, the line reads as social critique — a lament for conformity and timidity. Yet Flowers’ lyric, and the ambiguity it leaves hanging, struck me as oddly resonant with Midson’s project. To be “human” or to be “dancer” is not framed as a choice between corruption and purity, but as an unsettling play between categories. Reading Midson on the spiral dance, I couldn’t help but think Flowers had pre-empted the metaphor.[^6]
+
+[^6]: Later I discovered that *Human* was released on **September 22nd, 2008** — the same date I happened to be flying home and finishing *Cyborg Theology*. A coincidence, but one that seemed to echo Midson’s point: meaning often emerges less from fixed essences than from the choreography of connections we notice along the way.
+
+------------------------------------------------------------------------
