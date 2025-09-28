@@ -1,11 +1,11 @@
 project:
   type: website
 
-site-url: https://www.lumosinsight.co.uk
-
 website:
   title: "Lumos Insight"
   description: "Exploring knowledge, measurement, behaviour, and technology"
+  site-url: https://www.lumosinsight.co.uk   # enables absolute OG/Twitter URLs
+  open-graph: true
   favicon: "images/logo.PNG"
   sidebar:
     logo: "images/logo.PNG"
