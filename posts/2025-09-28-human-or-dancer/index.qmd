@@ -11,14 +11,14 @@ cover-image-alt: "Human or Dancer?"
 open-graph:
   title: "Human or Dancer?"
   description: "Reflecting on Midson’s *Cyborg Theology*, Haraway’s cyborg provocation, and why The Killers might have more to do with theology than we think."
-  image: https://www.lumosinsight.co.uk/posts/header.png
+  image: https://www.lumosinsight.co.uk/posts/2025-09-28-human-or-dancer/header.png
   image-alt: "Human or Dancer?"
 
 twitter-card:
   card: "summary_large_image"
   title: "Human or Dancer?"
   description: "Reflecting on Midson’s *Cyborg Theology*, Haraway’s cyborg provocation, and why The Killers might have more to do with theology than we think."
-  image: https://www.lumosinsight.co.uk/posts/header.png
+  image: https://www.lumosinsight.co.uk/posts/2025-09-28-human-or-dancer/header.png
   image-alt: "Human or Dancer?"
 
 format:
